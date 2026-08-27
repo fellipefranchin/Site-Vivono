@@ -1,0 +1,725 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- Google Analytics (GA4) com Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+  try{if(localStorage.getItem('vivono_cookies')==='accepted')gtag('consent','update',{'analytics_storage':'granted'});}catch(e){}
+  gtag('js', new Date());
+  gtag('config','G-8GDJFGRGD6',{'send_page_view':false});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8GDJFGRGD6"></script>
+<title>Vívono Pizzeria · Arte. Origine. Passione.</title>
+<meta name="description" content="Pizza napolitana contemporânea, de longa fermentação e forno a lenha, em Mafra. Arte. Origine. Passione. Reservas e encomendas online.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#54272E">
+<link rel="canonical" href="https://vivono.pt/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Vívono Pizzeria">
+<meta property="og:title" content="Vívono Pizzeria · Arte. Origine. Passione.">
+<meta property="og:description" content="Pizza napolitana contemporânea, de longa fermentação e forno a lenha, em Mafra.">
+<meta property="og:url" content="https://vivono.pt/">
+<meta property="og:image" content="https://vivono.pt/og-image.jpg">
+<meta property="og:locale" content="pt_PT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vívono Pizzeria · Arte. Origine. Passione.">
+<meta name="twitter:description" content="Pizza napolitana contemporânea, de longa fermentação e forno a lenha, em Mafra.">
+<meta name="twitter:image" content="https://vivono.pt/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rosso:#54272E;--rosso-deep:#3a1a1f;--oliva:#1F3125;--oliva-soft:#2c4534;--crema:#E9E0D7;--crema-light:#F4EFE9;--crema-warm:#EDE5DA;--ink:#2a1c1e;--gold:#c2a878;--muted:#6b5d56}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--crema-light);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;line-height:1.08}
+img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.btn{display:inline-block;padding:15px 32px;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:.35s;cursor:pointer;border:1.5px solid transparent}
+.btn-primary{background:var(--crema);color:var(--rosso)}
+.btn-primary:hover{background:#fff;transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.btn-ghost{border-color:var(--crema);color:var(--crema)}
+.btn-ghost:hover{background:var(--crema);color:var(--rosso);transform:translateY(-2px)}
+.btn-rosso{background:var(--rosso);color:var(--crema)}
+.btn-rosso:hover{background:var(--rosso-deep);transform:translateY(-2px);box-shadow:0 12px 30px rgba(84,39,46,.3)}
+.btn-oliva{border-color:var(--oliva);color:var(--oliva)}
+.btn-oliva:hover{background:var(--oliva);color:var(--crema);transform:translateY(-2px)}
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s;padding:16px 0}
+header.scrolled,header.lighttop{background:var(--crema-light);box-shadow:0 2px 30px rgba(42,28,30,.09);padding:8px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;cursor:pointer}
+.brand img.forno{width:54px;height:54px;margin-left:-6px;transition:.4s;flex-shrink:0;position:relative;top:2px;filter:brightness(0) saturate(100%) invert(92%) sepia(8%) saturate(380%) hue-rotate(335deg) brightness(98%)}
+header.scrolled .brand img.forno,header.lighttop .brand img.forno{filter:none}
+.brand .wm{height:27px;transition:.4s;position:relative;top:0}
+.brand .wm.dark{display:none}
+header.scrolled .brand .wm.light,header.lighttop .brand .wm.light{display:none}
+header.scrolled .brand .wm.dark,header.lighttop .brand .wm.dark{display:block}
+.navlinks{display:flex;gap:30px;list-style:none;align-items:center}
+.navlinks a{font-size:13.5px;font-weight:400;color:var(--crema);letter-spacing:.03em;position:relative;transition:.3s;cursor:pointer}
+header.scrolled .navlinks a,header.lighttop .navlinks a{color:var(--ink)}
+.navlinks a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:1.5px;background:var(--gold);transition:.3s}
+.navlinks a:hover::after{width:100%}.navlinks a:hover{color:var(--gold)}
+.nav-cta{padding:9px 20px;border:1.5px solid var(--crema);border-radius:2px;font-size:12.5px!important;letter-spacing:.08em;text-transform:uppercase}
+header.scrolled .nav-cta,header.lighttop .nav-cta{border-color:var(--rosso)}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:var(--crema);color:var(--rosso)!important}
+header.scrolled .nav-cta:hover,header.lighttop .nav-cta:hover{background:var(--rosso);color:var(--crema)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;z-index:101}
+.burger span{width:26px;height:2px;background:var(--crema);transition:.3s}
+header.scrolled .burger span,header.lighttop .burger span{background:var(--rosso)}
+/* PAGE SYSTEM */
+.page{display:none}.page.active{display:block;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;background:linear-gradient(180deg,rgba(58,26,31,.78) 0%,rgba(84,39,46,.62) 38%,rgba(58,26,31,.74) 70%,rgba(31,49,37,.8) 100%),url('assets/img/hero-forno-lenha.jpg') center 38%/cover;color:var(--crema);padding:130px 28px 90px}
+.hero-logo{max-width:340px;margin:0 auto 30px;filter:drop-shadow(0 6px 28px rgba(0,0,0,.45))}
+.hero p.lead{font-size:clamp(15px,2vw,18px);max-width:560px;margin:0 auto 14px;font-weight:300}
+.hero .fire-note{font-size:13.5px;color:var(--gold);letter-spacing:.05em;margin-bottom:34px;font-style:italic}
+.hero-cta{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--crema);font-size:10px;letter-spacing:.35em;text-transform:uppercase;opacity:.65;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%)}50%{transform:translateX(-50%) translateY(8px)}}
+/* DUPLA ALMA strip */
+.alma{background:var(--rosso);color:var(--crema);padding:70px 0;text-align:center}
+.alma .inner{max-width:780px;margin:0 auto}
+.alma .eyebrow{color:var(--gold)}
+.alma h2{font-size:clamp(28px,4.5vw,42px);color:var(--crema);margin-bottom:18px;line-height:1.2}
+.alma p{font-weight:300;opacity:.9;font-size:16.5px}
+.alma .three{display:flex;justify-content:center;gap:50px;margin-top:36px;flex-wrap:wrap}
+.alma .three div{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--gold)}
+.alma .three span{display:block;font-family:'Poppins';font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--crema);opacity:.6;margin-top:4px}
+/* SECTION */
+section{padding:100px 0}
+.eyebrow{font-size:11.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--rosso);font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:12px;justify-content:center}
+.eyebrow::before,.eyebrow::after{content:'';width:32px;height:1px;background:var(--gold)}
+.eyebrow.left{justify-content:flex-start}.eyebrow.left::before{display:none}
+.sec-title{font-size:clamp(36px,5.5vw,58px);text-align:center;color:var(--oliva);margin-bottom:16px}
+.sec-sub{text-align:center;max-width:600px;margin:0 auto 58px;color:var(--muted);font-weight:300;font-size:17px}
+/* SOBRE preview on home */
+.sobre{background:var(--crema-light)}
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.sobre-img{position:relative}
+.sobre-img img{border-radius:4px;box-shadow:0 30px 70px rgba(42,28,30,.22);width:100%;height:520px;object-fit:cover;object-position:center 80%}
+.sobre-img .badge{position:absolute;top:20px;right:20px;background:var(--oliva);width:118px;height:118px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 12px 32px rgba(31,49,37,.45);border:2px solid rgba(233,224,215,.85)}
+.sobre-img .badge img{width:40px;height:40px;object-fit:contain;margin-bottom:4px;filter:brightness(0) saturate(100%) invert(92%) sepia(8%) saturate(380%) hue-rotate(335deg) brightness(98%)}
+.sobre-img .badge span{font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;line-height:1.3;color:var(--crema)}
+.sobre-text .eyebrow{justify-content:flex-start}
+.sobre-text .eyebrow::before{display:none}
+.sobre-text h2{font-size:clamp(32px,4.5vw,48px);color:var(--oliva);margin-bottom:22px}
+.sobre-text p{color:#5c4f48;margin-bottom:16px;font-weight:300;font-size:16px}
+.sobre-text .motto{font-family:'Playfair Display',serif;font-style:italic;font-size:21px;color:var(--rosso);margin:24px 0;padding-left:20px;border-left:3px solid var(--gold);line-height:1.4}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.stat{background:var(--crema-warm);border-left:3px solid var(--oliva);padding:20px 16px;border-radius:3px}
+.stat .num{font-family:'Playfair Display',serif;font-size:30px;font-weight:800;color:var(--rosso);line-height:1}
+.stat .lbl{font-size:12px;color:var(--muted);margin-top:5px}
+/* MENU */
+.menu-sec{background:var(--oliva);color:var(--crema);position:relative;overflow:hidden}
+.menu-sec .forno-wm{position:absolute;top:-50px;right:-70px;width:380px;opacity:.05;pointer-events:none}
+.menu-sec .eyebrow{color:var(--gold)}.menu-sec .eyebrow::before,.menu-sec .eyebrow::after{background:var(--gold)}
+.menu-sec .sec-title{color:var(--crema)}.menu-sec .sec-sub{color:rgba(233,224,215,.65)}
+.tabs{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:16px 0;position:sticky;top:58px;z-index:50;background:rgba(31,49,37,.96);backdrop-filter:blur(8px);margin:0 -28px 8px;border-bottom:1px solid rgba(233,224,215,.1)}
+.tab{padding:10px 22px;border-radius:40px;font-size:13px;font-weight:400;letter-spacing:.03em;cursor:pointer;transition:.3s;background:transparent;border:1px solid rgba(233,224,215,.22);color:var(--crema)}
+.tab:hover{border-color:var(--gold)}.tab.active{background:var(--crema);color:var(--oliva);border-color:var(--crema);font-weight:500}
+.cat-tag{text-align:center;font-style:italic;font-family:'Playfair Display',serif;font-size:17px;color:var(--gold);margin:24px 0 44px;min-height:24px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1040px;margin:0 auto}
+.dish{background:var(--crema-light);border-radius:8px;padding:26px 28px;border:1px solid rgba(233,224,215,.6);box-shadow:0 8px 28px rgba(20,12,8,.18);transition:.35s;position:relative;overflow:hidden}
+.dish::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--rosso),var(--oliva));opacity:0;transition:.35s}
+.dish:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,12,8,.28)}
+.dish:hover::before{opacity:1}
+.dish-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.dish-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--rosso);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+
+.allg-table{margin-top:46px;background:linear-gradient(165deg,rgba(31,49,37,.06),rgba(84,39,46,.05));border:1px solid rgba(84,39,46,.14);border-radius:10px;padding:32px 30px}
+.allg-head{text-align:center;max-width:640px;margin:0 auto 22px}
+.allg-head h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--crema);margin-bottom:10px}
+.allg-head p{font-size:12.5px;color:var(--crema);line-height:1.55}
+.allg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px;max-width:760px;margin:0 auto}
+.allg-item{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--crema)}
+.allg-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--rosso);color:var(--crema);font-family:'Poppins';font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.allg-lbl{font-weight:400}
+.allg-note{text-align:center;font-size:11.5px;color:var(--crema);font-style:italic;margin-top:22px;padding-top:16px;border-top:1px solid rgba(233,224,215,.2)}
+.dish-name .allg{font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:500;color:var(--gold);background:rgba(194,168,120,.14);border:1px solid rgba(194,168,120,.35);border-radius:20px;padding:2px 9px;letter-spacing:.04em;align-self:center}.dish-name .fav{color:var(--gold);font-size:12px;align-self:center;opacity:.85;line-height:1;cursor:default}
+.dish-name .pop{font-family:'Poppins';font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--rosso);color:var(--crema);padding:3px 8px;border-radius:20px;font-weight:500}
+.dish-price{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--oliva);white-space:nowrap}
+.dish-desc{font-size:13.5px;color:#5c4f48;font-weight:400;line-height:1.55;margin-top:10px}
+.dish-story{font-size:12.5px;color:var(--rosso);font-style:italic;line-height:1.55;margin-top:12px;padding-left:12px;border-left:2px solid var(--gold);opacity:.85}
+.menu-cat{display:none}.menu-cat.active{display:block}
+/* BEBIDAS page */
+.beb{background:var(--crema-light)}
+.beb-hero{margin:0 auto 56px;max-width:1000px;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(42,28,30,.18);position:relative}.beb-hero img{width:100%;height:380px;object-fit:cover;display:block}.beb-hero .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(58,26,31,.35),transparent 60%);display:flex;align-items:flex-end;padding:30px}.beb-hero .ov span{display:inline-block;background:rgba(58,26,31,.82);color:var(--crema);padding:13px 22px;border-radius:6px;font-family:"Playfair Display",serif;font-size:20px;font-style:italic;line-height:1.35;letter-spacing:.01em;box-shadow:0 6px 24px rgba(42,28,30,.28);max-width:560px}
+.beb-block{margin-bottom:54px}
+.beb-block h3{font-family:'Playfair Display',serif;font-size:26px;color:var(--rosso);margin-bottom:6px;text-align:center}
+.beb-rule{width:50px;height:2px;background:var(--gold);margin:0 auto 32px}
+.beb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 50px;max-width:1000px;margin:0 auto}
+.beb-item{padding:18px 0;border-bottom:1px solid rgba(84,39,46,.1)}
+.beb-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.beb-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--oliva)}
+.beb-meta{font-size:11px;color:var(--muted);letter-spacing:.04em;margin-left:8px;font-family:'Poppins'}
+.beb-dots{flex:1;border-bottom:1px dotted rgba(84,39,46,.25);margin:0 3px;transform:translateY(-4px)}
+.beb-price{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--rosso)}
+.beb-desc{font-size:13px;color:#5c4f48;font-weight:300;margin-top:5px}
+.beb-harm{font-size:11.5px;color:var(--rosso);margin-top:6px;letter-spacing:.02em}
+.beb-harm b{font-weight:500;text-transform:uppercase;font-size:10px;letter-spacing:.1em;color:var(--gold)}
+.beb-note{max-width:620px;margin:0 auto;text-align:center;color:#5c4f48;font-weight:300;font-size:15.5px;line-height:1.75;font-style:italic}
+/* HISTORIA page */
+.hist-hero{background:var(--rosso);color:var(--crema);padding:170px 0 90px;text-align:center}
+.hist-hero h1{font-size:clamp(42px,7vw,76px);color:var(--crema);margin-bottom:16px}
+.hist-hero .tag{font-style:italic;letter-spacing:.3em;text-transform:uppercase;font-size:14px;color:var(--gold)}
+.hist-body{background:var(--crema-light);padding:90px 0}
+.hist-col{max-width:760px;margin:0 auto}
+.hist-col h2{font-size:clamp(28px,4vw,40px);color:var(--oliva);margin:48px 0 18px}
+.hist-col h2:first-child{margin-top:0}
+.hist-col p{color:#5c4f48;font-weight:300;font-size:17px;margin-bottom:18px;line-height:1.75}
+.hist-col .big{font-family:'Playfair Display',serif;font-style:italic;font-size:24px;color:var(--rosso);line-height:1.5;margin:36px 0;padding:24px 28px;border-left:3px solid var(--gold);background:var(--crema-warm)}
+.hist-col .hist-foto{width:100%;height:clamp(360px,60vw,520px);object-fit:cover;object-position:center 46%;border-radius:6px;box-shadow:0 22px 55px rgba(42,28,30,.2);margin:44px 0 12px;display:block}
+.origins{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:50px 0}
+.origins-two{grid-template-columns:repeat(2,1fr);max-width:620px;margin-left:auto;margin-right:auto}
+.origin{text-align:center;padding:30px 20px;background:var(--crema-warm);border-radius:4px;border-top:3px solid var(--oliva)}
+.origin .ot{font-family:'Playfair Display',serif;font-size:22px;color:var(--rosso);margin-bottom:8px}
+.origin p{font-size:14px;margin:0}
+.hist-person{display:flex;gap:34px;align-items:flex-start;margin:52px 0}
+.hist-person.rev{flex-direction:row-reverse}
+.hist-person .hp-photo{flex:0 0 270px}
+.hist-person .hp-photo img{width:270px;height:360px;object-fit:cover;border-radius:6px;box-shadow:0 18px 44px rgba(42,28,30,.22)}
+.hist-person .hp-text h2{margin-top:0}
+.hist-person .hp-text p:last-child{margin-bottom:0}
+@media(max-width:720px){.hist-person,.hist-person.rev{flex-direction:column;gap:18px;margin:40px 0}.hist-person .hp-photo{flex:none;width:100%;max-width:320px;margin:0 auto}.hist-person .hp-photo img{width:100%;height:auto}}
+/* EXPERIENCIAS */
+.exp{background:var(--crema-light)}
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:920px;margin:0 auto}
+.exp-card{background:var(--oliva);color:var(--crema);padding:42px 34px;border-radius:4px;transition:.4s;position:relative;overflow:hidden}
+.exp-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(31,49,37,.3)}
+.exp-card .ec-icon{width:48px;height:48px;margin-bottom:20px;opacity:.9}
+.exp-card h3{font-size:26px;color:var(--crema);margin-bottom:14px}
+.exp-card p{font-size:14.5px;font-weight:300;opacity:.85;line-height:1.6}
+.exp-card .ec-tag{display:inline-block;margin-top:18px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(194,168,120,.4);padding:5px 14px;border-radius:20px}
+/* GALERIA */
+.galeria{background:var(--crema-warm)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:300px;gap:14px}
+.gal-item{overflow:hidden;border-radius:4px;position:relative}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-item.tall{grid-row:span 2}
+.gal-item .cap{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(31,25,21,.82));display:flex;align-items:flex-end;padding:18px;opacity:0;transition:.4s}
+.gal-item:hover .cap{opacity:1}
+.gal-item .cap span{color:var(--crema);font-family:'Playfair Display',serif;font-style:italic;font-size:17px}
+/* AVAL */
+.aval{background:var(--crema-light)}
+.aval-score{text-align:center;margin-bottom:48px}
+.aval-score .big{font-family:'Playfair Display',serif;font-size:60px;font-weight:800;color:var(--rosso);line-height:1}
+.aval-score .gs{color:var(--gold);font-size:20px;letter-spacing:4px;margin:6px 0}
+.aval-score .ct{font-size:13px;color:var(--muted)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{background:var(--crema-warm);padding:30px 28px;border-radius:4px;transition:.35s}
+.review:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(42,28,30,.1)}
+.review .stars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:14px}
+.review p{font-size:14.5px;color:#5c4f48;font-weight:300;font-style:italic;line-height:1.6;margin-bottom:18px}
+.review .name{font-family:'Playfair Display',serif;font-weight:600;color:var(--oliva);font-size:15px}
+.review .src{font-size:11px;color:#9a8a80;white-space:nowrap;flex:0 0 auto}
+.review .rev-meta{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.review .rev-meta .name{min-width:0;overflow-wrap:anywhere}
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:540px;margin:0 auto;background:var(--rosso);color:var(--crema);padding:18px 20px;border-radius:10px;box-shadow:0 16px 44px rgba(42,28,30,.4);display:flex;flex-direction:column;gap:14px;font-size:13.5px;line-height:1.55}
+.cookie-banner[hidden]{display:none}
+.cookie-banner p{margin:0}
+.cookie-banner .cookie-actions{display:flex;gap:10px;justify-content:flex-end;flex-shrink:0}
+.cookie-banner .btn-cookie{cursor:pointer;border:0;border-radius:6px;padding:9px 18px;font-family:inherit;font-size:13px;font-weight:600;background:var(--crema);color:var(--rosso);transition:.25s}
+.cookie-banner .btn-cookie:hover{background:#fff}
+.cookie-banner .btn-cookie.ghost{background:transparent;color:var(--crema);border:1px solid rgba(233,224,215,.5)}
+.cookie-banner .btn-cookie.ghost:hover{background:rgba(233,224,215,.12)}
+@media(min-width:600px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between}}
+/* RESERVAS */
+.res-hero{background:linear-gradient(rgba(28,20,16,.62),rgba(28,20,16,.72)),url('assets/img/galeria-5-casa-mafra.jpg') center 58%/cover;color:var(--crema);padding:160px 0 90px;text-align:center}
+.res-hero h1{font-size:clamp(40px,6vw,68px);color:var(--crema);margin-bottom:16px}
+.res-hero p{font-weight:300;max-width:520px;margin:0 auto 32px;opacity:.92}
+.contacto{background:var(--crema-light)}
+.cont-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:50px;align-items:stretch}
+.cont-cards{display:flex;flex-direction:column;gap:16px}
+.cont-card{background:var(--crema-warm);border-left:3px solid var(--oliva);padding:24px 26px;border-radius:3px;display:flex;gap:18px;align-items:flex-start;transition:.3s}
+.cont-card:hover{transform:translateX(5px);box-shadow:0 10px 30px rgba(42,28,30,.08)}
+.cont-card .ic{width:42px;height:42px;flex-shrink:0;background:var(--oliva);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--crema)}
+.cont-card .ic svg{width:19px;height:19px}
+.cont-card h4{font-size:16px;color:var(--rosso);margin-bottom:5px}
+.cont-card p{font-size:14px;color:#5c4f48;font-weight:300;line-height:1.5}
+.cont-card a{color:#5c4f48;transition:.2s}.cont-card a:hover{color:var(--rosso)}
+.map-wrap{border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(42,28,30,.15);min-height:430px}
+.map-wrap iframe{width:100%;height:100%;min-height:430px;border:0;filter:saturate(.9)}
+.res-cta-band{background:var(--oliva);color:var(--crema);text-align:center;padding:70px 0}
+.res-cta-band h2{font-size:clamp(30px,4.5vw,46px);color:var(--crema);margin-bottom:14px}
+.res-cta-band p{font-weight:300;opacity:.85;margin-bottom:28px}
+.res-widget{background:var(--crema-light);padding-bottom:30px}
+.res-widget .eyebrow{margin-bottom:34px}
+.res-widget-card{max-width:920px;margin:0 auto;background:var(--crema-warm);border-top:3px solid var(--gold);border-radius:6px;box-shadow:0 20px 50px rgba(42,28,30,.15);padding:26px 20px;min-height:140px}
+/* FOOTER */
+footer{background:var(--rosso-deep);color:var(--crema);padding:64px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:46px;margin-bottom:44px}
+.foot-brand .fl{width:150px;margin-bottom:14px}
+.foot-brand p{font-size:14px;font-weight:300;opacity:.7;max-width:280px;line-height:1.6}
+.foot-tag{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.06em;color:var(--gold);opacity:.95;margin-top:12px;max-width:280px;line-height:1.4}
+.beb-emblem{display:block;height:66px;width:auto;margin:0 auto 12px;opacity:.92}
+/* elementos de marca */
+.sobre-text .sobre-selo{float:right;width:90px;height:auto;margin:2px 0 10px 22px;filter:drop-shadow(0 6px 16px rgba(42,28,30,.22))}
+.menu-cat{position:relative}
+.menu-grid{position:relative;z-index:1}
+.menu-veg{position:absolute;pointer-events:none;z-index:0;opacity:.06}
+.menu-veg.tomate{left:-55px;bottom:70px;width:215px}
+.menu-veg.manjeric{right:-45px;bottom:150px;width:185px}
+.menu-sec .wrap{position:relative;z-index:1}
+.tel-actions{display:flex;gap:9px;margin-top:9px}
+.tel-actions a{font-size:11.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:6px 15px;border:1.5px solid var(--oliva);border-radius:20px;color:var(--oliva);transition:.25s}
+.tel-actions a:hover{background:var(--oliva);color:var(--crema)}
+.hist-body{position:relative;overflow:hidden}
+.hist-col{position:relative;z-index:1}
+.hist-wm{position:absolute;bottom:-12px;right:-28px;width:322px;opacity:.09;pointer-events:none;z-index:0}
+footer{position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background:url('assets/img/pattern-creme.png') center/cover;opacity:.035;pointer-events:none;z-index:0}
+footer .wrap{position:relative;z-index:1}
+@media(max-width:720px){.sobre-text .sobre-selo{float:right;width:77px;margin:0 0 8px 14px}.hist-wm{width:220px;opacity:.07}}
+.foot-col h4{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-family:'Poppins';font-weight:500}
+.foot-col ul{list-style:none}.foot-col li{margin-bottom:11px}
+.foot-col a{font-size:14px;font-weight:300;opacity:.8;transition:.2s;cursor:pointer}
+.foot-col a:hover{opacity:1;color:var(--gold);padding-left:4px}
+.foot-social{display:flex;gap:12px;margin-top:8px}
+.foot-social a{width:38px;height:38px;border:1px solid rgba(233,224,215,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s}
+.foot-social a:hover{background:var(--crema);color:var(--rosso);border-color:var(--crema)}
+.foot-social svg{width:17px;height:17px}
+.foot-bottom{border-top:1px solid rgba(233,224,215,.12);padding-top:22px;text-align:center;font-size:12px;opacity:.6;font-weight:300}
+.foot-dext{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:20px;opacity:.72;transition:.3s}
+.foot-dext:hover{opacity:1}
+.foot-dext span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--crema);font-weight:300}
+.dext-mark{height:16px;width:auto;display:block}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:880px){
+ .navlinks{position:fixed;top:0;right:-100%;height:100vh;width:80%;max-width:330px;background:var(--rosso);flex-direction:column;justify-content:center;gap:26px;padding:40px;transition:.4s}
+ .navlinks.open{right:0}.navlinks a{color:var(--crema)!important;font-size:17px}
+ .nav-cta{border-color:var(--crema)!important}
+ .burger{display:flex}
+ .sobre-grid,.cont-grid{grid-template-columns:1fr;gap:44px}
+ .menu-grid,.beb-grid{grid-template-columns:1fr;gap:0;max-width:560px}
+ .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal-item.tall{grid-row:span 1}
+ .rev-grid,.exp-grid,.origins{grid-template-columns:1fr}
+ .foot-grid{grid-template-columns:1fr;gap:34px;text-align:center}
+ .foot-brand p,.foot-brand .fl{margin-left:auto;margin-right:auto}
+ .foot-social{justify-content:center}.eyebrow{justify-content:center}
+ .sobre-text .eyebrow{justify-content:center}.sobre-text .eyebrow::before{display:block}
+ section{padding:70px 0}.stats{grid-template-columns:1fr}
+ .alma .three{gap:30px}
+}
+@media(max-width:480px){.hero-cta{flex-direction:column}.btn{width:100%}.gal-grid{grid-template-columns:1fr}}
+
+.gal-item{cursor:pointer}
+.lightbox{position:fixed;inset:0;z-index:1000;background:rgba(20,12,10,.94);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.lightbox.open{display:flex;opacity:1}
+.lightbox img{max-width:88vw;max-height:80vh;object-fit:contain;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5);animation:lbin .35s ease}
+@keyframes lbin{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.lb-cap{position:absolute;bottom:36px;left:0;right:0;text-align:center;color:var(--crema);font-family:'Playfair Display',serif;font-style:italic;font-size:19px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.lb-close{position:absolute;top:24px;right:30px;width:48px;height:48px;border:0;background:rgba(233,224,215,.12);color:var(--crema);border-radius:50%;font-size:26px;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center;line-height:1}
+.lb-close:hover{background:rgba(233,224,215,.25);transform:rotate(90deg)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:0;background:rgba(233,224,215,.12);color:var(--crema);border-radius:50%;font-size:30px;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center;line-height:1}
+.lb-nav:hover{background:rgba(233,224,215,.28)}
+.lb-prev{left:24px}.lb-next{right:24px}
+.lb-count{position:absolute;top:30px;left:30px;color:rgba(233,224,215,.6);font-size:13px;letter-spacing:.1em}
+@media(max-width:600px){.lb-nav{width:44px;height:44px;font-size:24px}.lb-prev{left:10px}.lb-next{right:10px}.lb-close{top:14px;right:14px}.lb-cap{font-size:16px;bottom:24px;padding:0 20px}}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Vívono Pizzeria",
+  "description": "Pizza napolitana contemporânea, de longa fermentação e forno a lenha, em Mafra.",
+  "url": "https://vivono.pt/",
+  "telephone": "+351911868823",
+  "email": "adm@vivono.pt",
+  "image": "https://vivono.pt/og-image.jpg",
+  "logo": "https://vivono.pt/assets/img/logo-vivono-escuro.png",
+  "servesCuisine": ["Pizza", "Italiana", "Napolitana"],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "acceptsReservations": "https://app.dextdigital.com.br/r/vivono",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Ementa Vívono",
+    "url": "https://vivono.pt/#menu",
+    "inLanguage": "pt-PT",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Entradas",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Azeitonas Marinadas", "description": "Azeitonas verdes marinadas em azeite, vegetais, ervas mediterrânicas e um toque cítrico.", "offers": {"@type": "Offer", "price": "1.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Queijo Curado", "description": "Fatias de queijo português curado, servidas à temperatura ideal.", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Pão de Alho", "description": "Pão artesanal servido com pasta de ricotta, alho confitado e Mozzarella Fior di Latte.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Crostini", "description": "Crostini com alecrim, servido com creme de pesto de pistache, creme de pesto rosso e caponata.", "offers": {"@type": "Offer", "price": "9.40", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Di Andria", "description": "Burrata assada com tomate cereja e manjericão, servida com crostini artesanal.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Insalata Vívono", "description": "Mix de folhas, grão-de-bico, pimento, beringela e courgette assados, cebola roxa, tomate cherry, azeitonas e lascas de Grana Padano, finalizada com azeite extravirgem e vinagre balsâmico.", "offers": {"@type": "Offer", "price": "9.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Insalata Caprese", "description": "Tomate fresco, mozzarella de búfala, pesto de manjericão, azeite, flor de sal e pimenta preta.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "As Brasileiras",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Brasiliana", "description": "Molho San Marzano, Mozzarella Fior di Latte, frango desfiado e queijo tipo catupiry, finalizada com orégano e azeite extravirgem.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Calabrese", "description": "Molho San Marzano, Mozzarella Fior di Latte, calabresa brasileira e cebola.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Lusitana", "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, cebola, ovo e azeitonas verdes.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Seleção Vívono",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Vívono", "description": "Molho San Marzano, stracciatella, pesto de pistache artesanal, tomate-cereja e folhas de manjericão.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Parma Grana", "description": "Molho San Marzano, Mozzarella Fior di Latte, Prosciutto Crudo, Grana Padano, geleia de figo e rúcula.", "offers": {"@type": "Offer", "price": "16.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Emiliana", "description": "Mozzarella Fior di Latte, mortadela com pistache, stracciatella, pistache torrado, pesto de pistache artesanal e folhas de manjericão.", "offers": {"@type": "Offer", "price": "16.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Prosciutto e Funghi", "description": "Molho San Marzano, Mozzarella Fior di Latte, prosciutto cotto e cogumelos.", "offers": {"@type": "Offer", "price": "14.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Courgette", "description": "Mozzarella Fior di Latte, ricotta, courgette marinada, Grana Padano, raspas de limão siciliano, hortelã e pimenta preta.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Tropicale", "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, ananás e cogumelos.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Porcellina", "description": "Molho San Marzano, Mozzarella Fior di Latte, bacon, ananás e cebola.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Puttanesca", "description": "Molho San Marzano, Grana Padano, alho, anchovas, alcaparras, tomate cereja, pimenta preta, manjericão e orégano.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Piemontese", "description": "Mozzarella Fior di Latte, ricotta com molho de trufas, cebola caramelizada, cogumelos, azeite trufado, Grana Padano e folhas de manjericão.", "offers": {"@type": "Offer", "price": "15.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Chourição", "description": "Molho San Marzano, Mozzarella Fior di Latte, cogumelos e chourição.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Giardino", "description": "Molho San Marzano, Mozzarella Fior di Latte, tomate cereja, courgette e beringela assadas e rúcula.", "offers": {"@type": "Offer", "price": "10.90", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Clássicas",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Margherita", "description": "Molho San Marzano, Mozzarella Fior di Latte e folhas de manjericão.", "offers": {"@type": "Offer", "price": "10.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Quattro Formaggi", "description": "Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta, mel e folhas de manjericão.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Pepperoni", "description": "Molho San Marzano, Mozzarella Fior di Latte e pepperoni.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Tonno", "description": "Molho San Marzano, Mozzarella Fior di Latte, atum, cebola, azeitona e rúcula.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Fiambre", "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Diavola", "description": "Molho San Marzano, Mozzarella Fior di Latte, salame picante, 'Nduja e cebola roxa.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Marinara", "description": "Molho San Marzano, alho, orégano, azeite e manjericão.", "offers": {"@type": "Offer", "price": "10.70", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Bambino",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Margherita Bambino", "description": "Molho San Marzano, Mozzarella Fior di Latte e manjericão.", "offers": {"@type": "Offer", "price": "8.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Fiambre Bambino", "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.", "offers": {"@type": "Offer", "price": "9.20", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Dolce",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Nutella", "description": "Creme de Nutella, cacau em pó e avelã torrada.", "offers": {"@type": "Offer", "price": "7.80", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Pistachio", "description": "Creme de pistache com mascarpone e pistache torrado.", "offers": {"@type": "Offer", "price": "9.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Tiramisù Vívono", "description": "Camada suave de creme de pistache com mascarpone, zabaione, biscoitos Savoiardi embebidos em café e finalização com cacau em pó e pistache torrado.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Brownie", "description": "Brownie artesanal de chocolate, servido com calda de chocolate e gelato de baunilha.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Pudim", "description": "Sobremesa cremosa à base de leite condensado, ovos e leite, coberta com calda de caramelo.", "offers": {"@type": "Offer", "price": "4.70", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Gelato", "description": "Gelato artesanal italiano. Pergunte os sabores disponíveis.", "offers": {"@type": "Offer", "price": "3.70", "priceCurrency": "EUR"}}
+        ]
+      }
+    ]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. José Silvestre 12",
+    "postalCode": "2640-497",
+    "addressLocality": "Mafra",
+    "addressCountry": "PT"
+  },
+  "sameAs": [
+    "https://instagram.com/vivonopizzeria"
+  ],
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "19:00", "closes": "22:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "15:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "19:00", "closes": "23:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "19:00", "closes": "23:00"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "151"
+  }
+}
+</script>
+</head><body>
+
+<header id="hdr"><div class="wrap nav">
+<div class="brand" data-go="home"><img src="assets/img/logo-forno.png" class="forno" alt="Forno Vívono"><img src="assets/img/logo-vivono-claro.png" class="wm light" alt="Vívono"><img src="assets/img/logo-vivono-escuro.png" class="wm dark" alt="Vívono"></div>
+<ul class="navlinks" id="navlinks">
+<li><a data-go="home">Início</a></li>
+<li><a data-go="historia">História</a></li>
+<li><a data-go="menu">Menu</a></li>
+<li><a data-go="bebidas">Bebidas</a></li>
+<li><a data-go="experiencias">Experiências</a></li>
+<li><a data-go="reservas">Contactos</a></li>
+<li><a href="https://app.dextdigital.com.br/r/vivono" target="_blank" rel="noopener" class="nav-cta">Reservar</a></li>
+</ul>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></header>
+
+<!-- ===== HOME ===== -->
+<div class="page active" id="page-home">
+<section class="hero">
+<div>
+<img src="assets/img/logo-vivono-hero.png" class="hero-logo" alt="Vívono Pizzeria · Arte Origine Passione">
+<p class="lead">Pizza napolitana contemporânea. Massa de longa fermentação, forno a lenha, ingredientes selecionados. Em Mafra, onde o tempo passa diferente.</p>
+<p class="fire-note">Napolitana contemporânea · Forno a lenha tradicional</p>
+<div class="hero-cta"><a href="https://app.dextdigital.com.br/r/vivono" target="_blank" rel="noopener" class="btn btn-primary">Reservar a Vossa Noite</a><a data-go="menu" class="btn btn-ghost">Ver Ementa</a></div>
+</div>
+<div class="scroll-cue">Descer</div>
+</section>
+
+<section class="alma"><div class="wrap"><div class="inner reveal">
+<div class="eyebrow">A Casa</div>
+<h2>Arte. Origine. Passione.</h2>
+<p>Massa de longa fermentação, forno a lenha e ingredientes selecionados. O respeito ao tempo, em cada detalhe da casa.</p>
+<div class="three"><div>Arte<span>no fazer</span></div><div>Origine<span>na tradição</span></div><div>Passione<span>em cada detalhe</span></div></div>
+</div></div><div class="lightbox" id="lightbox"><span class="lb-count" id="lbCount"></span><button class="lb-close" id="lbClose" aria-label="Fechar">&times;</button><button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">&#8249;</button><img id="lbImg" src="" alt=""><button class="lb-nav lb-next" id="lbNext" aria-label="Seguinte">&#8250;</button><div class="lb-cap" id="lbCap"></div></div></section>
+
+<section class="sobre"><div class="wrap"><div class="sobre-grid">
+<div class="sobre-img reveal"><img src="assets/img/massa-longa-fermentacao.jpg" alt="Pizza napolitana contemporânea Vívono"></div>
+<div class="sobre-text reveal">
+<img class="sobre-selo" src="assets/img/selo-rosso-fundo.png" alt="Selo Vívono · Arte, Origine, Passione" loading="lazy">
+<div class="eyebrow left">A Nossa Massa</div>
+<h2>O respeito ao tempo</h2>
+<p>A nossa massa é preparada diariamente com ingredientes selecionados e fermentada de 48 a 72 horas. Todo esse processo é responsável por revelar a leveza, a textura e o sabor da nossa pizza.</p>
+<p>O forno a lenha, aquecido à temperatura controlada, garante a crosta crocante e o interior macio que só uma verdadeira pizza napolitana pode oferecer.</p>
+<p class="motto">"É na simplicidade que tudo aparece."</p>
+<p>Acreditamos que uma boa pizza vai além do sabor: carrega tradição, tempo e cuidado.</p>
+<div class="stats"><div class="stat"><div class="num">Ingredientes</div><div class="lbl">Frescos</div></div><div class="stat"><div class="num">48–72h</div><div class="lbl">Fermentação da Massa</div></div><div class="stat"><div class="num">400°C</div><div class="lbl">Forno a Lenha</div></div></div>
+<div style="margin-top:30px"><a data-go="historia" class="btn btn-oliva">A Nossa História</a></div>
+</div></div></div></section>
+
+<section class="galeria"><div class="wrap">
+<div class="reveal"><div class="eyebrow">O Nosso Espaço</div><h2 class="sec-title">Galeria</h2><p class="sec-sub">Um espaço moderno e acolhedor, e a apresentação das nossas criações.</p></div>
+<div class="gal-grid reveal"><div class="gal-item"><img src="assets/img/galeria-1-uma-noite.jpg" alt="Uma noite na Vívono" loading="lazy"><div class="cap"><span>Uma noite na Vívono</span></div></div><div class="gal-item"><img src="assets/img/galeria-2-pudim.jpg" alt="Pudim, doçura da casa" loading="lazy"><div class="cap"><span>Pudim, doçura da casa</span></div></div><div class="gal-item"><img src="assets/img/galeria-3-salao.jpg" alt="O nosso salão" loading="lazy"><div class="cap"><span>O nosso salão</span></div></div><div class="gal-item"><img src="assets/img/galeria-4-pizza-da-casa.jpg" alt="Vívono, a pizza da casa" loading="lazy"><div class="cap"><span>Vívono, a pizza da casa</span></div></div><div class="gal-item"><img src="assets/img/galeria-5-casa-mafra.jpg" alt="A nossa casa em Mafra" loading="lazy"><div class="cap"><span>A nossa casa em Mafra</span></div></div><div class="gal-item"><img src="assets/img/galeria-6-fim-de-tarde.jpg" alt="Fim de tarde na Vívono" loading="lazy"><div class="cap"><span>Fim de tarde na Vívono</span></div></div></div></div></section>
+
+<section class="aval"><div class="wrap">
+<div class="reveal"><div class="eyebrow">O Que Dizem</div><h2 class="sec-title">Avaliações</h2></div>
+<div class="aval-score reveal" id="avalScore"><div class="big" id="avalBig">4,9</div><div class="gs" id="avalStars">★★★★★</div><div class="ct" id="avalCount">151 avaliações no Google</div></div>
+<div class="rev-grid" id="revGrid"><div class="review reveal"><div class="stars">★★★★★</div><p>"Excelente, a massa da pizza é sensacional, tendo um sabor e maciez incrível."</p><div class="rev-meta"><span class="name">Paulo Henrique</span><span class="src">Google</span></div></div><div class="review reveal"><div class="stars">★★★★★</div><p>"Pizzas fantásticas e o serviço é excelente. Melhor pizzaria em Mafra."</p><div class="rev-meta"><span class="name">Luis Querido</span><span class="src">Google</span></div></div><div class="review reveal"><div class="stars">★★★★★</div><p>"Pizza incrível, lugar acolhedor e atendimento impecável!"</p><div class="rev-meta"><span class="name">Amanda Bragatti</span><span class="src">Google</span></div></div></div><div style="text-align:center;margin-top:40px" class="reveal"><a href="https://www.google.com/search?q=Vívono+Pizzeria+Mafra" target="_blank" rel="noopener" class="btn btn-oliva" id="avalAll">Ver todas no Google</a></div></div></section>
+</div>
+
+<!-- ===== HISTORIA ===== -->
+<div class="page" id="page-historia">
+<section class="hist-hero"><div class="wrap"><h1>A Nossa História</h1><div class="tag">Arte · Origine · Passione</div></div></section>
+<section class="hist-body"><img class="hist-wm" src="assets/img/pizzaiolo-rosso.png" alt="" aria-hidden="true" loading="lazy"><div class="wrap"><div class="hist-col">
+<p>A Pizzeria Vívono nasceu da união entre tradição, excelência e um respeito profundo pelos ritmos naturais que a verdadeira qualidade exige, virtudes quase esquecidas no tempo em que vivemos. A fusão de duas trajetórias que se complementam.</p>
+<div class="big">Arte, origem e paixão, transformadas em propósito.</div>
+<div class="hist-person"><div class="hp-photo reveal"><img src="assets/img/hist-fabio.jpg" alt="Fabio Soares, pizzaiolo e co-fundador da Vívono" loading="lazy"></div><div class="hp-text"><h2>Fabio Soares, arte como ofício</h2>
+<p>Brasileiro do Rio Grande do Norte, Fabio Soares construiu a carreira na cozinha por onde passou: Minas Gerais, Curitiba, Santa Catarina, sempre ao lado do fogo, sempre aprimorando o ofício. Movido pela vontade de aprender, mais de uma vez abriu mão de posições mais confortáveis e melhor remuneradas para estar onde havia algo novo a dominar. Em 2016, partiu rumo à terra da pizza, em busca do que não se aprende em livros, a essência viva da cozinha italiana. Aprendeu com mestres, cozinhou com alma e trouxe de lá mais do que técnica: trouxe respeito. Ao tempo, ao fogo, à verdade de cada ingrediente. É o coração técnico da casa, o pizzaiolo que cuida da massa de longa fermentação dia após dia.</p>
+</div></div><div class="hist-person rev"><div class="hp-photo reveal"><img src="assets/img/hist-fellipe.jpg" alt="Fellipe Franchin, co-fundador da Vívono" loading="lazy"></div><div class="hp-text"><h2>Fellipe Franchin, origem como propósito</h2>
+<p>Nascido no interior de São Paulo, numa família de raízes italianas, Fellipe Franchin cresceu com o cheiro de massa no ar. Ao lado dos avós e inspirado pelo tio, entendeu desde cedo que cozinhar é mais do que preparar alimentos, é um gesto de amor, tempo e intenção. Viveu, trabalhou e formou-se em gastronomia em João Pessoa, na Paraíba. Mais tarde mudou-se para Curitiba, onde trabalhou em alta gastronomia, no mesmo restaurante que Fabio, num encontro que viria a dar origem à Vívono. A vida levou-o ainda por Itália e Irlanda, experiências que ampliaram o seu olhar sobre cultura, hospitalidade e negócio. Hoje, Fellipe leva esse afeto à construção da marca, unindo a excelência artesanal a um olhar que organiza, conecta e dá clareza à experiência.</p>
+</div></div><div class="origins origins-two">
+<div class="origin reveal"><div class="ot">Itália</div><p>A técnica, a tradição napolitana, o respeito ao ofício. O coração da casa.</p></div>
+<div class="origin reveal"><div class="ot">Brasil</div><p>A terra natal de Fabio e Fellipe. O calor, o acolhimento e a criatividade à mesa. A alma da casa.</p></div>
+</div>
+<img src="assets/img/hist-parceria.jpg" alt="Fabio Soares e Fellipe Franchin apertando as mãos no salão da Vívono" loading="lazy" class="hist-foto reveal">
+<p>Dessa fusão nasce a Vívono: pizza napolitana contemporânea, com a alma brasileira que a torna única. Massa de longa fermentação, forno a lenha, ingredientes selecionados, e a hospitalidade de quem trata cada mesa como parte da própria casa. Aqui, o tempo passa diferente.</p>
+<div class="big">Cada fatia conta a nossa história, uma de cada vez.</div>
+<div style="text-align:center;margin-top:40px"><a data-go="menu" class="btn btn-rosso">Conhecer a Ementa</a></div>
+</div></div></section>
+</div>
+
+<!-- ===== MENU ===== -->
+<div class="page" id="page-menu">
+<section class="menu-sec" style="padding-top:160px"><img src="assets/img/icone-forno.png" class="forno-wm" alt=""><img class="menu-veg tomate" src="assets/img/tomate-creme.png" alt="" aria-hidden="true" loading="lazy"><img class="menu-veg manjeric" src="assets/img/manjericao-creme.png" alt="" aria-hidden="true" loading="lazy">
+<div class="wrap">
+<div class="reveal"><div class="eyebrow">Sabores Autênticos</div><h2 class="sec-title">Nossa Ementa</h2><p class="sec-sub">Napolitana contemporânea, massa de longa fermentação de 48 a 72 horas, assada em forno a lenha. Cada prato, uma viagem de origem.</p></div>
+<div class="tabs reveal"><div class="tab active" data-cat="entradas">Entradas</div><div class="tab " data-cat="brasileiras">As Brasileiras</div><div class="tab " data-cat="selecao">Seleção Vívono</div><div class="tab " data-cat="classicas">Clássicas</div><div class="tab " data-cat="bambino">Bambino</div><div class="tab " data-cat="dolce">Dolce</div></div>
+<div class="cat-tag" id="catTag"></div>
+<div class="menu-cat active" id="mc-entradas" data-tag="Para começar com leveza, e já saber que não vai parar por aqui"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Azeitonas Marinadas</div><div class="dish-price">1,90 €</div></div><div class="dish-desc">Azeitonas verdes marinadas em azeite, vegetais, ervas mediterrânicas e um toque cítrico.</div><div class="dish-story">O aperitivo mais antigo do Mediterrâneo, onde a oliveira é sagrada desde a Antiguidade, acompanha a mesa italiana desde a Roma Antiga.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Queijo Curado<span class="allg">7</span></div><div class="dish-price">4,90 €</div></div><div class="dish-desc">Fatias de queijo português curado, servidas à temperatura ideal.</div><div class="dish-story">A tábua de queijos é o gesto de hospitalidade mais antigo da mesa ibérica. Homenagem ao terroir português.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Pão de Alho<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">5,90 €</div></div><div class="dish-desc">Pão artesanal servido com pasta de ricotta, alho confitado e Mozzarella Fior di Latte.</div><div class="dish-story">Nascido da nossa própria massa de longa fermentação, o mesmo pão que faz a pizza, agora como entrada.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Crostini<span class="allg">1,7,8</span></div><div class="dish-price">9,40 €</div></div><div class="dish-desc">Crostini com alecrim, servido com creme de pesto de pistache, creme de pesto rosso e caponata.</div><div class="dish-story">Da Toscana, onde nasceu como aperitivo camponês, o crostini atravessa séculos como o quebra-jejum mais querido da Itália central.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Di Andria<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">11,90 €</div></div><div class="dish-desc">Burrata assada com tomate cereja e manjericão, servida com crostini artesanal.</div><div class="dish-story">Andria, na Puglia, é a cidade-mãe da burrata. Aquecê-la liberta o coração cremoso da stracciatella, uma das experiências mais sensoriais da cozinha italiana.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Insalata Vívono<span class="allg">7,12</span></div><div class="dish-price">9,90 €</div></div><div class="dish-desc">Mix de folhas, grão-de-bico, pimento, beringela e courgette assados, cebola roxa, tomate cherry, azeitonas e lascas de Grana Padano, finalizada com azeite extravirgem e vinagre balsâmico.</div><div class="dish-story">Finalizada com vinagre balsâmico de Módena DOP, um dos produtos mais antigos e protegidos da gastronomia italiana, envelhecido em barris de madeira até ao equilíbrio perfeito.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Insalata Caprese<span class="allg">7,8</span></div><div class="dish-price">11,90 €</div></div><div class="dish-desc">Tomate fresco, mozzarella de búfala, pesto de manjericão, azeite, flor de sal e pimenta preta.</div><div class="dish-story">A verdadeira mozzarella di bufala campana é a estrela desta salada nascida em Capri, homenagem às cores de Itália: o branco do queijo, o vermelho do tomate, o verde do manjericão.</div></div></div></div><div class="menu-cat" id="mc-brasileiras" data-tag="O nosso diferencial, a alma brasileira no forno napolitano"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Brasiliana<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">14,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, frango desfiado e queijo tipo catupiry, finalizada com orégano e azeite extravirgem.</div><div class="dish-story">A combinação mais amada do Brasil: frango com catupiry. Trazemos para a massa e o forno a lenha napolitano, unindo dois mundos numa só fatia.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Calabrese<span class="allg">1,7</span></div><div class="dish-price">13,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, calabresa brasileira e cebola.</div><div class="dish-story">Presença obrigatória em qualquer pizzaria brasileira. A calabresa fatiada com cebola é tradição por gerações.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Lusitana<span class="allg">1,3,7</span></div><div class="dish-price">13,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, fiambre, cebola, ovo e azeitonas verdes.</div><div class="dish-story">Criada por mãos italianas em São Paulo e batizada em honra dos portugueses. Uma fatia que junta três povos, e que aqui, em Mafra, volta à terra que lhe deu o nome.</div></div></div></div><div class="menu-cat" id="mc-selecao" data-tag="As combinações que contam a nossa história, uma fatia de cada vez"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Vívono<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7,8</span></div><div class="dish-price">14,90 €</div></div><div class="dish-desc">Molho San Marzano, stracciatella, pesto de pistache artesanal, tomate-cereja e folhas de manjericão.</div><div class="dish-story">De Nápoles, onde tudo começa: a Vívono é a nossa releitura da Margherita. A stracciatella no lugar da mozzarella, o pesto artesanal no lugar do manjericão simples. Uma explosão de sabor.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Parma Grana<span class="allg">1,7</span></div><div class="dish-price">16,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, Prosciutto Crudo, Grana Padano, geleia de figo e rúcula.</div><div class="dish-story">De Parma, capital de dois soberanos da gastronomia: o Prosciutto e o Grana Padano DOP. A geleia de figo é o contraponto doce que a tradição do norte italiano consagrou.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Emiliana<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7,8</span></div><div class="dish-price">16,90 €</div></div><div class="dish-desc">Mozzarella Fior di Latte, mortadela com pistache, stracciatella, pistache torrado, pesto de pistache artesanal e folhas de manjericão.</div><div class="dish-story">A Emília-Romanha é o celeiro gastronómico de Itália, a região que deu ao mundo o Parmigiano Reggiano. A mortadela bolonhesa, produzida desde o século XVII, é hoje IGP.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Prosciutto e Funghi<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">14,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, prosciutto cotto e cogumelos.</div><div class="dish-story">Das trattorias italianas de sempre, de norte a sul. É a pizza mais pedida em Itália a seguir à Margherita, e na Vívono não seria diferente.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Courgette<span class="allg">1,7,8</span></div><div class="dish-price">11,90 €</div></div><div class="dish-desc">Mozzarella Fior di Latte, ricotta, courgette marinada, Grana Padano, raspas de limão siciliano, hortelã e pimenta preta.</div><div class="dish-story">Da Campânia e da Sicília, regiões do sul onde o verão cheira a limão, hortelã e azeite, onde a courgette e o limão siciliano definem a cozinha.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Tropicale<span class="allg">1,7</span></div><div class="dish-price">13,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, fiambre, ananás e cogumelos.</div><div class="dish-story">Da imaginação criativa das pizzarias italianas dos anos 70, quando o ananás entrou pela primeira vez numa pizza. Aqui equilibrada com cogumelos, num registo mais sóbrio.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Porcellina<span class="allg">1,7</span></div><div class="dish-price">12,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, bacon, ananás e cebola.</div><div class="dish-story">De inspiração do norte italiano, onde o fumado e o curado são tradição secular. &quot;Porcellina&quot; (leitoa) celebra o porco, que a Emília-Romanha transformou em arte com os seus embutidos.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Puttanesca<span class="allg">1,4,7</span></div><div class="dish-price">14,90 €</div></div><div class="dish-desc">Molho San Marzano, Grana Padano, alho, anchovas, alcaparras, tomate cereja, pimenta preta, manjericão e orégano.</div><div class="dish-story">De Nápoles, releitura em pizza da famosa pasta alla puttanesca. Diz-se que nasceu numa noite em que não havia tempo nem ingredientes, e a mistura do que havia virou clássico.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Piemontese<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">15,90 €</div></div><div class="dish-desc">Mozzarella Fior di Latte, ricotta com molho de trufas, cebola caramelizada, cogumelos, azeite trufado, Grana Padano e folhas de manjericão.</div><div class="dish-story">Do Piemonte, vem a trufa de Alba, nobreza que eleva o seu valor ao patamar do ouro. Esta é a nossa pizza mais sofisticada.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Chourição<span class="allg">1,7</span></div><div class="dish-price">12,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, cogumelos e chourição.</div><div class="dish-story">De Portugal, onde o chourição é rei dos enchidos há séculos: defumado, aromático, com cor e carácter. Sobre a massa napolitana e o Fior di Latte, mais um encontro entre duas tradições.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Giardino<span class="allg">1,7</span></div><div class="dish-price">10,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, tomate cereja, courgette e beringela assadas e rúcula.</div><div class="dish-story">Do sul de Itália, onde a cozinha de horta é filosofia, não tendência. Tomate cereja, courgette e beringela assadas no forno a lenha, rúcula fresca. Genuinamente vegetariana.</div></div></div></div><div class="menu-cat" id="mc-classicas" data-tag="As de sempre, como devem ser, mas com um toque Vívono"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Margherita<span class="allg">1,7</span></div><div class="dish-price">10,90 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte e folhas de manjericão.</div><div class="dish-story">A rainha de Nápoles. Diz-se que foi criada em 1889 para a Rainha Margherita de Saboia, com as cores da bandeira italiana. A prova de fogo de qualquer pizzaiolo.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Quattro Formaggi<span class="allg">1,7</span></div><div class="dish-price">13,90 €</div></div><div class="dish-desc">Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta, mel e folhas de manjericão.</div><div class="dish-story">Da Itália, onde o queijo é quase uma religião. Unidos pelo fio de mel, que equilibra o sal e a intensidade, elevando a experiência.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Pepperoni<span class="allg">1,7</span></div><div class="dish-price">12,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte e pepperoni.</div><div class="dish-story">Invenção ítalo-americana, criada pelos imigrantes italianos nos Estados Unidos no início do século XX. O enchido levemente picante hoje volta às pizzarias europeias como clássico.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Tonno<span class="allg">1,4,7</span></div><div class="dish-price">13,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, atum, cebola, azeitona e rúcula.</div><div class="dish-story">O atum em conserva de azeite é tradição siciliana e calabresa. Surgiu como método de conservação antes da refrigeração. Um dos sabores mais pedidos nas regiões costeiras.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Fiambre<span class="allg">1,7</span></div><div class="dish-price">12,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte e fiambre.</div><div class="dish-story">Simples, direto e sem pretensões: a pizza que agrada a todas as gerações.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Diavola<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,7</span></div><div class="dish-price">13,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte, salame picante, &#x27;Nduja e cebola roxa.</div><div class="dish-story">Da Calábria, a &quot;diabólica&quot;. A &#x27;Nduja, pasta de enchido picante com indicação geográfica protegida, é tão intensa que transforma tudo o que toca. Traz o fogo que dá nome à pizza.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Marinara<span class="allg">1</span></div><div class="dish-price">10,70 €</div></div><div class="dish-desc">Molho San Marzano, alho, orégano, azeite e manjericão.</div><div class="dish-story">De Nápoles, anterior à própria Margherita, a pizza mais antiga que existe, sem queijo. Diz-se que o nome remete aos marinheiros (marinai) e ao molho que os acompanhava nas longas navegações.</div></div></div></div><div class="menu-cat" id="mc-bambino" data-tag="Para os pequenos da casa. Porque toda a grande história começa pequena"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Margherita<span class="allg">1,7</span></div><div class="dish-price">8,70 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte e manjericão.</div><div class="dish-story">A pizza mais famosa do mundo, no tamanho certo para os maiores apreciadores da mesa.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Fiambre<span class="allg">1,7</span></div><div class="dish-price">9,20 €</div></div><div class="dish-desc">Molho San Marzano, Mozzarella Fior di Latte e fiambre.</div><div class="dish-story">O fiambre que toda a gente adora, numa pizza feita à medida. Pequena no tamanho, grande no sabor.</div></div></div></div><div class="menu-cat" id="mc-dolce" data-tag="Porque algumas coisas na vida são pura paixão, e a sobremesa é uma delas"><div class="menu-grid"><div class="dish"><div class="dish-top"><div class="dish-name">Nutella<span class="allg">1,7,8</span></div><div class="dish-price">7,80 €</div></div><div class="dish-desc">Creme de Nutella, cacau em pó e avelã torrada.</div><div class="dish-story">De Turim, capital do chocolate italiano. A gianduia, criada por volta de 1852 quando os chocolateiros piemonteses juntaram avelã ao chocolate. A Nutella é a sua herdeira direta.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Pistachio<span class="allg">1,7,8</span></div><div class="dish-price">9,90 €</div></div><div class="dish-desc">Creme de pistache com mascarpone e pistache torrado.</div><div class="dish-story">Da Sicília, nas encostas do Etna, onde o pistache cresce em solo vulcânico. O pistache de Bronte, o &quot;ouro verde da Sicília&quot;, é protegido por DOP desde 2009.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Tiramisù Vívono<span class="fav" title="Recomendação da casa">◆</span><span class="allg">1,3,7,8</span></div><div class="dish-price">5,90 €</div></div><div class="dish-desc">Camada suave de creme de pistache com mascarpone, zabaione, biscoitos Savoiardi embebidos em café e finalização com cacau em pó e pistache torrado.</div><div class="dish-story">Do Vêneto, nasceu nos anos 1960 numa pastelaria de Treviso. &quot;Tiramisù&quot; significa &quot;levanta-me&quot;. A nossa versão acrescenta pistache, a assinatura da casa.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Brownie<span class="allg">1,3,7</span></div><div class="dish-price">5,90 €</div></div><div class="dish-desc">Brownie artesanal de chocolate, servido com calda de chocolate e gelato de baunilha.</div><div class="dish-story">Porque nem tudo tem que ser italiano: este é de Chicago, onde surgiu por acidente quando um chef esqueceu o fermento. Mas o gelato é italiano.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Pudim<span class="allg">3,7</span></div><div class="dish-price">4,70 €</div></div><div class="dish-desc">Sobremesa cremosa à base de leite condensado, ovos e leite, coberta com calda de caramelo.</div><div class="dish-story">De Portugal e do Brasil ao mesmo tempo: o pudim brasileiro inspira-se no clássico pudim de ovos português. Duas tradições, uma só experiência: cremosa, doce, irresistível.</div></div><div class="dish"><div class="dish-top"><div class="dish-name">Gelato<span class="allg">7</span></div><div class="dish-price">3,70 €</div></div><div class="dish-desc">Gelato artesanal italiano. Pergunte os sabores disponíveis.</div><div class="dish-story">Da corte florentina dos Médici, século XVI. Denso, sedoso, com mais sabor e menos ar que o gelado comum.</div></div></div></div>
+<div style="text-align:center;margin-top:50px" class="reveal"><a href="https://wa.me/351911868823?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20a%20experi%C3%AAncia%20V%C3%ADvono." target="_blank" rel="noopener" class="btn btn-primary">Faça sua encomenda</a></div>
+<div class="allg-table reveal"><div class="allg-head"><h3>Alergénios</h3><p>Os números junto a cada prato indicam os alergénios presentes. Tem alguma alergia ou intolerância? Fale connosco antes de pedir, cuidar de si faz parte da experiência.</p></div><div class="allg-grid"><div class="allg-item"><span class="allg-num">1</span><span class="allg-lbl">Glúten</span></div><div class="allg-item"><span class="allg-num">2</span><span class="allg-lbl">Crustáceos</span></div><div class="allg-item"><span class="allg-num">3</span><span class="allg-lbl">Ovos</span></div><div class="allg-item"><span class="allg-num">4</span><span class="allg-lbl">Peixe</span></div><div class="allg-item"><span class="allg-num">5</span><span class="allg-lbl">Amendoins</span></div><div class="allg-item"><span class="allg-num">6</span><span class="allg-lbl">Soja</span></div><div class="allg-item"><span class="allg-num">7</span><span class="allg-lbl">Leite</span></div><div class="allg-item"><span class="allg-num">8</span><span class="allg-lbl">Frutos de casca rija</span></div><div class="allg-item"><span class="allg-num">9</span><span class="allg-lbl">Aipo</span></div><div class="allg-item"><span class="allg-num">10</span><span class="allg-lbl">Mostarda</span></div><div class="allg-item"><span class="allg-num">11</span><span class="allg-lbl">Sésamo</span></div><div class="allg-item"><span class="allg-num">12</span><span class="allg-lbl">Sulfitos</span></div><div class="allg-item"><span class="allg-num">13</span><span class="allg-lbl">Tremoço</span></div><div class="allg-item"><span class="allg-num">14</span><span class="allg-lbl">Moluscos</span></div></div><p class="allg-note">A nossa cozinha manipula glúten e frutos de casca rija, pode ocorrer contacto cruzado.</p></div>
+</div></section>
+</div>
+
+<!-- ===== BEBIDAS ===== -->
+<div class="page" id="page-bebidas">
+<section class="beb" style="padding-top:160px"><div class="wrap">
+<div class="reveal"><div class="eyebrow">Curadoria & Harmonização</div><h2 class="sec-title">Bebidas</h2><p class="sec-sub">Vinhos, cervejas artesanais, cocktails e espirituosas, cada um com a sua história e harmonização sugerida com a nossa ementa.</p></div>
+<div class="beb-hero reveal"><img src="assets/img/bebidas-aperol-spritz.jpg" alt="Aperol Spritz, o aperitivo da casa" loading="lazy"><div class="ov"><span>Aperol Spritz, o nosso convite para começar a noite</span></div></div>
+<div class="beb-block reveal"><img class="beb-emblem" src="assets/img/lupulo-oliva.png" alt="" aria-hidden="true" loading="lazy"><h3>Cervejas Artesanais</h3><div class="beb-rule"></div><p class="beb-note">As nossas cervejas artesanais são produzidas em pequenos lotes e de forma sazonal. Por isso, a nossa seleção varia, e é sempre escolhida a dedo para melhor servir quem nos visita. Consulte a nossa equipa e deixe-nos apresentar-lhe a melhor opção para si.</p></div><div class="beb-block reveal"><h3>Cervejas &amp; Sidra</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Super Bock<span class="beb-meta">Imperial · 25cl</span></div><div class="beb-dots"></div><div class="beb-price">1,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Super Bock<span class="beb-meta">Caneca · 50cl</span></div><div class="beb-dots"></div><div class="beb-price">3,60 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Heineken<span class="beb-meta">33cl</span></div><div class="beb-dots"></div><div class="beb-price">3,20 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Heineken 0.0%<span class="beb-meta">25cl</span></div><div class="beb-dots"></div><div class="beb-price">2,40 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Somersby<span class="beb-meta">33cl</span></div><div class="beb-dots"></div><div class="beb-price">3,80 €</div></div></div></div></div><div class="beb-block reveal"><img class="beb-emblem" src="assets/img/uvas-rosso.png" alt="" aria-hidden="true" loading="lazy"><h3>Vinhos Portugueses · Tintos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Esteva Douro Tinto<span class="beb-meta">13%</span></div><div class="beb-dots"></div><div class="beb-price">12,90 €</div></div><div class="beb-desc">Frutado e acessível, com fruta madura, taninos suaves e final limpo.</div><div class="beb-harm"><b>Harmoniza</b> · Brasiliana · Calabrese · Diavola · Fiambre · Pão de Alho</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Lisboa Reserva<span class="beb-meta">13,5%</span></div><div class="beb-dots"></div><div class="beb-price">16,90 €</div></div><div class="beb-desc">Frutado, equilibrado e versátil, com taninos macios e acidez moderada.</div><div class="beb-harm"><b>Harmoniza</b> · Prosciutto e Funghi · Pepperoni · Emiliana · Lusitana · Insalata Vívono</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Contador de Estórias<span class="beb-meta">13,5%</span></div><div class="beb-dots"></div><div class="beb-price">22,90 €</div></div><div class="beb-desc">Encorpado e surpreendente, com notas balsâmicas, fruta madura e personalidade marcante.</div><div class="beb-harm"><b>Harmoniza</b> · Diavola · Piemontese · Porcellina · Parma Grana · Quattro Formaggi</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Quinta de Chocapalha Tinto<span class="beb-meta">14%</span></div><div class="beb-dots"></div><div class="beb-price">25,90 €</div></div><div class="beb-desc">Elegante e gastronómico, com acidez viva, taninos finos e final persistente.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Parma Grana · Vívono · Insalata Vívono · Emiliana</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Quinta da Boa Esperança Reserva<span class="beb-meta">14,5%</span></div><div class="beb-dots"></div><div class="beb-price">29,90 €</div></div><div class="beb-desc">Encorpado e elegante, com frutos vermelhos maduros, especiarias suaves e final longo.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Prosciutto e Funghi · Vívono · Emiliana · Insalata Vívono</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Esporão Reserva Tinto<span class="beb-meta">14%</span></div><div class="beb-dots"></div><div class="beb-price">39,90 €</div></div><div class="beb-desc">Encorpado e envolvente, com frutos vermelhos maduros, especiarias e madeira integrada.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Parma Grana · Diavola · Quattro Formaggi · Emiliana</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Niepoort Redoma Tinto<span class="beb-meta">14%</span></div><div class="beb-dots"></div><div class="beb-price">54,90 €</div></div><div class="beb-desc">Elegante e complexo, com fruta vermelha madura, notas balsâmicas e um toque mineral.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Parma Grana · Prosciutto Crudo · Emiliana · Di Andria</div></div></div></div><div class="beb-block reveal"><h3>Vinhos Portugueses · Rosés</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Mateus Rosé<span class="beb-meta">11%</span></div><div class="beb-dots"></div><div class="beb-price">11,90 €</div></div><div class="beb-desc">Leve, frutado e refrescante, com notas de frutos vermelhos e doçura equilibrada.</div><div class="beb-harm"><b>Harmoniza</b> · Brasiliana · Lusitana · Calabrese · Tropicale · Courgette</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Quinta da Boa Esperança Atlântico Rosé<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">29,90 €</div></div><div class="beb-desc">Seco e elegante, com perfil atlântico, fresco e mineral, com acidez viva.</div><div class="beb-harm"><b>Harmoniza</b> · Di Andria · Vívono · Courgette · Insalata Vívono · Tonno</div></div></div></div><div class="beb-block reveal"><h3>Vinhos Portugueses · Brancos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Muralha Vinho Verde<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">12,90 €</div></div><div class="beb-desc">Leve, cítrico e com efervescência natural, frescor imediato e final limpo.</div><div class="beb-harm"><b>Harmoniza</b> · Margherita · Courgette · Marinara · Tonno · Insalata Vívono</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Soalheiro Alvarinho<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">25,90 €</div></div><div class="beb-desc">Mineral, cítrico e gastronómico, com acidez viva, corpo elegante e final longo.</div><div class="beb-harm"><b>Harmoniza</b> · Di Andria · Courgette · Tonno · Puttanesca · Insalata Vívono</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Dona Fátima<span class="beb-meta">13%</span></div><div class="beb-dots"></div><div class="beb-price">37,90 €</div></div><div class="beb-desc">Tropical, estruturado e com textura surpreendente, branco de carácter próprio.</div><div class="beb-harm"><b>Harmoniza</b> · Tropicale · Parma Grana · Courgette · Vívono · Insalata Vívono</div></div></div></div><div class="beb-block reveal"><h3>Vinhos Italianos · Espumantes</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Bolla Prosecco Millesimato DOCG<span class="beb-meta">11%</span></div><div class="beb-dots"></div><div class="beb-price">28,90 €</div></div><div class="beb-desc">Elegante e refinado, notas de maçã verde e pera, bolha fina e frescor vibrante.</div><div class="beb-harm"><b>Harmoniza</b> · Parma Grana · Di Andria · Vívono · Emiliana · Insalata Vívono</div></div></div></div><div class="beb-block reveal"><h3>Vinhos Italianos · Brancos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Donnafugata Anthilia DOC<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">26,90 €</div></div><div class="beb-desc">Aromático e fresco, com notas cítricas e tropicais, acidez equilibrada.</div><div class="beb-harm"><b>Harmoniza</b> · Courgette · Tropicale · Tonno · Puttanesca · Di Andria</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Allegrini Lugana DOC<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">36,90 €</div></div><div class="beb-desc">Elegante e equilibrado, frutas brancas, florais e leve toque de amêndoa.</div><div class="beb-harm"><b>Harmoniza</b> · Di Andria · Parma Grana · Courgette · Vívono · Insalata Vívono</div></div></div></div><div class="beb-block reveal"><h3>Vinhos Italianos · Tintos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Cecchi Chianti DOCG<span class="beb-meta">13%</span></div><div class="beb-dots"></div><div class="beb-price">18,90 €</div></div><div class="beb-desc">Clássico e equilibrado, frutos vermelhos, especiarias e acidez marcante.</div><div class="beb-harm"><b>Harmoniza</b> · Margherita · Prosciutto e Funghi · Pepperoni · Fiambre · Diavola</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Valpolicella Classico DOC<span class="beb-meta">12,5%</span></div><div class="beb-dots"></div><div class="beb-price">29,90 €</div></div><div class="beb-desc">Leve e elegante, notas de cereja fresca e frutos vermelhos, final delicado.</div><div class="beb-harm"><b>Harmoniza</b> · Margherita · Vívono · Courgette · Prosciutto e Funghi · Marinara</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Chianti Rufina Riserva DOCG<span class="beb-meta">13%</span></div><div class="beb-dots"></div><div class="beb-price">35,90 €</div></div><div class="beb-desc">Estruturado e clássico, frutos maduros, especiarias e madeira integrada.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Parma Grana · Calabrese · Emiliana · Diavola</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Passato Organic Barolo DOCG<span class="beb-meta">14,5%</span></div><div class="beb-dots"></div><div class="beb-price">49,90 €</div></div><div class="beb-desc">Complexo e poderoso, fruta madura, cereja silvestre e especiarias, taninos sedosos.</div><div class="beb-harm"><b>Harmoniza</b> · Piemontese · Parma Grana · Vívono · Emiliana · Quattro Formaggi</div></div></div></div><div class="beb-block reveal"><h3>Cocktails</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Gin Tónica</div><div class="beb-dots"></div><div class="beb-price">9,90 €</div></div><div class="beb-desc">Gin, tónica e limão-siciliano, com um toque de pimenta rosa.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Aperol Spritz</div><div class="beb-dots"></div><div class="beb-price">8,90 €</div></div><div class="beb-desc">Aperol, Prosecco, um toque de água com gás e rodelas de laranja.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Amalfi Spritz</div><div class="beb-dots"></div><div class="beb-price">8,90 €</div></div><div class="beb-desc">Limoncello, Prosecco e um toque de água com gás. O sul de Itália numa taça.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Caipirinha</div><div class="beb-dots"></div><div class="beb-price">7,90 €</div></div><div class="beb-desc">Cachaça Pirassununga, limão e açúcar. A clássica brasileira servida com frescor.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Ginovese Spritz</div><div class="beb-dots"></div><div class="beb-price">7,90 €</div></div><div class="beb-desc">Gin, manjericão fresco, açúcar e limão. Fresco, vibrante e aromático.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Bellini</div><div class="beb-dots"></div><div class="beb-price">7,90 €</div></div><div class="beb-desc">Prosecco e sumo de pêssego. Suave e elegante, nascido no Harry&#x27;s Bar de Veneza.</div></div></div></div><div class="beb-block reveal"><h3>Sangrias</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Sangria Tinta<span class="beb-meta">165cl</span></div><div class="beb-dots"></div><div class="beb-price">19,90 €</div></div><div class="beb-desc">Vinho tinto, frutas da estação e especiarias suaves. Equilíbrio entre frescor, doçura e intensidade.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Sangria Branca<span class="beb-meta">165cl</span></div><div class="beb-dots"></div><div class="beb-price">19,90 €</div></div><div class="beb-desc">Vinho branco, frutas frescas e um toque cítrico. Leve, frutada e ideal para partilhar.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Sangria de Frutos Vermelhos<span class="beb-meta">165cl</span></div><div class="beb-dots"></div><div class="beb-price">22,90 €</div></div><div class="beb-desc">Espumante, frutos vermelhos e um toque de hortelã e canela. Vibrante e frutada.</div></div></div></div><div class="beb-block reveal"><h3>Espirituosas</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Whisky Jameson Black Barrel</div><div class="beb-dots"></div><div class="beb-price">6,70 €</div></div><div class="beb-desc">Duplo envelhecimento em barris de bourbon e sherry: caramelo, baunilha e suavidade.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Tanqueray Gin</div><div class="beb-dots"></div><div class="beb-price">6,90 €</div></div><div class="beb-desc">Destilado quatro vezes com zimbro, coentro, angélica e alcaçuz.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Vodka Smirnoff</div><div class="beb-dots"></div><div class="beb-price">4,90 €</div></div><div class="beb-desc">Filtrada em carvão vegetal para uma pureza que a tornou a vodka mais vendida do mundo.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Aguardente Velha CR&amp;F Reserva</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Destilada em alambique de cobre e envelhecida em madeira portuguesa.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Cachaça 51 Pirassununga</div><div class="beb-dots"></div><div class="beb-price">4,90 €</div></div><div class="beb-desc">De Pirassununga, São Paulo, destilada da cana fresca com carácter inconfundível.</div></div></div></div><div class="beb-block reveal"><h3>Aperitivos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Aperol</div><div class="beb-dots"></div><div class="beb-price">4,90 €</div></div><div class="beb-desc">Amargo, alaranjado e leve, feito de laranja, ruibarbo e genciana.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Campari Bitter</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Vermelho intenso, amargo e misterioso, com mais de 60 ingredientes. O estilo milanês.</div></div></div></div><div class="beb-block reveal"><h3>Digestivos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Disaronno Amaretto Originale</div><div class="beb-dots"></div><div class="beb-price">4,90 €</div></div><div class="beb-desc">Feito de essência de damasco, o amaretto mais famoso do mundo.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Limoncello del Mediterraneo</div><div class="beb-dots"></div><div class="beb-price">4,90 €</div></div><div class="beb-desc">Da Costa Amalfitana, servido bem gelado. O digestivo obrigatório do sul de Itália.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Amaro Montenegro</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">De Bolonha, com 40 ervas e botânicos. O ritual digestivo italiano por excelência.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Licor Beirão</div><div class="beb-dots"></div><div class="beb-price">3,90 €</div></div><div class="beb-desc">Da Lousã, com plantas aromáticas mediterrânicas e orientais. O licor mais português.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Baileys Irish Cream</div><div class="beb-dots"></div><div class="beb-price">5,50 €</div></div><div class="beb-desc">De Dublin, o primeiro licor a estabilizar creme de leite com álcool.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Alambre Moscatel de Setúbal</div><div class="beb-dots"></div><div class="beb-price">2,90 €</div></div><div class="beb-desc">Vinho generoso, doce e aromático, uma das joias licorosas de Portugal.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Ginja</div><div class="beb-dots"></div><div class="beb-price">2,70 €</div></div><div class="beb-desc">De Lisboa e Óbidos, fruto silvestre macerado em aguardente e açúcar.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Vinho do Porto<span class="beb-meta">Tawny / Ruby</span></div><div class="beb-dots"></div><div class="beb-price">3,90 €</div></div><div class="beb-desc">Do Douro, fortificado para preservar a doçura natural. O vinho português mais famoso do mundo.</div></div></div></div><div class="beb-block reveal"><h3>Taças de Vinho</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Tinto<span class="beb-meta">15cl</span></div><div class="beb-dots"></div><div class="beb-price">3,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Branco<span class="beb-meta">15cl</span></div><div class="beb-dots"></div><div class="beb-price">3,90 €</div></div></div></div></div><div class="beb-block reveal"><h3>Refrigerantes &amp; Águas</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Coca-Cola<span class="beb-meta">35cl</span></div><div class="beb-dots"></div><div class="beb-price">2,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Coca-Cola Zero<span class="beb-meta">35cl</span></div><div class="beb-dots"></div><div class="beb-price">2,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Guaraná do Brasil<span class="beb-meta">33cl</span></div><div class="beb-dots"></div><div class="beb-price">3,20 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">7UP<span class="beb-meta">33cl</span></div><div class="beb-dots"></div><div class="beb-price">2,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Ice Tea Pêssego<span class="beb-meta">30cl</span></div><div class="beb-dots"></div><div class="beb-price">2,50 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Ice Tea Limão<span class="beb-meta">30cl</span></div><div class="beb-dots"></div><div class="beb-price">2,50 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Água Tónica<span class="beb-meta">30cl</span></div><div class="beb-dots"></div><div class="beb-price">2,60 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Pedras<span class="beb-meta">25cl</span></div><div class="beb-dots"></div><div class="beb-price">1,60 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Pedras<span class="beb-meta">75cl</span></div><div class="beb-dots"></div><div class="beb-price">3,60 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Água Purificada<span class="beb-meta">50cl</span></div><div class="beb-dots"></div><div class="beb-price">1,30 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Água Purificada<span class="beb-meta">70cl</span></div><div class="beb-dots"></div><div class="beb-price">1,90 €</div></div></div></div></div><div class="beb-block reveal"><h3>Sumos Frescos</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Laranja<span class="beb-meta">Natural</span></div><div class="beb-dots"></div><div class="beb-price">3,50 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Limonada<span class="beb-meta">Natural</span></div><div class="beb-dots"></div><div class="beb-price">2,90 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Limão com Maracujá<span class="beb-meta">Polpa</span></div><div class="beb-dots"></div><div class="beb-price">3,90 €</div></div></div></div></div><div class="beb-block reveal"><h3>Sodas Italianas</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Fragola</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Xarope de morango, água com gás e gelo, com um toque de lima.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Limone</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Xarope de lima, água com gás e gelo, com rodela de limão.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Melograno</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Xarope de romã, água com gás e gelo, com um toque de lima e hortelã.</div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Pesca</div><div class="beb-dots"></div><div class="beb-price">5,90 €</div></div><div class="beb-desc">Xarope de pêssego, água com gás e gelo. A versão sem álcool do Bellini.</div></div></div></div><div class="beb-block reveal"><h3>Café</h3><div class="beb-rule"></div><div class="beb-grid"><div class="beb-item"><div class="beb-top"><div class="beb-name">Espresso</div><div class="beb-dots"></div><div class="beb-price">1,20 €</div></div></div><div class="beb-item"><div class="beb-top"><div class="beb-name">Abatanado</div><div class="beb-dots"></div><div class="beb-price">1,30 €</div></div></div></div></div>
+<p style="text-align:center;margin-top:10px;font-size:13px;color:var(--muted)">A nossa equipa tem todo o gosto em ajudar a escolher a vossa.</p>
+</div></section>
+</div>
+
+<!-- ===== EXPERIENCIAS ===== -->
+<div class="page" id="page-experiencias">
+<section class="exp" style="padding-top:160px"><div class="wrap">
+<div class="reveal"><div class="eyebrow">Programas da Casa</div><h2 class="sec-title">Experiências</h2><p class="sec-sub">Ativações próprias que reforçam o nosso posicionamento, sempre adicionando valor, nunca descontando.</p></div>
+<div class="exp-grid">
+<div class="exp-card reveal"><svg class="ec-icon" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 8h14l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.3H7.7a1.5 1.5 0 0 1-1.5-1.3L5 8z"/><path d="M9 8V6.2a3 3 0 0 1 6 0V8" stroke-linecap="round"/><path d="M10 12.4h4" stroke-linecap="round" opacity=".55"/></svg><h3>Take Away 2 + 1</h3><p>De terça a quinta, leve a experiência Vívono a casa: na compra de duas pizzas da Seleção Vívono ou das Brasileiras, a terceira é por nossa conta. Apenas em take away.</p><span class="ec-tag">Terça a quinta · Só take away · A 3ª por nossa conta</span></div>
+<div class="exp-card reveal"><svg class="ec-icon" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><h3>Quarta a Due</h3><p>A experiência completa para dois, todas as quartas-feiras: entrada para partilhar, duas pizzas e sobremesa para partilhar, com a garrafa de vinho por nossa conta. Vinho selecionado por nós, mesa à luz de vela, ambiente intimista.</p><span class="ec-tag">44,90 € · Vinho por nossa conta</span></div>
+<div class="exp-card reveal"><svg class="ec-icon" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M7 8h8v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z"/><path d="M15 10h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2"/><path d="M9 8V5a2 2 0 0 1 4 0v3" stroke-linecap="round"/><path d="M9.5 12v5M12.5 12v5" stroke-linecap="round" opacity=".5"/></svg><h3>Imperial em Dobro</h3><p>De terça a quinta, a sua imperial vem acompanhada: a segunda é por nossa conta. Um brinde a dois, para acompanhar a pizza no forno a lenha.</p><span class="ec-tag">Terça a quinta · A segunda por nossa conta</span></div>
+<div class="exp-card reveal"><svg class="ec-icon" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M5 4h14l-7 8z"/><path d="M12 12v7M8 21h8" stroke-linecap="round"/><circle cx="17" cy="6" r="1.2" fill="var(--gold)" stroke="none"/></svg><h3>Cocktails em Dobro</h3><p>Às quintas, o seu cocktail vem a par: o segundo é por nossa conta. Do Aperol ao Amalfi, o sul de Itália numa taça, para brindar a dois.</p><span class="ec-tag">Quintas · O segundo por nossa conta</span></div>
+<div class="exp-card reveal"><svg class="ec-icon" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><h3>Música ao Vivo</h3><p>Noites pontuais com música ao vivo, elevando o jantar a evento e reforçando a atmosfera da casa. Acompanhe as datas no nosso Instagram.</p><span class="ec-tag">Noites selecionadas</span></div>
+</div>
+<div style="text-align:center;margin-top:50px" class="reveal"><a href="https://app.dextdigital.com.br/r/vivono" target="_blank" rel="noopener" class="btn btn-rosso">Reservar a Vossa Noite</a></div>
+</div></section>
+</div>
+
+<!-- ===== RESERVAS ===== -->
+<div class="page" id="page-reservas">
+<section class="res-hero"><div class="wrap"><h1>Reserve a Vossa Noite</h1><p>Estamos no centro de Mafra, com fácil acesso e estacionamento na zona. Será um prazer recebê-los.</p><a class="btn btn-primary" id="heroReservar">Reservar</a></div></section>
+<section class="res-widget"><div class="wrap">
+<div class="reveal"><div class="eyebrow">Reserva Online</div></div>
+<div class="res-widget-card reveal"><div id="dext-reservas"></div></div>
+</div></section>
+<section class="contacto"><div class="wrap"><div class="cont-grid">
+<div class="cont-cards reveal">
+<div class="cont-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Telefone</h4><p>+351 911 868 823</p><div class="tel-actions"><a href="tel:+351911868823">Ligar</a><a href="https://wa.me/351911868823" target="_blank" rel="noopener">WhatsApp</a></div></div></div>
+<div class="cont-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p><a href="mailto:adm@vivono.pt">adm@vivono.pt</a></p></div></div>
+<div class="cont-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Morada</h4><p>R. José Silvestre 12<br>2640-497 Mafra, Portugal</p></div></div>
+<div class="cont-card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h4>Horário</h4><p>Ter–Qui: 19:00–22:30<br>Sex: 19:00–23:30<br>Sáb: 12:00–15:00 · 19:00–23:30<br>Dom: 12:00–15:00 · 19:00–23:00<br>Seg: encerrado</p></div></div>
+</div>
+<div class="map-wrap reveal"><iframe src="https://www.google.com/maps?q=R.+Jos%C3%A9+Silvestre+12,+2640-497+Mafra,+Portugal&output=embed" loading="lazy" title="Mapa Vívono"></iframe></div>
+</div></div></section>
+<section class="res-cta-band"><div class="wrap reveal"><h2>Salão · Delivery · Take-away</h2><p>A mesma dedicação, seja qual for o momento.</p><a href="https://wa.me/351911868823?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20a%20experi%C3%AAncia%20V%C3%ADvono." target="_blank" rel="noopener" class="btn btn-primary">Faça sua encomenda</a></div></section>
+</div>
+
+<footer><div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand"><img src="assets/img/monograma-creme.png" class="fl" alt="Vívono" style="width:auto;height:74px;margin-bottom:18px"><p>Pizza napolitana contemporânea, de longa fermentação, assada em forno a lenha, em Mafra.</p><p class="foot-tag">Arte. Origine. Passione.</p></div>
+<div class="foot-col"><h4>Navegação</h4><ul><li><a data-go="home">Início</a></li><li><a data-go="historia">História</a></li><li><a data-go="menu">Menu</a></li><li><a data-go="bebidas">Bebidas</a></li><li><a data-go="experiencias">Experiências</a></li></ul></div>
+<div class="foot-col"><h4>Contacto</h4><ul><li><a href="tel:+351911868823">+351 911 868 823</a></li><li><a href="mailto:adm@vivono.pt">adm@vivono.pt</a></li><li><a href="https://app.dextdigital.com.br/r/vivono" target="_blank" rel="noopener">Reservar</a></li></ul>
+<div class="foot-social"><a href="https://instagram.com/vivonopizzeria" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://wa.me/351911868823" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.7 11a4.9 4.9 0 0 0 1 2.6 11.3 11.3 0 0 0 4.3 3.8c.6.3 1.1.4 1.5.5a3.6 3.6 0 0 0 1.6.1c.5-.1 1.4-.6 1.6-1.1a2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3z"/></svg></a></div>
+</div></div>
+<div class="foot-dext"><span>Site por</span><svg class="dext-mark" viewBox="0 0 597.3 156" role="img" aria-label="Dext" xmlns="http://www.w3.org/2000/svg"><g fill="#E9E0D7"><path d="M364,131.9c-31.9,0-55-22.4-55-53.3s23.1-53.2,55-53.2,54.5,22.5,54.8,53.5c0,1.6-.1,3.4-.4,5h-89.3c-.5,0-.9.2-1.3.6-.3.4-.5.9-.4,1.3,3,18.7,17.7,31.3,36.7,31.3s28.4-9.1,33.3-22.2h19c-6.6,21.9-27.9,37-52.5,37ZM364.2,40.2c-17.8,0-31.9,11-36,28-.1.5,0,1,.3,1.4.3.4.8.6,1.3.6h69.5c.5,0,1-.2,1.3-.6.3-.4.4-.9.3-1.4-3.9-16.7-18.6-28-36.7-28Z"/><path d="M505.7,130l-24.7-31.8c-2-2.6-5-4-8.2-4s-6.2,1.5-8.2,4l-24.5,31.7h-21.4l39.7-50.5c.5-.6.5-1.4,0-2l-39-50.1h21.2l24,30.9c2,2.6,5,4,8.2,4s6.2-1.5,8.2-4l24-30.9h21.4l-39,49.9c-.5.6-.5,1.4,0,2l39.5,50.7h-21.2Z"/><path d="M564.1,130c-5.3,0-9.6-4.3-9.6-9.6V44.2c0-.9-.7-1.6-1.6-1.6h-17.9v-15.2h17.9c.9,0,1.6-.7,1.6-1.6V0h18.9v12.9l-11.6,11.6c-.5.5-.6,1.2-.4,1.8.3.6.9,1,1.5,1h34.3v15.2h-22.3c-.9,0-1.6.7-1.6,1.6v65.2c0,.9.7,1.6,1.6,1.6h22.3v18.9h-33.2Z"/><path d="M186.1,130V27.3h62.1c10.8,0,21.1,3.3,29.9,9.6,4.6,3.3,8.5,7.3,11.8,11.8,6.3,8.7,9.6,19.1,9.6,29.9s-3.3,21.1-9.6,29.9c-3.3,4.6-7.3,8.5-11.8,11.8-8.7,6.3-19.1,9.6-29.9,9.6h-62.1ZM206.5,43.3c-.9,0-1.6.7-1.6,1.6v67.3c0,.9.7,1.6,1.6,1.6h41.7c17.3,0,32.5-16.5,32.5-35.3s-15.2-35.3-32.5-35.3h-41.7Z"/></g><g fill="#9a9a9a"><path d="M148.4,79.3c0,7.7-1,15.1-3.1,22.2-7.5,25.8-28,46-53.9,53.2,0,0,0,0,0,0-.4.1-.8.2-1.1.3,0,0,0,0,0,0-1.2.3-2.4.4-3.6.4-8.7,0-15.8-6.9-16.1-15.6v-49.3c0-6-4.9-10.9-10.9-10.9H19.2c-8.3,0-15-6.7-15-15V16.9C4.2,8.6,10.9,1.9,19.2,1.9h50.7c42.9,0,78.2,34.5,78.4,77.4Z"/><path d="M48.7,104.5v42.8c0,2.6-3.2,4-5,2.1L.9,106.6c-1.9-1.9-.5-5,2.1-5h42.8c1.6,0,3,1.3,3,3Z"/></g></svg></div>
+<div class="foot-bottom">© 2026 Vívono Pizzeria · R. José Silvestre 12, Mafra · Pizzaria napolitana · Forno a lenha · Arte. Origine. Passione.</div>
+</div></footer>
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" hidden>
+<p>Usamos cookies para entender como o site é utilizado e melhorar a sua experiência. Pode aceitar ou recusar.</p>
+<div class="cookie-actions"><button id="cookie-reject" class="btn-cookie ghost" type="button">Recusar</button><button id="cookie-accept" class="btn-cookie" type="button">Aceitar</button></div>
+</div>
+
+<script>
+const pages=['home','historia','menu','bebidas','experiencias','reservas'];
+// Widget de reservas Dext. Carregado só ao abrir a página de reservas: fora dela o
+// contentor está display:none e o widget não consegue medir a própria altura.
+var dextReady=false;
+function loadDextWidget(){
+  if(dextReady)return;dextReady=true;
+  window._dext={slug:'vivono',alvo:'dext-reservas',fundo:'#e9e0d7',botao:'#54272e'};
+  var e=document.createElement('script');e.src='https://app.dextdigital.com.br/embed.js';e.async=true;
+  document.body.appendChild(e);
+}
+// troca a página visível (sem mexer na URL)
+function render(p){
+  if(pages.indexOf(p)<0)p='home';
+  pages.forEach(x=>document.getElementById('page-'+x).classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  document.getElementById('navlinks').classList.remove('open');
+  var lightTop=['menu','bebidas','experiencias'];
+  var hdrEl=document.getElementById('hdr');
+  if(lightTop.indexOf(p)>-1){hdrEl.classList.add('lighttop');}
+  else{hdrEl.classList.remove('lighttop');}
+  hdrEl.classList.toggle('scrolled',window.scrollY>60);
+  if(p==='reservas')loadDextWidget();
+  if(window.gtag)gtag('event','page_view',{page_title:'Vívono · '+p,page_location:location.href,page_path:location.pathname+(location.hash||'')});
+  setTimeout(initReveal,60);
+}
+function routeFromHash(){return (location.hash||'').replace(/^#/,'')||'home';}
+// navegação: atualiza a URL; o render acontece via hashchange
+function go(p){
+  if(pages.indexOf(p)<0)p='home';
+  if(p==='home'){ if(location.hash){location.hash='';}else{render('home');} }
+  else{ if(routeFromHash()===p){render(p);}else{location.hash=p;} }
+}
+window.addEventListener('hashchange',function(){
+  if(location.hash===''||location.hash==='#'){history.replaceState('','',location.pathname+location.search);}
+  render(routeFromHash());
+});
+document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();go(el.dataset.go);}));
+render(routeFromHash()); // estado inicial a partir da URL (permite links diretos e F5)
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{if(!hdr.classList.contains('lighttop'))hdr.classList.toggle('scrolled',window.scrollY>60);});
+const burger=document.getElementById('burger'),nav=document.getElementById('navlinks');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+// Botão do hero de reservas: rola até ao widget. Não usa âncora #hash porque o hash é a rota das páginas.
+const heroResBtn=document.getElementById('heroReservar');
+if(heroResBtn)heroResBtn.addEventListener('click',()=>{
+  const semAnimacao=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelector('.res-widget').scrollIntoView({behavior:semAnimacao?'instant':'smooth',block:'start'});
+});
+// menu tabs
+const catTag=document.getElementById('catTag');
+function setTag(){const a=document.querySelector('.menu-cat.active');if(a&&catTag)catTag.textContent=a.dataset.tag;}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');
+  document.querySelectorAll('.menu-cat').forEach(c=>c.classList.remove('active'));
+  document.getElementById('mc-'+t.dataset.cat).classList.add('active');setTag();setTimeout(initReveal,40);
+}));
+setTag();
+// reveal
+let io;
+function initReveal(){
+  if(io)io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+  document.querySelectorAll('.page.active .reveal:not(.in)').forEach(el=>io.observe(el));
+}
+initReveal();
+// lightbox da galeria
+(function(){
+  const lb=document.getElementById('lightbox');if(!lb)return;
+  const lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount');
+  const items=Array.from(document.querySelectorAll('#page-home .gal-item'));
+  const slides=items.map(it=>{const img=it.querySelector('img'),cap=it.querySelector('.cap span');return{src:img.getAttribute('src'),alt:img.getAttribute('alt')||'',cap:cap?cap.textContent:''};});
+  let idx=0;
+  function show(i){idx=(i+slides.length)%slides.length;const s=slides[idx];lbImg.src=s.src;lbImg.alt=s.alt;lbCap.textContent=s.cap;lbCount.textContent=(idx+1)+' / '+slides.length;}
+  function open(i){show(i);lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  items.forEach((it,i)=>it.addEventListener('click',()=>open(i)));
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();show(idx-1);});
+  document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();show(idx+1);});
+  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(idx-1);else if(e.key==='ArrowRight')show(idx+1);});
+})();
+// avaliações do Google (sincronização via api/reviews.php; fallback = estáticos)
+(function(){
+  var grid=document.getElementById('revGrid');
+  if(!grid)return;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];});}
+  function stars(n){n=Math.max(0,Math.min(5,Math.round(n||5)));return '★★★★★'.slice(0,n)+'☆☆☆☆☆'.slice(0,5-n);}
+  function apply(d){
+    if(!d||d.ok===false||!d.reviews||!d.reviews.length)return false;
+    if(d.rating){var b=document.getElementById('avalBig');if(b)b.textContent=String(d.rating).replace('.',',');
+      var st=document.getElementById('avalStars');if(st)st.textContent=stars(d.rating);}
+    if(d.total){var c=document.getElementById('avalCount');if(c)c.textContent=d.total+' avaliações no Google';}
+    if(d.googleUrl){var a=document.getElementById('avalAll');if(a)a.href=d.googleUrl;}
+    grid.innerHTML=d.reviews.slice(0,6).map(function(rv){
+      var txt=(rv.text||'').trim();if(txt.length>230)txt=txt.slice(0,227).trim()+'…';
+      var src=(rv.when?esc(rv.when)+' · ':'')+'Google';
+      return '<div class="review reveal in"><div class="stars">'+stars(rv.rating)+'</div>'+
+        '<p>“'+esc(txt)+'”</p><div class="rev-meta">'+
+        '<span class="name">'+esc(rv.author||'Cliente Google')+'</span><span class="src">'+src+'</span></div></div>';
+    }).join('');
+    setTimeout(initReveal,40);
+    return true;
+  }
+  window.__vivonoApplyReviews=apply; // usado só para teste local
+  fetch('api/reviews.php',{cache:'no-store'}).then(function(r){return r.json();}).then(apply).catch(function(){});
+})();
+// Banner de consentimento de cookies (RGPD). Mostra na 1ª visita; guarda a escolha.
+(function(){
+  var b=document.getElementById('cookie-banner'); if(!b)return;
+  var choice=null; try{choice=localStorage.getItem('vivono_cookies');}catch(e){}
+  if(choice!=='accepted'&&choice!=='rejected') b.hidden=false;
+  function decide(v){
+    try{localStorage.setItem('vivono_cookies',v);}catch(e){}
+    if(v==='accepted'&&window.gtag){gtag('consent','update',{'analytics_storage':'granted'});
+      gtag('event','page_view',{page_title:document.title,page_location:location.href,page_path:location.pathname+(location.hash||'')});}
+    b.hidden=true;
+  }
+  var a=document.getElementById('cookie-accept'),r=document.getElementById('cookie-reject');
+  if(a)a.addEventListener('click',function(){decide('accepted');});
+  if(r)r.addEventListener('click',function(){decide('rejected');});
+})();
+</script>
+</body></html>

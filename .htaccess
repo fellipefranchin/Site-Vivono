@@ -1,0 +1,54 @@
+# ===== Vívono Pizzeria — configuração de produção (Apache/LiteSpeed / Hostinger) =====
+
+# Charset padrão
+AddDefaultCharset UTF-8
+
+# ---- Compressão (gzip/deflate) ----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# ---- Cache do navegador ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Imagens e fontes: 1 ano (têm nome fixo; se trocar a imagem, troque o nome do ficheiro)
+  ExpiresByType image/jpeg   "access plus 1 year"
+  ExpiresByType image/png    "access plus 1 year"
+  ExpiresByType image/webp   "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  # HTML: sem cache "cega". O navegador revalida sempre -> alterações aparecem na hora.
+  # (Todo o CSS/JS está embutido no HTML, por isso o HTML precisa de estar sempre fresco.)
+  ExpiresByType text/html    "access plus 0 seconds"
+</IfModule>
+
+# ---- Cabeçalhos de segurança básicos ----
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # HTML e PHP sempre revalidados -> atualização na hora, sem cache preso.
+  # (Revalida com o servidor: se nada mudou, devolve 304 e continua rápido.)
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ---- Página de erro amigável ----
+ErrorDocument 404 /index.html
+
+# ---- Força HTTPS (domínio vivono.pt ativo) ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# ============================================================================
+# OPCIONAL — força domínio sem "www" (descomente só se quiser padronizar).
+# Use OU este bloco (sem www), OU o inverso — nunca os dois:
+#   RewriteCond %{HTTP_HOST} ^www\.vivono\.pt [NC]
+#   RewriteRule ^(.*)$ https://vivono.pt/$1 [R=301,L]
+# ============================================================================

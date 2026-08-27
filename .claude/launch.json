@@ -1,0 +1,39 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5500"
+      ],
+      "port": 5500
+    },
+    {
+      "name": "seleta",
+      "runtimeExecutable": "/opt/homebrew/bin/php",
+      "runtimeArgs": [
+        "-S",
+        "localhost:8010",
+        "-t",
+        "/Users/fellipefranchin/Library/Mobile Documents/com~apple~CloudDocs/fellipe/trabalho/dext/70 • CTO • Tecnologia/DEV • Desenvolvimento e Sistemas/sistema/dext • sistema de gestão/seleta/public",
+        "/Users/fellipefranchin/Library/Mobile Documents/com~apple~CloudDocs/fellipe/trabalho/dext/70 • CTO • Tecnologia/DEV • Desenvolvimento e Sistemas/sistema/dext • sistema de gestão/seleta/public/router.php"
+      ],
+      "port": 8010
+    },
+    {
+      "name": "dext-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5600",
+        "-d",
+        "/Users/fellipefranchin/Library/Mobile Documents/com~apple~CloudDocs/fellipe/trabalho/dext/70 • CTO • Tecnologia/DEV • Desenvolvimento e Sistemas/site"
+      ],
+      "port": 5600
+    }
+  ]
+}

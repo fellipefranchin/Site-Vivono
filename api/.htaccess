@@ -1,0 +1,10 @@
+# Sem listagem de diretório
+Options -Indexes
+
+# Bloquear acesso direto aos ficheiros de cache e config
+<FilesMatch "\.(json)$">
+  Require all denied
+</FilesMatch>
+<Files "config.php">
+  Require all denied
+</Files>

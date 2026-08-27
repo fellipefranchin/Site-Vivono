@@ -1,6 +1,8 @@
 config.php
 *-config.php
 *config*.php
+# ...mas mantém o modelo versionado (não tem segredos):
+!api/config.example.php
 .env
 .env.*
 credentials*

@@ -38,13 +38,11 @@ MAPA = [
     ("sodas e sumos", "sumo de laranja.heic", "Laranja"),
     ("sodas e sumos", "limonada.heic", "Limonada"),
 
-    ("refrigerantes", "coca normal.jpg", "Coca-Cola"),
+    # Os refrigerantes saíram: ver o comentario em gerar-bebidas.py
+
     ("refrigerantes", "coca zero.jpg", "Coca-Cola Zero"),
-    ("refrigerantes", "guaraná.jpg", "Guaraná do Brasil"),
     ("refrigerantes", "fuze tea pêssego.jpg", "Fuze Tea Pêssego"),
-    ("refrigerantes", "fuze tea limão.jpg", "Fuze Tea Limão"),
     ("refrigerantes", "pedras salgadas (garrafa pequena).jpg", "Pedras 25cl"),
-    ("refrigerantes", "pedras salgadas (garrafa grande).jpg", "Pedras 75cl"),
     ("refrigerantes", "pedras limão.jpg", "Pedras Limão"),
 ]
 

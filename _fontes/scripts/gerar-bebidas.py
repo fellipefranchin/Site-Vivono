@@ -323,7 +323,9 @@ META_EN = {
 COM_GARRAFA = {"ptred", "ptrose", "ptwhite", "itred", "itwhite", "itsp"}
 GARRAFAS = Path("/Users/fellipefranchin/dev/sites/vívono/assets/img/vinhos")
 # seccoes cujos itens levam foto quadrada, quando ela existe
-COM_FOTO = {"cocktails", "sangria", "soda", "juice", "soft"}
+# Os refrigerantes ficaram de fora a pedido dele: as fotos de lata e garrafa
+# sao fracas e tres itens da seccao nao tem foto, o que desalinhava a lista.
+COM_FOTO = {"cocktails", "sangria", "soda", "juice"}
 FOTOS_BEB = Path("/Users/fellipefranchin/dev/sites/vívono/assets/img/bebidas")
 
 

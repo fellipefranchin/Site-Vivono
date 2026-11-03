@@ -4,7 +4,7 @@
 As harmonizacoes da carta vem por prato; aqui sao invertidas para ficarem por
 vinho, que e como o site sempre as mostrou.
 """
-import re
+import re, unicodedata
 from pathlib import Path
 
 HTML = Path("/Users/fellipefranchin/dev/sites/vívono/index.html")
@@ -319,6 +319,19 @@ META_EN = {
  "33cl · garrafa": "33cl · bottle", "Natural": "Freshly squeezed",
 }
 
+# seccoes de vinho: cada item leva a foto da garrafa recortada
+COM_GARRAFA = {"ptred", "ptrose", "ptwhite", "itred", "itwhite", "itsp"}
+GARRAFAS = Path("/Users/fellipefranchin/dev/sites/vívono/assets/img/vinhos")
+# seccoes cujos itens levam foto quadrada, quando ela existe
+COM_FOTO = {"cocktails", "sangria", "soda", "juice", "soft"}
+FOTOS_BEB = Path("/Users/fellipefranchin/dev/sites/vívono/assets/img/bebidas")
+
+
+def slug(nome):
+    s = unicodedata.normalize("NFKD", nome).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
 en_dict = []
 
 
@@ -340,17 +353,36 @@ def item_html(sec, i, dados):
             en_dict.append(f"'{key}.m':'{esc(META_EN[meta])}'")
         else:
             meta_html = f'<span class="beb-meta">{meta}</span>'
-    out = (f'<div class="beb-item"><div class="beb-top"><div class="beb-name">{nome_html}'
-           f'{meta_html}</div><div class="beb-dots"></div><div class="beb-price">{preco}</div></div>')
+    garrafa = ""
+    if sec in COM_GARRAFA:
+        f = slug(nome)
+        if (GARRAFAS / f"{f}.png").exists():
+            garrafa = (f'<div class="beb-bottle"><img src="assets/img/vinhos/{f}.png" '
+                       f'alt="Garrafa de {nome}" loading="lazy" decoding="async"></div>')
+        else:
+            raise SystemExit(f"falta a foto da garrafa: {nome} ({f}.png)")
+    elif sec in COM_FOTO:
+        # o tamanho so entra no nome quando e preciso distinguir (Pedras 25cl / 75cl)
+        for cand in ([slug(f"{nome} {meta}")] if meta else []) + [slug(nome)]:
+            if (FOTOS_BEB / f"{cand}.jpg").exists():
+                garrafa = (f'<div class="beb-thumb"><img src="assets/img/bebidas/{cand}.jpg" '
+                           f'alt="{nome}" loading="lazy" decoding="async"></div>')
+                break
+
+    corpo = (f'<div class="beb-top"><div class="beb-name">{nome_html}'
+             f'{meta_html}</div><div class="beb-dots"></div><div class="beb-price">{preco}</div></div>')
     if desc:
-        out += f'<div class="beb-desc" data-i18n="{key}.d">{desc}</div>'
+        corpo += f'<div class="beb-desc" data-i18n="{key}.d">{desc}</div>'
         en_dict.append(f"'{key}.d':'{esc(desc_en)}'")
     if curto and curto in HPT:
         pt = " · ".join(HPT[curto][:MAX_HARM])
         en = " · ".join(HEN[curto][:MAX_HARM])
-        out += f'<div class="beb-harm" data-i18n="{key}.h"><b>Harmoniza</b> · {pt}</div>'
+        corpo += f'<div class="beb-harm" data-i18n="{key}.h"><b>Harmoniza</b> · {pt}</div>'
         en_dict.append(f"'{key}.h':'<b>Pairs with</b> · {esc(en)}'")
-    return out + "</div>"
+
+    if garrafa:
+        return f'<div class="beb-item beb-wine">{garrafa}<div class="beb-txt">{corpo}</div></div>'
+    return f'<div class="beb-item">{corpo}</div>'
 
 
 def main():
@@ -368,14 +400,25 @@ def main():
 
     linhas = HTML.read_text(encoding="utf-8").split("\n")
 
-    alvo = [i for i, l in enumerate(linhas) if l.startswith('<div class="beb-block reveal">')]
+    # a linha das bebidas pode comecar pelo bloco da Selecao Especial, que fica como esta
+    alvo = [i for i, l in enumerate(linhas) if '<div class="beb-block reveal">' in l]
     assert len(alvo) == 1, f"linha das bebidas: {len(alvo)} candidatas"
-    linhas[alvo[0]] = "".join(partes)
+    i = alvo[0]
+    prefixo = linhas[i][:linhas[i].index('<div class="beb-block reveal">')]
+    linhas[i] = prefixo + "".join(partes)
 
     # bloco EN: tudo entre 'b.eyebrow' e 'b.footnote', preservando as duas pontas
     ini = next(i for i, l in enumerate(linhas) if "'b.eyebrow'" in l)
     fim = next(i for i, l in enumerate(linhas) if "'b.footnote'" in l)
-    cabeca = [l for l in linhas[ini:fim] if "'b.eyebrow'" in l or "'b.hero'" in l]
+    # guardar as entradas que nao sao deste gerador (titulo, subtitulo, legenda do hero).
+    # Tem de ser entrada a entrada e nao linha a linha: uma linha pode misturar as duas coisas.
+    geradas = {re.match(r"'([^']+)'", e).group(1) for e in en_dict}
+    cabeca = []
+    for l in linhas[ini:fim]:
+        for entrada in re.findall(r"'[a-zA-Z0-9._]+':'(?:[^'\\]|\\.)*'", l):
+            chave = re.match(r"'([^']+)'", entrada).group(1)
+            if chave not in geradas:
+                cabeca.append("    " + entrada + ",")
     novas = []
     for j in range(0, len(en_dict), 3):
         novas.append("    " + ",".join(en_dict[j:j + 3]) + ",")

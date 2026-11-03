@@ -31,12 +31,14 @@ TRABALHOS = [
     # as caixas verdes antigas estao no canto superior esquerdo; corta-se por
     # baixo delas (y>=420), que assim saem de vez e o logotipo fica inteiro
     ("14.jpg", "galeria-15-mafra-tv.jpg",       900, 675, (100, 420, 768, 921)),
-    # Substituicoes de 2026-11-03: a pizza de mortadela saiu do menu
+    # Substituicoes de 2026-11-03: a pizza de mortadela saiu do menu.
+    # NOME NOVO DE PROPOSITO: as imagens sao servidas com cache de um ano,
+    # por isso trocar o conteudo no mesmo caminho nao chega a quem ja visitou.
     # A Vivono fica na seccao "O respeito ao tempo", no formato da que la estava
-    ("15.jpg", "massa-longa-fermentacao.jpg",   902, 1100, (0, 171, 1500, 2000)),
+    ("15.jpg", "massa-vivono.jpg",             902, 1100, (0, 171, 1500, 2000)),
     # As duas pizzas tomam o lugar da Vivono na galeria, para nao repetir.
     # Corte a esquerda do verde que aparece na borda direita do original.
-    ("16.jpg", "galeria-4-pizza-da-casa.jpg",   900, 675, (0, 300, 1240, 1230)),
+    ("16.jpg", "galeria-4-duas-pizzas.jpg",     900, 675, (0, 300, 1240, 1230)),
     # Como Chegar: quadradas, que as fachadas sao composicoes verticais
     ("8.jpg",  "chegar-fachada.jpg",            700, 700, 0.56),
     ("7.jpg",  "chegar-tabuleta.jpg",           700, 700, 0.08),

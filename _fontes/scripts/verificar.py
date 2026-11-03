@@ -25,13 +25,18 @@ ini = t.index("'menu.eyebrow'")
 bloco = t[t.rindex("{", 0, ini):]
 traduzidas = set(re.findall(r"'([a-zA-Z0-9._]+)':\s*'", bloco))
 sem_en = sorted(usadas - traduzidas)
-orfas = sorted(k for k in traduzidas - usadas if k.startswith(("m.", "b.", "menu.", "esc.")))
+# chaves que ninguem usa por data-i18n mas que nao sao lixo:
+# as do mapa ilustrado (traducao preparada, ainda por ligar) e o evento anterior
+TOLERADAS = {"chegar.m.front", "chegar.m.min", "chegar.m.s1", "chegar.m.s2",
+             "chegar.m.s3", "evs.lbl", "evs.p", "trackCustom"}
+orfas = sorted(traduzidas - usadas - TOLERADAS)
 print(f"chaves data-i18n: {len(usadas)} · sem traducao EN: {len(sem_en)} · EN orfas: {len(orfas)}")
 if sem_en:
     print("   SEM EN:", ", ".join(sem_en[:25]))
     erros.append(f"{len(sem_en)} chaves sem EN")
 if orfas:
     print("   ORFAS :", ", ".join(orfas[:25]))
+    erros.append(f"{len(orfas)} chaves EN orfas")
 
 # 3) imagens
 refs = sorted(set(re.findall(r'src="(assets/[^"]+)"', t)))
@@ -59,6 +64,22 @@ for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', t, re
         json.loads(b)
     except Exception as e:
         erros.append(f"JSON-LD invalido: {e}")
+# 6) o hasMenu do JSON-LD tem de listar os mesmos pratos que o HTML
+d = json.loads(re.findall(r'<script type="application/ld\+json">(.*?)</script>', t, re.S)[0])
+secs = d.get("hasMenu", {}).get("hasMenuSection", [])
+no_schema = {i["name"].replace(" Bambino", "") for s in secs for i in s.get("hasMenuItem", [])}
+no_html = {re.sub(r"<[^>]+>|\u25c6", "", m).strip()
+           for m in re.findall(r'<div class="dish-name">(.*?)</div>', t)}
+no_html = {re.sub(r"[\d,]+$", "", n).strip() for n in no_html}
+so_schema, so_html = sorted(no_schema - no_html), sorted(no_html - no_schema)
+print(f"JSON-LD hasMenu: {len(no_schema)} pratos · so no schema: {len(so_schema)} · so no HTML: {len(so_html)}")
+if so_schema:
+    print("   SO NO SCHEMA (pratos que ja sairam):", ", ".join(so_schema))
+    erros.append(f"{len(so_schema)} pratos a mais no JSON-LD")
+if so_html:
+    print("   SO NO HTML (faltam no schema):", ", ".join(so_html))
+    erros.append(f"{len(so_html)} pratos em falta no JSON-LD")
+
 print("JSON-LD: ok" if not any("JSON-LD" in e for e in erros) else "JSON-LD: ERRO")
 
 print()

@@ -36,7 +36,6 @@
 <meta name="twitter:title" content="Vívono Pizzeria · Arte. Origine. Passione.">
 <meta name="twitter:description" content="Pizza napolitana contemporânea, de longa fermentação e forno a lenha, em Mafra.">
 <meta name="twitter:image" content="https://vivono.pt/og-image.jpg">
-
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -148,7 +147,6 @@ section{padding:100px 0}
 .dish-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
 .dish-ph{margin:-26px -28px 18px;aspect-ratio:840/525;overflow:hidden;background:rgba(84,39,46,.08)}.dish-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}.dish:hover .dish-ph img{transform:scale(1.045)}@media(prefers-reduced-motion:reduce){.dish-ph img{transition:none}.dish:hover .dish-ph img{transform:none}}.menu-note{max-width:1040px;margin:0 auto 30px;background:rgba(233,224,215,.06);border:1px solid rgba(168,121,74,.3);border-left:3px solid var(--gold);border-radius:6px;padding:20px 24px}.menu-note h4{font-family:'Playfair Display',serif;font-size:18px;color:var(--crema);margin-bottom:7px}.menu-note p{font-size:13.5px;color:rgba(233,224,215,.72);line-height:1.6;font-weight:300}
 .dish-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--rosso);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-
 .allg-table{margin-top:46px;background:linear-gradient(165deg,rgba(31,49,37,.06),rgba(84,39,46,.05));border:1px solid rgba(84,39,46,.14);border-radius:10px;padding:32px 30px}
 .allg-head{text-align:center;max-width:640px;margin:0 auto 22px}
 .allg-head h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--crema);margin-bottom:10px}
@@ -380,7 +378,6 @@ footer .wrap{position:relative;z-index:1}
  .alma .three{gap:30px}
 }
 @media(max-width:480px){.hero-cta{flex-direction:column}.btn{width:100%}.gal-grid{grid-template-columns:1fr}}
-
 .gal-item{cursor:pointer}
 .lightbox{position:fixed;inset:0;z-index:1000;background:rgba(20,12,10,.94);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
 .lightbox.open{display:flex;opacity:1}
@@ -394,7 +391,6 @@ footer .wrap{position:relative;z-index:1}
 .lb-prev{left:24px}.lb-next{right:24px}
 .lb-count{position:absolute;top:30px;left:30px;color:rgba(233,224,215,.6);font-size:13px;letter-spacing:.1em}
 @media(max-width:600px){.lb-nav{width:44px;height:44px;font-size:24px}.lb-prev{left:10px}.lb-next{right:10px}.lb-close{top:14px;right:14px}.lb-cap{font-size:16px;bottom:24px;padding:0 20px}}
-
 </style>
 <script type="application/ld+json">
 {
@@ -407,7 +403,11 @@ footer .wrap{position:relative;z-index:1}
   "email": "adm@vivono.pt",
   "image": "https://vivono.pt/og-image.jpg",
   "logo": "https://vivono.pt/assets/img/logo-vivono-escuro.png",
-  "servesCuisine": ["Pizza", "Italiana", "Napolitana"],
+  "servesCuisine": [
+    "Pizza",
+    "Italiana",
+    "Napolitana"
+  ],
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "acceptsReservations": "https://app.dextdigital.com.br/r/vivono",
@@ -419,74 +419,424 @@ footer .wrap{position:relative;z-index:1}
     "hasMenuSection": [
       {
         "@type": "MenuSection",
+        "name": "Pasta",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Lasagna al Ragù",
+            "description": "Sete camadas de massa fresca e seis de ragù de carne cozinhado lentamente, molho de tomate e Grana Padano gratinado no forno.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Gnocchi al Pomodoro",
+            "description": "Gnocchi de batata feitos na casa, molho de tomate e Grana Padano.",
+            "offers": {
+              "@type": "Offer",
+              "price": "12.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Gnocchi ai Quattro Formaggi",
+            "description": "Gnocchi de batata feitos na casa, num molho de nata fresca com Gorgonzola, Grana Padano, queijo tipo catupiry e Feta.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.90",
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
         "name": "Entradas",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Azeitonas Marinadas", "description": "Azeitonas verdes marinadas em azeite, vegetais, ervas mediterrânicas e um toque cítrico.", "offers": {"@type": "Offer", "price": "1.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Queijo Curado", "description": "Fatias de queijo português curado, servidas à temperatura ideal.", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Pão de Alho", "description": "Pão artesanal servido com pasta de ricotta, alho confitado e Mozzarella Fior di Latte.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Crostini", "description": "Crostini com alecrim, servido com creme de pesto de pistache, creme de pesto rosso e caponata.", "offers": {"@type": "Offer", "price": "9.40", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Di Andria", "description": "Burrata assada com tomate cereja e manjericão, servida com crostini artesanal.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Insalata Vívono", "description": "Mix de folhas, grão-de-bico, pimento, beringela e courgette assados, cebola roxa, tomate cherry, azeitonas e lascas de Grana Padano, finalizada com azeite extravirgem e vinagre balsâmico.", "offers": {"@type": "Offer", "price": "9.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Insalata Caprese", "description": "Tomate fresco, mozzarella de búfala, pesto de manjericão, azeite, flor de sal e pimenta preta.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Azeitonas Marinadas",
+            "description": "Azeitonas verdes marinadas em azeite, vegetais, ervas mediterrânicas e um toque cítrico.",
+            "offers": {
+              "@type": "Offer",
+              "price": "1.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Queijo Curado",
+            "description": "Fatias de queijo português curado.",
+            "offers": {
+              "@type": "Offer",
+              "price": "4.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Pão de Alho",
+            "description": "Pão artesanal servido com pasta de ricotta, alho confitado e Mozzarella Fior di Latte.",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Crostini",
+            "description": "Crostini com alecrim, servidos com pesto de pistache, pesto rosso e caponata.",
+            "offers": {
+              "@type": "Offer",
+              "price": "9.40",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Di Andria",
+            "description": "Burrata assada com tomate cherry e manjericão, servida com crostini artesanal.",
+            "offers": {
+              "@type": "Offer",
+              "price": "11.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Insalata Vívono",
+            "description": "Mix de folhas, grão-de-bico, pimento, beringela e courgette assados, cebola roxa, tomate cherry, azeitonas e lascas de Grana Padano, finalizada com azeite extravirgem e vinagre balsâmico.",
+            "offers": {
+              "@type": "Offer",
+              "price": "9.90",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "As Brasileiras",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Brasiliana", "description": "Molho San Marzano, Mozzarella Fior di Latte, frango desfiado e queijo tipo catupiry, finalizada com orégano e azeite extravirgem.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Calabrese", "description": "Molho San Marzano, Mozzarella Fior di Latte, calabresa brasileira e cebola.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Lusitana", "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, cebola, ovo e azeitonas verdes.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Brasiliana",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, frango desfiado e queijo tipo catupiry, finalizada com orégano e azeite extravirgem.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Brasiliana Più",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, frango desfiado, queijo tipo catupiry e bacon, finalizada com orégano e azeite extravirgem.",
+            "offers": {
+              "@type": "Offer",
+              "price": "15.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Calabrese",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, calabresa brasileira e cebola.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Paulistana",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, calabresa brasileira, cebola e queijo tipo catupiry.",
+            "offers": {
+              "@type": "Offer",
+              "price": "15.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Lusitana",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, cebola, ovo e azeitonas.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Mineira",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, bacon, ovo cozido e orégano.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.90",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "Seleção Vívono",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Vívono", "description": "Molho San Marzano, stracciatella, pesto de pistache artesanal, tomate-cereja e folhas de manjericão.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Parma Grana", "description": "Molho San Marzano, Mozzarella Fior di Latte, Prosciutto Crudo, Grana Padano, geleia de figo e rúcula.", "offers": {"@type": "Offer", "price": "16.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Emiliana", "description": "Mozzarella Fior di Latte, mortadela com pistache, stracciatella, pistache torrado, pesto de pistache artesanal e folhas de manjericão.", "offers": {"@type": "Offer", "price": "16.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Prosciutto e Funghi", "description": "Molho San Marzano, Mozzarella Fior di Latte, prosciutto cotto e cogumelos.", "offers": {"@type": "Offer", "price": "14.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Courgette", "description": "Mozzarella Fior di Latte, ricotta, courgette marinada, Grana Padano, raspas de limão siciliano, hortelã e pimenta preta.", "offers": {"@type": "Offer", "price": "11.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Tropicale", "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, ananás e cogumelos.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Porcellina", "description": "Molho San Marzano, Mozzarella Fior di Latte, bacon, ananás e cebola.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Puttanesca", "description": "Molho San Marzano, Grana Padano, alho, anchovas, alcaparras, tomate cereja, pimenta preta, manjericão e orégano.", "offers": {"@type": "Offer", "price": "14.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Piemontese", "description": "Mozzarella Fior di Latte, ricotta com molho de trufas, cebola caramelizada, cogumelos, azeite trufado, Grana Padano e folhas de manjericão.", "offers": {"@type": "Offer", "price": "15.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Chourição", "description": "Molho San Marzano, Mozzarella Fior di Latte, cogumelos e chourição.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Giardino", "description": "Molho San Marzano, Mozzarella Fior di Latte, tomate cereja, courgette e beringela assadas e rúcula.", "offers": {"@type": "Offer", "price": "10.90", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Vívono",
+            "description": "Molho San Marzano, stracciatella, pesto de pistache artesanal, tomate cherry e folhas de manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Parma Grana",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, Prosciutto di Parma, Grana Padano, geleia de figo e rúcula.",
+            "offers": {
+              "@type": "Offer",
+              "price": "16.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Parmatella",
+            "description": "Mozzarella Fior di Latte, Prosciutto di Parma, stracciatella, pistache torrado, pesto de pistache artesanal e folhas de manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "16.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Prosciutto e Funghi",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, prosciutto cotto e cogumelos.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Tropicale",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, fiambre, ananás e cogumelos.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Porcellina",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, bacon e cebola.",
+            "offers": {
+              "@type": "Offer",
+              "price": "12.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Puttanesca",
+            "description": "Molho San Marzano, Grana Padano, alho, anchovas, alcaparras, tomate cherry, pimenta preta, manjericão e orégano.",
+            "offers": {
+              "@type": "Offer",
+              "price": "14.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Piemontese",
+            "description": "Mozzarella Fior di Latte, ricotta com molho de trufas, cebola caramelizada, cogumelos, azeite trufado, Grana Padano e folhas de manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "15.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Giardino",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, tomate cherry, courgette e beringela assadas e rúcula.",
+            "offers": {
+              "@type": "Offer",
+              "price": "10.90",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "Clássicas",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Margherita", "description": "Molho San Marzano, Mozzarella Fior di Latte e folhas de manjericão.", "offers": {"@type": "Offer", "price": "10.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Quattro Formaggi", "description": "Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta, mel e folhas de manjericão.", "offers": {"@type": "Offer", "price": "13.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Pepperoni", "description": "Molho San Marzano, Mozzarella Fior di Latte e pepperoni.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Tonno", "description": "Molho San Marzano, Mozzarella Fior di Latte, atum, cebola, azeitona e rúcula.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Fiambre", "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.", "offers": {"@type": "Offer", "price": "12.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Diavola", "description": "Molho San Marzano, Mozzarella Fior di Latte, salame picante, 'Nduja e cebola roxa.", "offers": {"@type": "Offer", "price": "13.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Marinara", "description": "Molho San Marzano, alho, orégano, azeite e manjericão.", "offers": {"@type": "Offer", "price": "10.70", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Margherita",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte e folhas de manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "10.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "4 Formaggi",
+            "description": "Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta, mel e folhas de manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "5 Formaggi",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta e queijo tipo catupiry.",
+            "offers": {
+              "@type": "Offer",
+              "price": "15.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Pepperoni",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte e pepperoni.",
+            "offers": {
+              "@type": "Offer",
+              "price": "12.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Fiambre",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.",
+            "offers": {
+              "@type": "Offer",
+              "price": "12.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Diavola",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte, salame picante, 'Nduja e cebola roxa.",
+            "offers": {
+              "@type": "Offer",
+              "price": "13.70",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "Bambino",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Margherita Bambino", "description": "Molho San Marzano, Mozzarella Fior di Latte e manjericão.", "offers": {"@type": "Offer", "price": "8.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Fiambre Bambino", "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.", "offers": {"@type": "Offer", "price": "9.20", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Margherita Bambino",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte e manjericão.",
+            "offers": {
+              "@type": "Offer",
+              "price": "8.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Fiambre Bambino",
+            "description": "Molho San Marzano, Mozzarella Fior di Latte e fiambre.",
+            "offers": {
+              "@type": "Offer",
+              "price": "9.20",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       },
       {
         "@type": "MenuSection",
         "name": "Dolce",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "Nutella", "description": "Creme de Nutella, cacau em pó e avelã torrada.", "offers": {"@type": "Offer", "price": "7.80", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Pistachio", "description": "Creme de pistache com mascarpone e pistache torrado.", "offers": {"@type": "Offer", "price": "9.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Tiramisù Vívono", "description": "Camada suave de creme de pistache com mascarpone, zabaione, biscoitos Savoiardi embebidos em café e finalização com cacau em pó e pistache torrado.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Brownie", "description": "Brownie artesanal de chocolate, servido com calda de chocolate e gelato de baunilha.", "offers": {"@type": "Offer", "price": "5.90", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Pudim", "description": "Sobremesa cremosa à base de leite condensado, ovos e leite, coberta com calda de caramelo.", "offers": {"@type": "Offer", "price": "4.70", "priceCurrency": "EUR"}},
-          {"@type": "MenuItem", "name": "Gelato", "description": "Gelato artesanal italiano. Pergunte os sabores disponíveis.", "offers": {"@type": "Offer", "price": "3.70", "priceCurrency": "EUR"}}
+          {
+            "@type": "MenuItem",
+            "name": "Nutella",
+            "description": "Nutella, cacau em pó e avelã torrada.",
+            "offers": {
+              "@type": "Offer",
+              "price": "7.80",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Pistachio",
+            "description": "Creme de pistache e pistache torrado.",
+            "offers": {
+              "@type": "Offer",
+              "price": "9.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Tiramisù Vívono",
+            "description": "Creme de pistache com mascarpone, zabaione e biscoitos Savoiardi embebidos em café, finalizado com cacau em pó e pistache torrado.",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Brownie",
+            "description": "Brownie artesanal de chocolate, servido com calda de chocolate e gelato de baunilha.",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.90",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Pudim",
+            "description": "Sobremesa cremosa à base de leite condensado, ovos e leite, coberta com calda de caramelo.",
+            "offers": {
+              "@type": "Offer",
+              "price": "4.70",
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Gelato",
+            "description": "Gelato artesanal italiano. Pergunte pelos sabores disponíveis.",
+            "offers": {
+              "@type": "Offer",
+              "price": "3.70",
+              "priceCurrency": "EUR"
+            }
+          }
         ]
       }
     ]
@@ -502,13 +852,54 @@ footer .wrap{position:relative;z-index:1}
     "https://instagram.com/vivonopizzeria"
   ],
   "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "18:00", "closes": "22:30"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "18:00", "closes": "23:30"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "15:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "18:00", "closes": "23:30"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "18:00", "closes": "23:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday"], "opens": "00:00", "closes": "00:00"}
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "18:00",
+      "closes": "22:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "18:00",
+      "closes": "23:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "12:00",
+      "closes": "15:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "18:00",
+      "closes": "23:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "12:00",
+      "closes": "15:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "18:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday"
+      ],
+      "opens": "00:00",
+      "closes": "00:00"
+    }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -518,7 +909,6 @@ footer .wrap{position:relative;z-index:1}
 }
 </script>
 </head><body>
-
 <header id="hdr"><div class="wrap nav">
 <div class="brand" data-go="home"><img src="assets/img/logo-forno.png" class="forno" alt="Forno Vívono"><img src="assets/img/logo-vivono-claro.png" class="wm light" alt="Vívono"><img src="assets/img/logo-vivono-escuro.png" class="wm dark" alt="Vívono"></div>
 <ul class="navlinks" id="navlinks">
@@ -533,7 +923,6 @@ footer .wrap{position:relative;z-index:1}
 <div class="lang-switch" id="langSwitch"><button type="button" data-lang="pt">PT</button><button type="button" data-lang="en">EN</button></div>
 <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </div></header>
-
 <!-- ===== HOME ===== -->
 <div class="page active" id="page-home">
 <section class="hero">
@@ -545,14 +934,12 @@ footer .wrap{position:relative;z-index:1}
 </div>
 <div class="scroll-cue" data-i18n="hero.descer">Descer</div>
 </section>
-
 <section class="alma"><div class="wrap"><div class="inner reveal">
 <div class="eyebrow" data-i18n="alma.eyebrow">A Casa</div>
 <h2>Arte. Origine. Passione.</h2>
 <p data-i18n="alma.text">Massa de longa fermentação, forno a lenha e ingredientes selecionados. O respeito ao tempo, em cada detalhe da casa.</p>
 <div class="three"><div>Arte<span data-i18n="alma.three.1">no fazer</span></div><div>Origine<span data-i18n="alma.three.2">na tradição</span></div><div>Passione<span data-i18n="alma.three.3">em cada detalhe</span></div></div>
 </div></div><div class="lightbox" id="lightbox"><span class="lb-count" id="lbCount"></span><button class="lb-close" id="lbClose" aria-label="Fechar">&times;</button><button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">&#8249;</button><img id="lbImg" src="" alt=""><button class="lb-nav lb-next" id="lbNext" aria-label="Seguinte">&#8250;</button><div class="lb-cap" id="lbCap"></div></div></section>
-
 <section class="sobre"><div class="wrap"><div class="sobre-grid">
 <div class="sobre-img reveal"><img src="assets/img/massa-longa-fermentacao.jpg" alt="Pizza napolitana contemporânea Vívono"></div>
 <div class="sobre-text reveal">
@@ -566,17 +953,14 @@ footer .wrap{position:relative;z-index:1}
 <div class="stats"><div class="stat"><div class="num" data-i18n="sobre.st1.n">Ingredientes</div><div class="lbl" data-i18n="sobre.st1.l">Frescos</div></div><div class="stat"><div class="num">48–72h</div><div class="lbl" data-i18n="sobre.st2.l">Fermentação da Massa</div></div><div class="stat"><div class="num">400°C</div><div class="lbl" data-i18n="sobre.st3.l">Forno a Lenha</div></div></div>
 <div style="margin-top:30px"><a data-go="historia" class="btn btn-oliva" data-i18n="home.storycta">A Nossa História</a></div>
 </div></div></div></section>
-
 <section class="galeria"><div class="wrap">
 <div class="reveal"><div class="eyebrow" data-i18n="gal.eyebrow">O Nosso Espaço</div><h2 class="sec-title" data-i18n="gal.title">Galeria</h2><p class="sec-sub" data-i18n="gal.sub">Um espaço moderno e acolhedor, e a apresentação das nossas criações.</p></div>
 <div class="gal-grid reveal"><div class="gal-item"><img src="assets/img/galeria-1-uma-noite.jpg" alt="Uma noite na Vívono" loading="lazy"><div class="cap"><span data-i18n="gal.c1">Uma noite na Vívono</span></div></div><div class="gal-item"><img src="assets/img/galeria-2-pudim.jpg" alt="Pudim, doçura da casa" loading="lazy"><div class="cap"><span data-i18n="gal.c2">Pudim, doçura da casa</span></div></div><div class="gal-item"><img src="assets/img/galeria-3-salao.jpg" alt="O nosso salão" loading="lazy"><div class="cap"><span data-i18n="gal.c3">O nosso salão</span></div></div><div class="gal-item"><img src="assets/img/galeria-4-pizza-da-casa.jpg" alt="Vívono, a pizza da casa" loading="lazy"><div class="cap"><span data-i18n="gal.c4">Vívono, a pizza da casa</span></div></div><div class="gal-item"><img src="assets/img/galeria-5-casa-mafra.jpg" alt="A nossa casa em Mafra" loading="lazy"><div class="cap"><span data-i18n="gal.c5">A nossa casa em Mafra</span></div></div><div class="gal-item"><img src="assets/img/galeria-6-fim-de-tarde.jpg" alt="Fim de tarde na Vívono" loading="lazy"><div class="cap"><span data-i18n="gal.c6">Fim de tarde na Vívono</span></div></div></div></div></section>
-
 <section class="aval"><div class="wrap">
 <div class="reveal"><div class="eyebrow" data-i18n="rev.eyebrow">O Que Dizem</div><h2 class="sec-title" data-i18n="rev.title">Avaliações</h2></div>
 <div class="aval-score reveal" id="avalScore"><div class="big" id="avalBig">4,9</div><div class="gs" id="avalStars">★★★★★</div><div class="ct" id="avalCount">151 avaliações no Google</div></div>
 <div class="rev-grid" id="revGrid"><div class="review reveal"><div class="stars">★★★★★</div><p>"Excelente, a massa da pizza é sensacional, tendo um sabor e maciez incrível."</p><div class="rev-meta"><span class="name">Paulo Henrique</span><span class="src">Google</span></div></div><div class="review reveal"><div class="stars">★★★★★</div><p>"Pizzas fantásticas e o serviço é excelente. Melhor pizzaria em Mafra."</p><div class="rev-meta"><span class="name">Luis Querido</span><span class="src">Google</span></div></div><div class="review reveal"><div class="stars">★★★★★</div><p>"Pizza incrível, lugar acolhedor e atendimento impecável!"</p><div class="rev-meta"><span class="name">Amanda Bragatti</span><span class="src">Google</span></div></div></div><div style="text-align:center;margin-top:40px" class="reveal"><a href="https://www.google.com/search?q=Vívono+Pizzeria+Mafra" target="_blank" rel="noopener" class="btn btn-oliva" id="avalAll" data-i18n="rev.all">Ver todas no Google</a></div></div></section>
 </div>
-
 <!-- ===== HISTORIA ===== -->
 <div class="page" id="page-historia">
 <section class="hist-hero"><div class="wrap"><h1 data-i18n="hist.h1">A Nossa História</h1><div class="tag">Arte · Origine · Passione</div></div></section>
@@ -597,7 +981,6 @@ footer .wrap{position:relative;z-index:1}
 <div style="text-align:center;margin-top:40px"><a data-go="menu" class="btn btn-rosso" data-i18n="hist.cta">Conhecer a Ementa</a></div>
 </div></div></section>
 </div>
-
 <!-- ===== MENU ===== -->
 <div class="page" id="page-menu">
 <section class="menu-sec" style="padding-top:160px"><img src="assets/img/icone-forno.png" class="forno-wm" alt=""><img class="menu-veg tomate" src="assets/img/tomate-creme.png" alt="" aria-hidden="true" loading="lazy"><img class="menu-veg manjeric" src="assets/img/manjericao-creme.png" alt="" aria-hidden="true" loading="lazy">
@@ -611,7 +994,6 @@ footer .wrap{position:relative;z-index:1}
 <div class="allg-table reveal"><div class="allg-head"><h3 data-i18n="allg.title">Alergénios</h3><p data-i18n="allg.intro">Os números junto a cada prato indicam os alergénios presentes. Tem alguma alergia ou intolerância? Fale connosco antes de pedir, cuidar de si faz parte da experiência.</p></div><div class="allg-grid"><div class="allg-item"><span class="allg-num">1</span><span class="allg-lbl" data-i18n="allg.1">Glúten</span></div><div class="allg-item"><span class="allg-num">2</span><span class="allg-lbl" data-i18n="allg.2">Crustáceos</span></div><div class="allg-item"><span class="allg-num">3</span><span class="allg-lbl" data-i18n="allg.3">Ovos</span></div><div class="allg-item"><span class="allg-num">4</span><span class="allg-lbl" data-i18n="allg.4">Peixe</span></div><div class="allg-item"><span class="allg-num">5</span><span class="allg-lbl" data-i18n="allg.5">Amendoins</span></div><div class="allg-item"><span class="allg-num">6</span><span class="allg-lbl" data-i18n="allg.6">Soja</span></div><div class="allg-item"><span class="allg-num">7</span><span class="allg-lbl" data-i18n="allg.7">Leite</span></div><div class="allg-item"><span class="allg-num">8</span><span class="allg-lbl" data-i18n="allg.8">Frutos de casca rija</span></div><div class="allg-item"><span class="allg-num">9</span><span class="allg-lbl" data-i18n="allg.9">Aipo</span></div><div class="allg-item"><span class="allg-num">10</span><span class="allg-lbl" data-i18n="allg.10">Mostarda</span></div><div class="allg-item"><span class="allg-num">11</span><span class="allg-lbl" data-i18n="allg.11">Sésamo</span></div><div class="allg-item"><span class="allg-num">12</span><span class="allg-lbl" data-i18n="allg.12">Sulfitos</span></div><div class="allg-item"><span class="allg-num">13</span><span class="allg-lbl" data-i18n="allg.13">Tremoço</span></div><div class="allg-item"><span class="allg-num">14</span><span class="allg-lbl" data-i18n="allg.14">Moluscos</span></div></div><p class="allg-note" data-i18n="allg.note">A nossa cozinha manipula glúten e frutos de casca rija, pode ocorrer contacto cruzado.</p></div>
 </div></section>
 </div>
-
 <!-- ===== BEBIDAS ===== -->
 <div class="page" id="page-bebidas">
 <section class="beb" style="padding-top:160px"><div class="wrap">
@@ -621,7 +1003,6 @@ footer .wrap{position:relative;z-index:1}
 <p style="text-align:center;margin-top:10px;font-size:13px;color:var(--muted)" data-i18n="b.footnote">A nossa equipa tem todo o gosto em ajudar a escolher a vossa.</p>
 </div></section>
 </div>
-
 <!-- ===== EXPERIENCIAS ===== -->
 <div class="page" id="page-experiencias">
 <section class="exp" style="padding-top:160px"><div class="wrap">
@@ -666,11 +1047,9 @@ footer .wrap{position:relative;z-index:1}
 </ul>
 </div>
 <!-- APOIO · evento de terceiros (NAO acontece na Vivono). Repor a partir de _backups/modelo-evento.html quando houver outro. -->
-
 <div style="text-align:center;margin-top:50px" class="reveal"><a href="https://app.dextdigital.com.br/r/vivono" target="_blank" rel="noopener" class="btn btn-rosso" data-i18n="cta.book">Reservar a Vossa Noite</a></div>
 </div></section>
 </div>
-
 <!-- ===== RESERVAS ===== -->
 <div class="page" id="page-reservas">
 <section class="res-hero"><div class="wrap"><h1 data-i18n="res.h1">Reserve a Vossa Noite</h1><p data-i18n="res.sub">Estamos no centro de Mafra, com fácil acesso e estacionamento na zona. Será um prazer recebê-los.</p><a class="btn btn-primary" id="heroReservar" data-i18n="res.book">Reservar</a></div></section>
@@ -997,7 +1376,6 @@ footer .wrap{position:relative;z-index:1}
 </div></section>
 <section class="res-cta-band"><div class="wrap reveal"><h2 data-i18n="res.band.h">Salão · Delivery · Take-away</h2><p data-i18n="res.band.p">A mesma dedicação, seja qual for o momento.</p><a href="https://wa.me/351911868823?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20a%20experi%C3%AAncia%20V%C3%ADvono." target="_blank" rel="noopener" class="btn btn-primary" data-i18n="cta.order">Faça a sua encomenda</a></div></section>
 </div>
-
 <footer><div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand"><img src="assets/img/monograma-creme.png" class="fl" alt="Vívono" style="width:auto;height:74px;margin-bottom:18px"><p data-i18n="foot.desc">Pizza napolitana contemporânea, de longa fermentação, assada em forno a lenha, em Mafra.</p><p class="foot-tag">Arte. Origine. Passione.</p></div>
@@ -1008,12 +1386,10 @@ footer .wrap{position:relative;z-index:1}
 <div class="foot-dext"><span data-i18n="foot.siteby">Site por</span><svg class="dext-mark" viewBox="0 0 597.3 156" role="img" aria-label="Dext" xmlns="http://www.w3.org/2000/svg"><g fill="#E9E0D7"><path d="M364,131.9c-31.9,0-55-22.4-55-53.3s23.1-53.2,55-53.2,54.5,22.5,54.8,53.5c0,1.6-.1,3.4-.4,5h-89.3c-.5,0-.9.2-1.3.6-.3.4-.5.9-.4,1.3,3,18.7,17.7,31.3,36.7,31.3s28.4-9.1,33.3-22.2h19c-6.6,21.9-27.9,37-52.5,37ZM364.2,40.2c-17.8,0-31.9,11-36,28-.1.5,0,1,.3,1.4.3.4.8.6,1.3.6h69.5c.5,0,1-.2,1.3-.6.3-.4.4-.9.3-1.4-3.9-16.7-18.6-28-36.7-28Z"/><path d="M505.7,130l-24.7-31.8c-2-2.6-5-4-8.2-4s-6.2,1.5-8.2,4l-24.5,31.7h-21.4l39.7-50.5c.5-.6.5-1.4,0-2l-39-50.1h21.2l24,30.9c2,2.6,5,4,8.2,4s6.2-1.5,8.2-4l24-30.9h21.4l-39,49.9c-.5.6-.5,1.4,0,2l39.5,50.7h-21.2Z"/><path d="M564.1,130c-5.3,0-9.6-4.3-9.6-9.6V44.2c0-.9-.7-1.6-1.6-1.6h-17.9v-15.2h17.9c.9,0,1.6-.7,1.6-1.6V0h18.9v12.9l-11.6,11.6c-.5.5-.6,1.2-.4,1.8.3.6.9,1,1.5,1h34.3v15.2h-22.3c-.9,0-1.6.7-1.6,1.6v65.2c0,.9.7,1.6,1.6,1.6h22.3v18.9h-33.2Z"/><path d="M186.1,130V27.3h62.1c10.8,0,21.1,3.3,29.9,9.6,4.6,3.3,8.5,7.3,11.8,11.8,6.3,8.7,9.6,19.1,9.6,29.9s-3.3,21.1-9.6,29.9c-3.3,4.6-7.3,8.5-11.8,11.8-8.7,6.3-19.1,9.6-29.9,9.6h-62.1ZM206.5,43.3c-.9,0-1.6.7-1.6,1.6v67.3c0,.9.7,1.6,1.6,1.6h41.7c17.3,0,32.5-16.5,32.5-35.3s-15.2-35.3-32.5-35.3h-41.7Z"/></g><g fill="#9a9a9a"><path d="M148.4,79.3c0,7.7-1,15.1-3.1,22.2-7.5,25.8-28,46-53.9,53.2,0,0,0,0,0,0-.4.1-.8.2-1.1.3,0,0,0,0,0,0-1.2.3-2.4.4-3.6.4-8.7,0-15.8-6.9-16.1-15.6v-49.3c0-6-4.9-10.9-10.9-10.9H19.2c-8.3,0-15-6.7-15-15V16.9C4.2,8.6,10.9,1.9,19.2,1.9h50.7c42.9,0,78.2,34.5,78.4,77.4Z"/><path d="M48.7,104.5v42.8c0,2.6-3.2,4-5,2.1L.9,106.6c-1.9-1.9-.5-5,2.1-5h42.8c1.6,0,3,1.3,3,3Z"/></g></svg></div>
 <div class="foot-bottom" data-i18n="foot.bottom">© 2026 Vívono Pizzeria · R. José Silvestre 12, Mafra · Pizzaria napolitana · Forno a lenha · Arte. Origine. Passione.</div>
 </div></footer>
-
 <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Aviso de cookies" hidden>
 <p data-i18n="cookie.text">Usamos cookies para entender como o site é utilizado, melhorar a sua experiência e mostrar publicidade relevante. Pode aceitar ou recusar.</p>
 <div class="cookie-actions"><button id="cookie-reject" class="btn-cookie ghost" type="button" data-i18n="cookie.reject">Recusar</button><button id="cookie-accept" class="btn-cookie" type="button" data-i18n="cookie.accept">Aceitar</button></div>
 </div>
-
 <script>
 const pages=['home','historia','menu','bebidas','experiencias','reservas'];
 // Widget de reservas Dext. Carregado só ao abrir a página de reservas: fora dela o
@@ -1171,70 +1547,71 @@ initReveal();
 // ===== Idioma (PT padrão · EN) =====
 (function(){
   var EN = {
-    'nav.home':'Home','nav.historia':'Our Story','nav.menu':'Menu','nav.bebidas':'Drinks',
-    'nav.experiencias':'Experiences','nav.contactos':'Contact','nav.reservar':'Book',
-    'hero.lead':'Contemporary Neapolitan pizza. Long-fermentation dough, wood-fired oven, selected ingredients. In Mafra, where time moves differently.',
-    'hero.firenote':'Contemporary Neapolitan · Traditional wood-fired oven',
-    'hero.cta.reservar':'Book Your Evening','hero.cta.menu':'View Menu','hero.descer':'Scroll',
-    'alma.eyebrow':'The House',
-    'alma.text':'Long-fermentation dough, wood-fired oven and selected ingredients. Respect for time, in every detail of the house.',
-    'alma.three.1':'in the craft','alma.three.2':'in tradition','alma.three.3':'in every detail',
-    'hist.h1':'Our Story',
-    'hist.intro':'Pizzeria Vívono was born from the union of tradition, excellence and a deep respect for the natural rhythms that true quality demands, virtues almost forgotten in the times we live in. The fusion of two paths that complement each other.',
-    'hist.big1':'Art, origin and passion, turned into purpose.',
-    'hist.fabio.h2':'Fabio Soares, art as craft',
-    'hist.fabio.p':'A Brazilian from Rio Grande do Norte, Fabio Soares built his career in the kitchens he passed through: Minas Gerais, Curitiba, Santa Catarina, always beside the fire, always honing his craft. Driven by the will to learn, more than once he gave up more comfortable, better-paid positions to be where there was something new to master. In 2016, he set off for the land of pizza, in search of what books cannot teach, the living essence of Italian cuisine. He learned from masters, cooked with soul and brought back more than technique: he brought respect. For time, for fire, for the truth of every ingredient. He is the technical heart of the house, the pizzaiolo who tends the long-fermentation dough day after day.',
-    'hist.fellipe.h2':'Fellipe Franchin, origin as purpose',
-    'hist.fellipe.p':'Born in the countryside of São Paulo, into a family of Italian roots, Fellipe Franchin grew up with the smell of dough in the air. Alongside his grandparents and inspired by his uncle, he understood early on that cooking is more than preparing food, it is a gesture of love, time and intention. He lived, worked and trained in gastronomy in João Pessoa, Paraíba. Later he moved to Curitiba, where he worked in fine dining, at the same restaurant as Fabio, a meeting that would give rise to Vívono. Life also took him through Italy and Ireland, experiences that broadened his view of culture, hospitality and business. Today, Fellipe brings that affection to building the brand, uniting artisanal excellence with an eye that organises, connects and gives clarity to the experience.',
+    'nav.home':'Home','nav.historia':'Our Story',
+    'nav.menu':'Menu','nav.bebidas':'Drinks',
+    'nav.experiencias':'Experiences','nav.contactos':'Contact',
+    'nav.reservar':'Book','hero.lead':'Contemporary Neapolitan pizza. Long-fermentation dough, wood-fired oven, selected ingredients. In Mafra, where time moves differently.',
+    'hero.firenote':'Contemporary Neapolitan · Traditional wood-fired oven','hero.cta.reservar':'Book Your Evening',
+    'hero.cta.menu':'View Menu','hero.descer':'Scroll',
+    'alma.eyebrow':'The House','alma.text':'Long-fermentation dough, wood-fired oven and selected ingredients. Respect for time, in every detail of the house.',
+    'alma.three.1':'in the craft','alma.three.2':'in tradition',
+    'alma.three.3':'in every detail','hist.h1':'Our Story',
+    'hist.intro':'Pizzeria Vívono was born from the union of tradition, excellence and a deep respect for the natural rhythms that true quality demands, virtues almost forgotten in the times we live in. The fusion of two paths that complement each other.','hist.big1':'Art, origin and passion, turned into purpose.',
+    'hist.fabio.h2':'Fabio Soares, art as craft','hist.fabio.p':'A Brazilian from Rio Grande do Norte, Fabio Soares built his career in the kitchens he passed through: Minas Gerais, Curitiba, Santa Catarina, always beside the fire, always honing his craft. Driven by the will to learn, more than once he gave up more comfortable, better-paid positions to be where there was something new to master. In 2016, he set off for the land of pizza, in search of what books cannot teach, the living essence of Italian cuisine. He learned from masters, cooked with soul and brought back more than technique: he brought respect. For time, for fire, for the truth of every ingredient. He is the technical heart of the house, the pizzaiolo who tends the long-fermentation dough day after day.',
+    'hist.fellipe.h2':'Fellipe Franchin, origin as purpose','hist.fellipe.p':'Born in the countryside of São Paulo, into a family of Italian roots, Fellipe Franchin grew up with the smell of dough in the air. Alongside his grandparents and inspired by his uncle, he understood early on that cooking is more than preparing food, it is a gesture of love, time and intention. He lived, worked and trained in gastronomy in João Pessoa, Paraíba. Later he moved to Curitiba, where he worked in fine dining, at the same restaurant as Fabio, a meeting that would give rise to Vívono. Life also took him through Italy and Ireland, experiences that broadened his view of culture, hospitality and business. Today, Fellipe brings that affection to building the brand, uniting artisanal excellence with an eye that organises, connects and gives clarity to the experience.',
     'hist.italia.t':'Italy','hist.italia.p':'The technique, the Neapolitan tradition, respect for the craft. The heart of the house.',
     'hist.brasil.t':'Brazil','hist.brasil.p':'The homeland of Fabio and Fellipe. The warmth, the welcome and the creativity at the table. The soul of the house.',
-    'hist.fusao':'From this fusion Vívono is born: contemporary Neapolitan pizza, with the Brazilian soul that makes it unique. Long-fermentation dough, wood-fired oven, selected ingredients, and the hospitality of those who treat every table as part of their own home. Here, time moves differently.',
-    'hist.big2':'Every slice tells our story, one at a time.',
-    'hist.cta':'Discover the Menu',
-    'exp.eyebrow':'House Programmes','exp.title':'Experiences',
-    'exp.sub':'Our own activations that reinforce our positioning, always adding value, never discounting.',
-    'exp.c1.p':'From Wednesday to Thursday, take the Vívono experience home: buy two pizzas from the Vívono Selection or the Brazilians, and the third is on us. Take away only.',
-    'exp.c1.tag':'Wed to Thu · Take away only · The 3rd on us',
-    'exp.c2.p':'The complete experience for two, every Wednesday: a starter to share, two pizzas and a dessert to share, with the bottle of wine on us. Wine selected by us, a candlelit table, an intimate atmosphere.',
-    'exp.c2.tag':'€ 44.90 · Wine on us',
+    'hist.fusao':'From this fusion Vívono is born: contemporary Neapolitan pizza, with the Brazilian soul that makes it unique. Long-fermentation dough, wood-fired oven, selected ingredients, and the hospitality of those who treat every table as part of their own home. Here, time moves differently.','hist.big2':'Every slice tells our story, one at a time.',
+    'hist.cta':'Discover the Menu','exp.eyebrow':'House Programmes',
+    'exp.title':'Experiences','exp.sub':'Our own activations that reinforce our positioning, always adding value, never discounting.',
+    'exp.c1.p':'From Wednesday to Thursday, take the Vívono experience home: buy two pizzas from the Vívono Selection or the Brazilians, and the third is on us. Take away only.','exp.c1.tag':'Wed to Thu · Take away only · The 3rd on us',
+    'exp.c2.p':'The complete experience for two, every Wednesday: a starter to share, two pizzas and a dessert to share, with the bottle of wine on us. Wine selected by us, a candlelit table, an intimate atmosphere.','exp.c2.tag':'€ 44.90 · Wine on us',
     'exp.c3.h':'Draught for Two','exp.c3.p':'From Wednesday to Thursday, your draught comes with company: the second is on us. A toast for two, to go with pizza from the wood-fired oven.',
-    'exp.c3.tag':'Wed to Thu · The second on us',
-    'exp.c4.h':'Cocktails for Two','exp.c4.p':'On Thursdays, your cocktail comes in pairs: the second is on us. From Aperol to Amalfi, southern Italy in a glass, to toast for two.',
-    'exp.c4.tag':'Thursdays · The second on us',
+    'exp.c3.tag':'Wed to Thu · The second on us','exp.c4.h':'Cocktails for Two',
+    'exp.c4.p':'On Thursdays, your cocktail comes in pairs: the second is on us. From Aperol to Amalfi, southern Italy in a glass, to toast for two.','exp.c4.tag':'Thursdays · The second on us',
     'exp.c5.h':'Live Music','exp.c5.p':'Occasional nights with live music, turning dinner into an event and reinforcing the atmosphere of the house. Follow the dates on our Instagram.',
-    'exp.c5.tag':'Selected nights',
-    'cta.book':'Book Your Evening','cta.order':'Place Your Order',
-    'res.h1':'Book Your Evening','res.sub':'We are in the centre of Mafra, with easy access and parking nearby. It will be a pleasure to welcome you.',
-    'res.book':'Book','res.eyebrow':'Online Booking',
-    'res.phone':'Phone','res.call':'Call','res.address':'Address','res.hours':'Opening Hours',
-    'res.hours.val':'Wed–Thu: 18:00–22:30<br>Fri: 18:00–23:30<br>Sat: 12:00–15:00 · 18:00–23:30<br>Sun: 12:00–15:00 · 18:00–23:00<br>Mon–Tue: closed',
+    'exp.c5.tag':'Selected nights','cta.book':'Book Your Evening',
+    'cta.order':'Place Your Order','res.h1':'Book Your Evening',
+    'res.sub':'We are in the centre of Mafra, with easy access and parking nearby. It will be a pleasure to welcome you.','res.book':'Book',
+    'res.eyebrow':'Online Booking','res.phone':'Phone',
+    'res.call':'Call','res.address':'Address',
+    'res.hours':'Opening Hours','res.hours.val':'Wed–Thu: 18:00–22:30<br>Fri: 18:00–23:30<br>Sat: 12:00–15:00 · 18:00–23:30<br>Sun: 12:00–15:00 · 18:00–23:00<br>Mon–Tue: closed',
     'res.band.h':'Dine-in · Delivery · Take-away','res.band.p':'The same dedication, whatever the moment.',
-    'foot.desc':'Contemporary Neapolitan pizza, long-fermented, baked in a wood-fired oven, in Mafra.',
-    'foot.nav':'Navigation','foot.contact':'Contact','foot.siteby':'Site by',
-    'foot.bottom':'© 2026 Vívono Pizzeria · R. José Silvestre 12, Mafra · Neapolitan pizzeria · Wood-fired oven · Arte. Origine. Passione.',
-    'cookie.text':'We use cookies to understand how the site is used, improve your experience and show relevant advertising. You can accept or decline.',
+    'foot.desc':'Contemporary Neapolitan pizza, long-fermented, baked in a wood-fired oven, in Mafra.','foot.nav':'Navigation',
+    'foot.contact':'Contact','foot.siteby':'Site by',
+    'foot.bottom':'© 2026 Vívono Pizzeria · R. José Silvestre 12, Mafra · Neapolitan pizzeria · Wood-fired oven · Arte. Origine. Passione.','cookie.text':'We use cookies to understand how the site is used, improve your experience and show relevant advertising. You can accept or decline.',
     'cookie.reject':'Decline','cookie.accept':'Accept',
     'menu.eyebrow':'Authentic Flavours','menu.title':'Our Menu',
-    'menu.sub':'Contemporary Neapolitan, long-fermentation dough (48 to 72 hours), baked in a wood-fired oven. Each dish, a journey to its origin.',
-    'allg.title':'Allergens','allg.intro':'The numbers next to each dish indicate the allergens present. Do you have any allergy or intolerance? Talk to us before ordering, taking care of you is part of the experience.',
-    'allg.1':'Gluten','allg.2':'Crustaceans','allg.3':'Eggs','allg.4':'Fish','allg.5':'Peanuts','allg.6':'Soya','allg.7':'Milk','allg.8':'Tree Nuts','allg.9':'Celery','allg.10':'Mustard','allg.11':'Sesame','allg.12':'Sulphites','allg.13':'Lupin','allg.14':'Molluscs',
-    'allg.note':'Our kitchen handles gluten and tree nuts; cross-contamination may occur.',
-    'esc.title':'House Favourites','esc.c1.cat':'Starter','esc.c1.d':'Baked burrata with cherry tomatoes and basil.','esc.c2.cat':'Pizza','esc.c2.d':'Prosciutto di Parma, Grana Padano, fig jam and rocket.','esc.c3.cat':'Dolce','esc.c3.d':'Pistachio cream and toasted pistachio.',
-    'menu.tab.pasta':'Pasta','menu.new':'New','menu.tab.entradas':'Starters','menu.tab.pizzas':'Pizzas','menu.tab.dolce':'Dolce',
-    'menu.pasta.h':'Fresh pasta at the weekend',
-    'menu.pasta.p':'Our Lasagna al Ragù and potato gnocchi are made in house, with fresh pasta and the time each recipe calls for. To serve them at their best, we only make them at the weekend. Ask our team what we have made today.',
+    'menu.sub':'Contemporary Neapolitan, long-fermentation dough (48 to 72 hours), baked in a wood-fired oven. Each dish, a journey to its origin.','allg.title':'Allergens',
+    'allg.intro':'The numbers next to each dish indicate the allergens present. Do you have any allergy or intolerance? Talk to us before ordering, taking care of you is part of the experience.','allg.1':'Gluten',
+    'allg.2':'Crustaceans','allg.3':'Eggs',
+    'allg.4':'Fish','allg.5':'Peanuts',
+    'allg.6':'Soya','allg.7':'Milk',
+    'allg.8':'Tree Nuts','allg.9':'Celery',
+    'allg.10':'Mustard','allg.11':'Sesame',
+    'allg.12':'Sulphites','allg.13':'Lupin',
+    'allg.14':'Molluscs','allg.note':'Our kitchen handles gluten and tree nuts; cross-contamination may occur.',
+    'esc.title':'House Favourites','esc.c1.cat':'Starter',
+    'esc.c1.d':'Baked burrata with cherry tomatoes and basil.','esc.c2.cat':'Pizza',
+    'esc.c2.d':'Prosciutto di Parma, Grana Padano, fig jam and rocket.','esc.c3.cat':'Dolce',
+    'esc.c3.d':'Pistachio cream and toasted pistachio.','menu.tab.pasta':'Pasta',
+    'menu.new':'New','menu.tab.entradas':'Starters',
+    'menu.tab.pizzas':'Pizzas','menu.tab.dolce':'Dolce',
+    'menu.pasta.h':'Fresh pasta at the weekend','menu.pasta.p':'Our Lasagna al Ragù and potato gnocchi are made in house, with fresh pasta and the time each recipe calls for. To serve them at their best, we only make them at the weekend. Ask our team what we have made today.',
     'menu.tab.brasileiras':'From Brazil','menu.g.brasileiras':'The Brazilian soul in the Neapolitan oven',
     'menu.tab.selecao':'Vívono Selection','menu.g.selecao':'The combinations that tell our story, one slice at a time',
     'menu.tab.classicas':'Classics','menu.g.classicas':'The timeless ones, as they should be, with a Vívono touch',
     'menu.tab.bambino':'Bambino','menu.g.bambino':'For our youngest guests. Because every great story starts small',
-    'menu.tab.doces':'Sweet Pizzas',
-    'menu.tab.sobremesas':'Desserts',
-    'm.p1.d':'Seven layers of fresh pasta and six of slow-cooked meat ragù, tomato sauce and Grana Padano gratinated in the oven.','m.p1.s':'From Bologna, in Emilia-Romagna, where baked lasagne has been Sunday lunch for generations. Patience in layers: the ragù simmers for hours before it reaches the plate.','m.p1.h':'<b>Pairs with</b> · Contador de Estórias · Cecchi Chianti',
-    'm.p2.d':'House-made potato gnocchi, tomato sauce and Grana Padano.','m.p2.s':'In Rome they say &quot;giovedì gnocchi&quot;: Thursday is gnocchi day. The potato came late to Italian cooking, but it was there that it took its most delicate form.','m.p2.h':'<b>Pairs with</b> · Cecchi Chianti · Montado Rosé',
-    'm.p3.d':'House-made potato gnocchi in a fresh cream sauce with Gorgonzola, Grana Padano, catupiry-style cheese and Feta.','m.p3.s':'From northern Italy, where soft and cured cheeses meet at the table. The catupiry is our Brazilian accent in the sauce.','m.p3.h':'<b>Pairs with</b> · Crasto Branco · Arinto',
-    'm.e1.n':'Marinated Olives','m.e1.d':'Green olives marinated in olive oil, vegetables, Mediterranean herbs and a hint of citrus.','m.e1.s':'Around the Mediterranean, the olive tree has been sacred since Antiquity. In Ancient Rome, olives were already opening the banquets.',
-    'm.e2.n':'Cured Cheese','m.e2.d':'Slices of cured Portuguese cheese.','m.e2.s':'In Portugal, putting cheese on the table is the first way to welcome a guest. We chose a cured Portuguese cheese to whet the appetite.',
-    'm.e3.n':'Garlic Bread','m.e3.d':'Artisan bread served with ricotta spread, garlic confit and Mozzarella Fior di Latte.','m.e3.s':'Made with the same long-fermented dough as our pizzas, straight from the wood-fired oven.',
+    'menu.tab.doces':'Sweet Pizzas','menu.tab.sobremesas':'Desserts',
+    'm.p1.d':'Seven layers of fresh pasta and six of slow-cooked meat ragù, tomato sauce and Grana Padano gratinated in the oven.','m.p1.s':'From Bologna, in Emilia-Romagna, where baked lasagne has been Sunday lunch for generations. Patience in layers: the ragù simmers for hours before it reaches the plate.',
+    'm.p1.h':'<b>Pairs with</b> · Contador de Estórias · Cecchi Chianti','m.p2.d':'House-made potato gnocchi, tomato sauce and Grana Padano.',
+    'm.p2.s':'In Rome they say &quot;giovedì gnocchi&quot;: Thursday is gnocchi day. The potato came late to Italian cooking, but it was there that it took its most delicate form.','m.p2.h':'<b>Pairs with</b> · Cecchi Chianti · Montado Rosé',
+    'm.p3.d':'House-made potato gnocchi in a fresh cream sauce with Gorgonzola, Grana Padano, catupiry-style cheese and Feta.','m.p3.s':'From northern Italy, where soft and cured cheeses meet at the table. The catupiry is our Brazilian accent in the sauce.',
+    'm.p3.h':'<b>Pairs with</b> · Crasto Branco · Arinto','m.e1.n':'Marinated Olives',
+    'm.e1.d':'Green olives marinated in olive oil, vegetables, Mediterranean herbs and a hint of citrus.','m.e1.s':'Around the Mediterranean, the olive tree has been sacred since Antiquity. In Ancient Rome, olives were already opening the banquets.',
+    'm.e2.n':'Cured Cheese','m.e2.d':'Slices of cured Portuguese cheese.',
+    'm.e2.s':'In Portugal, putting cheese on the table is the first way to welcome a guest. We chose a cured Portuguese cheese to whet the appetite.','m.e3.n':'Garlic Bread',
+    'm.e3.d':'Artisan bread served with ricotta spread, garlic confit and Mozzarella Fior di Latte.','m.e3.s':'Made with the same long-fermented dough as our pizzas, straight from the wood-fired oven.',
     'm.e4.d':'Rosemary crostini, served with pistachio pesto, pesto rosso and caponata.','m.e4.s':'In Tuscany, toasted bread topped with whatever was at home was the countryside snack. Today it is the Italian way to open a meal.',
     'm.e5.d':'Baked burrata with cherry tomatoes and basil, served with artisan crostini.','m.e5.s':'Andria, in Puglia, is the home of burrata. In the oven, its stracciatella heart becomes even creamier.',
     'm.e6.d':'Mixed leaves, chickpeas, roasted peppers, aubergine and courgette, red onion, cherry tomatoes, olives and Grana Padano shavings, finished with extra virgin olive oil and balsamic vinegar.','m.e6.s':'The balsamic comes from Modena, where it has been made for centuries. It gives the salad the right balance between sweet and sour.',
@@ -1257,121 +1634,104 @@ initReveal();
     'm.c2.d':'Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta, honey and basil leaves.','m.c2.s':'It belongs to no region of Italy and is ordered in all of them. In our version, a drizzle of honey balances the saltiness of the cheeses.',
     'm.c3.d':'San Marzano sauce, Mozzarella Fior di Latte, Grana Padano, Gorgonzola, Feta and catupiry-style cheese.','m.c3.s':'The 4 Formaggi with a Brazilian accent: tomato sauce comes in, and catupiry joins the table as the fifth cheese.',
     'm.c4.d':'San Marzano sauce, Mozzarella Fior di Latte and pepperoni.','m.c4.s':'Born in the United States, at the hands of Italian immigrants, in the early 20th century. Today it is a classic in every pizzeria.',
-    'm.c5.n':'Ham','m.c5.d':'San Marzano sauce, Mozzarella Fior di Latte and ham.','m.c5.s':'Simple, honest and unpretentious: the pizza every generation enjoys.',
-    'm.c6.d':'San Marzano sauce, Mozzarella Fior di Latte, spicy salami, &#x27;Nduja and red onion.','m.c6.s':'Diavola means devilish. &#x27;Nduja, the spicy, spreadable sausage from Calabria, brings the fire that gives the pizza its name.',
-    'm.ba1.d':'San Marzano sauce, Mozzarella Fior di Latte and basil.','m.ba1.s':'The most famous pizza in the world, in just the right size for the biggest fans at the table.',
-    'm.ba2.n':'Ham','m.ba2.d':'San Marzano sauce, Mozzarella Fior di Latte and ham.','m.ba2.s':'The ham everyone loves, on a pizza made to measure. Small in size, big on flavour.',
+    'm.c5.n':'Ham','m.c5.d':'San Marzano sauce, Mozzarella Fior di Latte and ham.',
+    'm.c5.s':'Simple, honest and unpretentious: the pizza every generation enjoys.','m.c6.d':'San Marzano sauce, Mozzarella Fior di Latte, spicy salami, &#x27;Nduja and red onion.',
+    'm.c6.s':'Diavola means devilish. &#x27;Nduja, the spicy, spreadable sausage from Calabria, brings the fire that gives the pizza its name.','m.ba1.d':'San Marzano sauce, Mozzarella Fior di Latte and basil.',
+    'm.ba1.s':'The most famous pizza in the world, in just the right size for the biggest fans at the table.','m.ba2.n':'Ham',
+    'm.ba2.d':'San Marzano sauce, Mozzarella Fior di Latte and ham.','m.ba2.s':'The ham everyone loves, on a pizza made to measure. Small in size, big on flavour.',
     'm.d1.d':'Nutella, cocoa powder and toasted hazelnuts.','m.d1.s':'From Turin, Italy\'s chocolate capital, where in the 19th century hazelnut was added to chocolate and gianduja was born. Nutella is its direct heir.',
     'm.d2.d':'Pistachio cream and toasted pistachio.','m.d2.s':'From Sicily, where pistachios grow in volcanic soil on the slopes of Etna. Bronte pistachio, the &quot;green gold of Sicily&quot;, has held PDO status since 2009.',
     'm.d3.d':'Pistachio cream with mascarpone, zabaione and Savoiardi biscuits soaked in coffee, finished with cocoa powder and toasted pistachio.','m.d3.s':'Born in Treviso, in the Veneto, in the 1960s. Tiramisù means &quot;pick me up&quot;. Our version is made with pistachio, the signature of the house.',
     'm.d4.d':'Artisan chocolate brownie, served with chocolate sauce and vanilla gelato.','m.d4.s':'Because not everything has to be Italian: the brownie was born in Chicago in the late 19th century. The gelato, however, is Italian.',
     'm.d5.d':'Creamy dessert made with condensed milk, eggs and milk, topped with caramel sauce.','m.d5.s':'From Portugal and Brazil at once: the Brazilian condensed milk pudim was born from the Portuguese egg pudim. Two traditions in the same spoon.',
     'm.d6.d':'Artisan Italian gelato. Ask about the flavours available.','m.d6.s':'Born at the Florentine court of the Medici, in the 16th century. Less air, more flavour, as Italian tradition demands.',
-    'sel.title':'Vívono Special Selection','sel.sub':'The house choice, for those who would rather be advised than decide.','sel.v1.m':'Red · Dão','sel.v2.m':'White · Douro','sel.v3.m':'Red · Tuscany',
-    'b.eyebrow':'Selection & Pairing','b.title':'Drinks','b.sub':'Wines, beers, cocktails and spirits, each with its own story and a pairing suggested with our menu.',
-    'b.hero':'From the oven to the bar, the same care',
-    'b.h.beers':'Beers & Cider','b.beers1.m':'30cl · draught','b.beers2.m':'40cl · tankard',
-    'b.beers3.m':'30cl · draught','b.beers4.m':'25cl · draught','b.beers5.m':'50cl · tankard',
-    'b.beers6.m':'33cl · bottle','b.h.ptred':'Portuguese Wines · Reds','b.ptred1.d':'Young, vibrant and Atlantic, with fresh red fruit, a touch of spice and soft tannins. From the Lisbon region, by AdegaMãe. Aragonez, Castelão and Touriga Nacional.',
-    'b.ptred1.h':'<b>Pairs with</b> · Calabrese · Pepperoni · Ham · Diavola','b.ptred2.d':'Intense and smooth, with ripe red and black fruit, balsamic notes and rounded tannins. From the Douro, by Casa Ferreirinha. Touriga Nacional, Tinta Barroca, Touriga Franca and Tinta Roriz.','b.ptred2.h':'<b>Pairs with</b> · Paulistana · Mineira',
-    'b.ptred3.d':'Touriga Nacional and Aragonez: wild berries, spice and minerality, with an elegant structure and soft tannins. From Cheleiros, in the Lisbon region, by Manz Wine.','b.ptred3.h':'<b>Pairs with</b> · Porcellina · Calabrese · Paulistana · Lusitana · Ham','b.ptred4.d':'Full-bodied and surprising, with balsamic notes, ripe fruit and a striking personality. From the Setúbal Peninsula, land of Moscatel and great full-bodied reds. By Manz Wine.',
-    'b.ptred4.h':'<b>Pairs with</b> · Brasiliana Più · 5 Formaggi · Pepperoni · Lasagna al Ragù','b.ptred5.d':'Structured and fresh, with red and black fruit and polished tannins. From the Dão, by Casa da Passarella. Touriga Nacional, Alfrocheiro and Jaen, aged in barrels.','b.ptred5.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Prosciutto e Funghi',
-    'b.ptred6.d':'Full-bodied, with ripe fruit, fresh acidity and ripe tannins. From the Alentejo, by Herdade da Malhadinha Nova, in Albernoa.','b.ptred6.h':'<b>Pairs with</b> · Porcellina · Piemontese · 4 Formaggi · 5 Formaggi','b.h.ptrose':'Portuguese Wines · Rosés',
-    'b.ptrose1.d':'Light, fruity and refreshing, with notes of red berries and balanced sweetness. By Sogrape, since 1942. On the label, the baroque Mateus palace, in Vila Real. Sold in more than 130 countries.','b.ptrose1.h':'<b>Pairs with</b> · Brasiliana · Tropicale','b.ptrose2.d':'Fresh and fruity, with notes of wild berries and balanced acidity. From the Alentejo, by José Maria da Fonseca, a house founded in 1834.',
-    'b.ptrose2.h':'<b>Pairs with</b> · Brasiliana · Brasiliana Più · Lusitana · Margherita · Mineira','b.h.ptwhite':'Portuguese Wines · Whites','b.ptwhite1.d':'Young and exuberant, with grapefruit, lime and passion fruit, lively acidity and a salty Atlantic minerality. From the Lisbon region, by AdegaMãe. Alvarinho, Arinto, Sauvignon Blanc and Viosinho.',
-    'b.ptwhite1.h':'<b>Pairs with</b> · Garlic Bread · Giardino','b.ptwhite2.d':'Light, citrusy and naturally spritzy, with instant freshness and a clean finish. From Monção and Melgaço, in the Minho, by Adega de Monção. Alvarinho and Trajadura.','b.ptwhite2.h':'<b>Pairs with</b> · Garlic Bread · Di Andria · Puttanesca',
-    'b.ptwhite3.d':'Vibrant and mineral, with lively acidity and notes of citrus and pineapple. From the Lisbon region, by Casa Santos Lima, in Alenquer. 100% Arinto.','b.ptwhite3.h':'<b>Pairs with</b> · Di Andria · Crostini · Insalata Vívono · Puttanesca · Margherita','b.ptwhite4.d':'Fresh and floral, with lemon, green apple and chamomile, unoaked. From the Douro, by Quinta do Crasto. Viosinho, Gouveio and Rabigato.',
-    'b.ptwhite4.h':'<b>Pairs with</b> · Insalata Vívono · Giardino · 4 Formaggi · Vívono · Gnocchi ai Quattro Formaggi','b.ptwhite5.d':'Tropical and structured, with a surprising texture: a white with a character all its own. From Cheleiros, in the Lisbon region, by Manz Wine. Jampal, a rare and nearly extinct grape, revived by André Manz.','b.ptwhite5.h':'<b>Pairs with</b> · Vívono · Parmatella',
-    'b.h.itred':'Italian Wines · Reds','b.itred1.d':'A classic, balanced red, with red berries, spice and marked acidity. Soft tannins and a fresh finish. From Tuscany, where Chianti has been made for more than 300 years. DOCG, the highest tier of Italian appellations.','b.itred1.h':'<b>Pairs with</b> · Puttanesca · Calabrese · Paulistana · Margherita · Pepperoni',
-    'b.itred2.d':'Structured and classic, with ripe fruit, spice and well-integrated oak. Lively acidity, firm tannins and a long finish. From Tuscany, by the Frescobaldi, a family with more than 700 years in wine.','b.itred2.h':'<b>Pairs with</b> · Parma Grana · Prosciutto e Funghi','b.itred3.d':'Complex and powerful, with ripe fruit, wild cherry, spice and a light earthy touch. Silky tannins, full body and a long finish. From Piedmont, organically farmed, made by Luca Bosio.',
-    'b.itred3.h':'<b>Pairs with</b> · Piemontese · 4 Formaggi','b.h.itwhite':'Italian Wines · Whites','b.itwhite1.d':'Aromatic and fresh, with citrus, tropical and floral notes and a light finish. From Sicily, by Donnafugata. Anthilia was one of the names the ancient Greeks gave the island.',
-    'b.itwhite1.h':'<b>Pairs with</b> · Insalata Vívono · Giardino · Tropicale','b.h.itsp':'Italian Wines · Sparkling','b.itsp1.d':'Elegant, with green apple, pear and a floral touch. Fine bubbles and a clean finish. From the Veneto, by Bolla, a house founded in Soave in 1883. Brut and millesimato: dry and made with grapes from a single harvest.',
-    'b.itsp1.h':'<b>Pairs with</b> · Garlic Bread · Di Andria · Crostini · Brasiliana · Vívono','b.h.glass':'House Wine','b.glass1.n':'Red',
-    'b.glass2.n':'White','b.glass3.n':'Carafe of White','b.cocktails1.n':'Gin &amp; Tonic',
-    'b.cocktails1.d':'Gin, tonic, lemon and basil, with a hint of pink pepper. Born in colonial India: British soldiers took quinine against malaria and added gin to mask the bitterness.','b.cocktails2.d':'Aperol, Prosecco, a splash of sparkling water and orange slices. Aperol was born in Padua, in the Veneto, and in the 1950s the spritz became the aperitivo of all Italy.','b.cocktails3.d':'Limoncello, Prosecco and a splash of sparkling water. Limoncello, a liqueur made from the peel of Amalfi lemons, is the digestif of southern Italy. Here it meets the bubbles of Prosecco, from the north.',
-    'b.cocktails4.d':'Cachaça 51, lime and sugar. Born in the São Paulo countryside, in the early 20th century, as a home remedy for flu, with garlic and honey. The garlic and honey went, and Brazil\'s national cocktail remained.','b.cocktails5.d':'Gin, fresh basil, sugar and lemon. Genoese basil, the same used in pesto, leaves the kitchen and goes into the glass.','b.sangria1.n':'Red Sangria',
-    'b.sangria1.d':'Made with red wine, fruit and gentle spices. From the Iberian Peninsula, where adding fruit to wine was the way to cool down hot days. The name comes from &quot;sangue&quot;, blood, for the colour of the wine.','b.sangria2.n':'White Sangria','b.sangria2.d':'Made with white wine, fruit, spices and a hint of citrus. The same Iberian tradition, with white wine instead of red: lighter, citrusy and fragrant.',
-    'b.sangria3.n':'Red Berries Sangria','b.sangria3.d':'Made with sparkling wine, red berries and a touch of mint and cinnamon. Our take on sangria, with sparkling wine instead of still. The red berries bring the colour, the mint and cinnamon the aroma.','b.sangria4.n':'Bandida Sangria',
-    'b.sangria4.d':'Made with Bandida do Pomar cider, apple, lemon, cinnamon and mint. Our take on sangria, with Portuguese cider instead of wine. The apple brings out the fruit of the Bandida, and the cinnamon and mint bring the aroma.','b.h.spirits':'Spirits','b.spirits1.n':'Jameson Black Barrel Whiskey',
-    'b.spirits1.d':'From Dublin, where Jameson has distilled since 1780. Black Barrel is matured in double-charred bourbon barrels, which give it notes of caramel and vanilla.','b.spirits2.d':'From London, created in 1830 by Charles Tanqueray. A dry, clean gin with juniper, coriander, angelica and liquorice.','b.spirits3.n':'Smirnoff Vodka',
-    'b.spirits3.d':'From Moscow, where Pyotr Smirnov started distilling in 1864. Charcoal-filtered, it is today the best-selling vodka in the world.','b.spirits4.d':'Portuguese brandy, distilled in copper pot stills and aged in wood.','b.spirits5.d':'From Pirassununga, in the São Paulo countryside. Brazil\'s best-selling cachaça, distilled from fresh sugar cane.',
-    'b.h.aperit':'Aperitifs','b.aperit1.d':'From Padua, created in 1919 by the Barbieri brothers. Bitter and orange, with just 11% alcohol, made with orange, rhubarb and gentian.','b.aperit2.d':'From Novara, created by Gaspare Campari in 1860. Red and bitter, with a recipe that has never been revealed. The aperitivo of Milan.',
-    'b.h.digest':'Digestives','b.digest1.d':'From Saronno, in Lombardy. The aroma recalls almond, but it is made from apricot kernels.','b.digest2.d':'From the Amalfi Coast, made with the peel of the local lemons. Served ice cold, as in southern Italy.',
-    'b.digest3.d':'From Bologna, created in 1885 and named in honour of Princess Elena of Montenegro. Made with 40 herbs and botanicals.','b.digest4.d':'From Lousã, made since 1929 with seeds and aromatic plants. The best-selling liqueur in Portugal.','b.digest5.d':'From Dublin, created in 1974. Irish cream and whiskey, in a liqueur that quickly won over the world.',
-    'b.digest6.d':'Fortified wine from Setúbal, sweet and aromatic, with more than 500 years of history.','b.digest7.d':'From Lisbon and Óbidos, where ginja, a wild sour cherry, is steeped in brandy and sugar. A centuries-old Portuguese tradition, often served in chocolate cups.','b.digest8.n':'Port Wine',
-    'b.digest8.d':'From the Douro. Brandy is added halfway through fermentation, keeping the grape\'s natural sweetness. The most famous Portuguese wine in the world.','b.digest9.d':'A spirit distilled from grape pomace, what is left after the wine is pressed. A tradition from northern Portugal, served at the end of the meal.','b.h.soda':'Italian Sodas',
-    'b.soda1.d':'Sweet and refreshing: strawberry syrup, sparkling water and ice, with a touch of lime and mint. The Italian soda was born in the gelaterias of northern Italy, where fruit syrup met sparkling water to cool down the summers.','b.soda2.d':'Citrusy and vibrant: lime syrup, sparkling water and ice, with a slice of lemon and mint. From the terraced lemon groves of the Amalfi Coast, lemon gives this soda its sunny character.','b.soda3.d':'Fruity and elegant: pomegranate syrup, sparkling water and ice, with a touch of lime and mint. Melograno is Italian for pomegranate, a symbol of abundance across the Mediterranean.',
-    'b.soda4.d':'Smooth and velvety: peach nectar and syrup, sparkling water, ice and mint. Inspired by the Bellini, from Venice, but alcohol-free. Fresh, bubbly and for any time of day.','b.h.juice':'Fresh Juices','b.juice1.n':'Orange',
-    'b.juice1.m':'Freshly squeezed','b.juice2.n':'Lemonade','b.juice2.m':'Freshly squeezed',
-    'b.h.soft':'Soft Drinks & Waters','b.soft3.n':'Brazilian Guaraná','b.soft4.n':'Fuze Tea Peach',
-    'b.soft5.n':'Fuze Tea Lemon','b.soft6.n':'Tonic Water','b.soft7.n':'Pedras Sparkling Water',
-    'b.soft8.n':'Pedras Sparkling Water','b.soft9.n':'Pedras Sparkling Lemon','b.soft10.n':'Purified Water',
-    'b.soft11.n':'Purified Water','b.h.coffee':'Coffee','b.coffee2.n':'Abatanado (Americano)',
-    'b.footnote':'Our team will be delighted to help you choose yours.',
-    'w1.d':'Fruity and approachable, with ripe fruit, soft tannins and a clean finish.','w1.h':'<b>Pairs with</b> · Brasiliana · Calabrese · Diavola · Ham · Garlic Bread',
-    'w2.d':'Fruity, balanced and versatile, with soft tannins and moderate acidity.','w2.h':'<b>Pairs with</b> · Prosciutto e Funghi · Pepperoni · Emiliana · Lusitana · Insalata Vívono',
-    'w3.d':'Full-bodied and surprising, with balsamic notes, ripe fruit and a striking personality.','w3.h':'<b>Pairs with</b> · Diavola · Piemontese · Porcellina · Parma Grana · Quattro Formaggi',
-    'w4.d':'Elegant and gastronomic, with lively acidity, fine tannins and a persistent finish.','w4.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Vívono · Insalata Vívono · Emiliana',
-    'w5.d':'Full-bodied and elegant, with ripe red fruits, soft spices and a long finish.','w5.h':'<b>Pairs with</b> · Piemontese · Prosciutto e Funghi · Vívono · Emiliana · Insalata Vívono',
-    'w6.d':'Full-bodied and enveloping, with ripe red fruits, spices and well-integrated oak.','w6.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Diavola · Quattro Formaggi · Emiliana',
-    'w7.d':'Elegant and complex, with ripe red fruit, balsamic notes and a mineral touch.','w7.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Prosciutto Crudo · Emiliana · Di Andria',
-    'w8.d':'Light, fruity and refreshing, with notes of red berries and balanced sweetness.','w8.h':'<b>Pairs with</b> · Brasiliana · Lusitana · Calabrese · Tropicale · Courgette',
-    'w9.d':'Dry and elegant, with an Atlantic profile, fresh and mineral, with lively acidity.','w9.h':'<b>Pairs with</b> · Di Andria · Vívono · Courgette · Insalata Vívono · Tonno',
-    'w10.d':'Light, citrusy and with natural effervescence, immediate freshness and a clean finish.','w10.h':'<b>Pairs with</b> · Margherita · Courgette · Marinara · Tonno · Insalata Vívono',
-    'w11.d':'Mineral, citrusy and gastronomic, with lively acidity, an elegant body and a long finish.','w11.h':'<b>Pairs with</b> · Di Andria · Courgette · Tonno · Puttanesca · Insalata Vívono',
-    'w12.d':'Tropical, structured and with a surprising texture, a white with a character of its own.','w12.h':'<b>Pairs with</b> · Tropicale · Parma Grana · Courgette · Vívono · Insalata Vívono',
-    'w13.d':'Elegant and refined, notes of green apple and pear, fine bubbles and vibrant freshness.','w13.h':'<b>Pairs with</b> · Parma Grana · Di Andria · Vívono · Emiliana · Insalata Vívono',
-    'w14.d':'Aromatic and fresh, with citrus and tropical notes, balanced acidity.','w14.h':'<b>Pairs with</b> · Courgette · Tropicale · Tonno · Puttanesca · Di Andria',
-    'w15.d':'Elegant and balanced, white fruits, florals and a light touch of almond.','w15.h':'<b>Pairs with</b> · Di Andria · Parma Grana · Courgette · Vívono · Insalata Vívono',
-    'w16.d':'Classic and balanced, red fruits, spices and marked acidity.','w16.h':'<b>Pairs with</b> · Margherita · Prosciutto e Funghi · Pepperoni · Ham · Diavola',
-    'w17.d':'Light and elegant, notes of fresh cherry and red fruits, a delicate finish.','w17.h':'<b>Pairs with</b> · Margherita · Vívono · Courgette · Prosciutto e Funghi · Marinara',
-    'w18.d':'Structured and classic, ripe fruits, spices and well-integrated oak.','w18.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Calabrese · Emiliana · Diavola',
-    'w19.d':'Complex and powerful, ripe fruit, wild cherry and spices, silky tannins.','w19.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Vívono · Emiliana · Quattro Formaggi',
-    'ck1.n':'Gin & Tonic','ck1.d':'Gin, tonic and Sicilian lemon, with a touch of pink pepper.',
-    'ck2.d':'Aperol, Prosecco, a touch of sparkling water and orange slices.',
-    'ck3.d':'Limoncello, Prosecco and a touch of sparkling water. Southern Italy in a glass.',
-    'ck4.d':'Cachaça Pirassununga, lime and sugar. The Brazilian classic served fresh.',
-    'ck5.d':'Gin, fresh basil, sugar and lemon. Fresh, vibrant and aromatic.',
-    'sg1.n':'Red Sangria','sg1.d':'Red wine, seasonal fruits and gentle spices. A balance of freshness, sweetness and intensity.',
-    'sg2.n':'White Sangria','sg2.d':'White wine, fresh fruits and a citrus touch. Light, fruity and ideal for sharing.',
-    'sg3.n':'Red Berry Sangria','sg3.d':'Sparkling wine, red berries and a touch of mint and cinnamon. Vibrant and fruity.',
-    'sp1.d':'Double ageing in bourbon and sherry barrels: caramel, vanilla and smoothness.','sp2.d':'Distilled four times with juniper, coriander, angelica and liquorice.',
-    'sp3.d':'Filtered through charcoal for a purity that made it the best-selling vodka in the world.','sp4.d':'Distilled in a copper still and aged in Portuguese oak.',
-    'sp5.d':'From Pirassununga, São Paulo, distilled from fresh cane with an unmistakable character.',
-    'ap1.d':'Bitter, orange-hued and light, made from orange, rhubarb and gentian.','ap2.d':'Intensely red, bitter and mysterious, with more than 60 ingredients. The Milanese style.',
-    'dg1.d':'Made from apricot essence, the most famous amaretto in the world.','dg2.d':'From the Amalfi Coast, served well chilled. The essential digestive of southern Italy.',
-    'dg3.d':'From Bologna, with 40 herbs and botanicals. The Italian digestive ritual par excellence.','dg4.d':'From Lousã, with Mediterranean and oriental aromatic plants. The most Portuguese liqueur there is.',
-    'dg5.d':'From Dublin, the first liqueur to stabilise dairy cream with alcohol.','dg6.d':'A fortified wine, sweet and aromatic, one of the liqueur jewels of Portugal.',
-    'dg7.d':'From Lisbon and Óbidos, a wild fruit macerated in aguardente and sugar.','dg8.d':'From the Douro, fortified to preserve its natural sweetness. The most famous Portuguese wine in the world.',
-    'g.red':'Red','g.white':'White',
-    'r.tonic':'Tonic','r.pedraslemon':'Pedras Lemon','r.water':'Purified Water',
-    'j.orange':'Orange','j.lemonade':'Lemonade','j.lpf':'Lemon & Passion Fruit','j.pulp':'Pulp',
-    'so1.d':'Strawberry syrup, sparkling water and ice, with a touch of lime.','so2.d':'Lime syrup, sparkling water and ice, with a slice of lemon.',
-    'so3.d':'Pomegranate syrup, sparkling water and ice, with a touch of lime and mint.','so4.d':'Peach syrup, sparkling water and ice. The alcohol-free version of the Bellini.',
-    'home.storycta':'Our Story','rev.eyebrow':'What They Say','rev.title':'Reviews','rev.all':'See all on Google',
-    'sobre.eyebrow':'Our Dough','sobre.title':'Respect for Time',
-    'sobre.p1':'Our dough is prepared daily with selected ingredients and fermented for 48 to 72 hours. This whole process is what reveals the lightness, the texture and the flavour of our pizza.',
-    'sobre.p2':'The wood-fired oven, heated to a controlled temperature, ensures the crispy crust and soft interior that only a true Neapolitan pizza can offer.',
-    'sobre.motto':'"It is in simplicity that everything appears."',
-    'sobre.p3':'We believe a good pizza goes beyond flavour: it carries tradition, time and care.',
-    'sobre.st1.n':'Ingredients','sobre.st1.l':'Fresh','sobre.st2.l':'Dough Fermentation','sobre.st3.l':'Wood-Fired Oven',
-    'gal.eyebrow':'Our Space','gal.title':'Gallery','gal.sub':'A modern and welcoming space, and a showcase of our creations.',
-    'gal.c1':'An evening at Vívono','gal.c2':'Flan, the house sweet','gal.c3':'Our dining room','gal.c4':'Vívono, the house pizza','gal.c5':'Our home in Mafra','gal.c6':'Late afternoon at Vívono',
+    'sel.title':'Vívono Special Selection','sel.sub':'The house choice, for those who would rather be advised than decide.',
+    'sel.v1.m':'Red · Dão','sel.v2.m':'White · Douro',
+    'sel.v3.m':'Red · Tuscany','b.eyebrow':'Selection & Pairing',
+    'b.title':'Drinks','b.sub':'Wines, beers, cocktails and spirits, each with its own story and a pairing suggested with our menu.',
+    'b.hero':'From the oven to the bar, the same care','b.h.beers':'Beers & Cider',
+    'b.beers1.m':'30cl · draught','b.beers2.m':'40cl · tankard',
+    'b.beers3.m':'30cl · draught','b.beers4.m':'25cl · draught',
+    'b.beers5.m':'50cl · tankard','b.beers6.m':'33cl · bottle',
+    'b.h.ptred':'Portuguese Wines · Reds','b.ptred1.d':'Young, vibrant and Atlantic, with fresh red fruit, a touch of spice and soft tannins. From the Lisbon region, by AdegaMãe. Aragonez, Castelão and Touriga Nacional.',
+    'b.ptred1.h':'<b>Pairs with</b> · Calabrese · Pepperoni · Ham · Diavola','b.ptred2.d':'Intense and smooth, with ripe red and black fruit, balsamic notes and rounded tannins. From the Douro, by Casa Ferreirinha. Touriga Nacional, Tinta Barroca, Touriga Franca and Tinta Roriz.',
+    'b.ptred2.h':'<b>Pairs with</b> · Paulistana · Mineira','b.ptred3.d':'Touriga Nacional and Aragonez: wild berries, spice and minerality, with an elegant structure and soft tannins. From Cheleiros, in the Lisbon region, by Manz Wine.',
+    'b.ptred3.h':'<b>Pairs with</b> · Porcellina · Calabrese · Paulistana · Lusitana · Ham','b.ptred4.d':'Full-bodied and surprising, with balsamic notes, ripe fruit and a striking personality. From the Setúbal Peninsula, land of Moscatel and great full-bodied reds. By Manz Wine.',
+    'b.ptred4.h':'<b>Pairs with</b> · Brasiliana Più · 5 Formaggi · Pepperoni · Lasagna al Ragù','b.ptred5.d':'Structured and fresh, with red and black fruit and polished tannins. From the Dão, by Casa da Passarella. Touriga Nacional, Alfrocheiro and Jaen, aged in barrels.',
+    'b.ptred5.h':'<b>Pairs with</b> · Piemontese · Parma Grana · Prosciutto e Funghi','b.ptred6.d':'Full-bodied, with ripe fruit, fresh acidity and ripe tannins. From the Alentejo, by Herdade da Malhadinha Nova, in Albernoa.',
+    'b.ptred6.h':'<b>Pairs with</b> · Porcellina · Piemontese · 4 Formaggi · 5 Formaggi','b.h.ptrose':'Portuguese Wines · Rosés',
+    'b.ptrose1.d':'Light, fruity and refreshing, with notes of red berries and balanced sweetness. By Sogrape, since 1942. On the label, the baroque Mateus palace, in Vila Real. Sold in more than 130 countries.','b.ptrose1.h':'<b>Pairs with</b> · Brasiliana · Tropicale',
+    'b.ptrose2.d':'Fresh and fruity, with notes of wild berries and balanced acidity. From the Alentejo, by José Maria da Fonseca, a house founded in 1834.','b.ptrose2.h':'<b>Pairs with</b> · Brasiliana · Brasiliana Più · Lusitana · Margherita · Mineira',
+    'b.h.ptwhite':'Portuguese Wines · Whites','b.ptwhite1.d':'Young and exuberant, with grapefruit, lime and passion fruit, lively acidity and a salty Atlantic minerality. From the Lisbon region, by AdegaMãe. Alvarinho, Arinto, Sauvignon Blanc and Viosinho.',
+    'b.ptwhite1.h':'<b>Pairs with</b> · Garlic Bread · Giardino','b.ptwhite2.d':'Light, citrusy and naturally spritzy, with instant freshness and a clean finish. From Monção and Melgaço, in the Minho, by Adega de Monção. Alvarinho and Trajadura.',
+    'b.ptwhite2.h':'<b>Pairs with</b> · Garlic Bread · Di Andria · Puttanesca','b.ptwhite3.d':'Vibrant and mineral, with lively acidity and notes of citrus and pineapple. From the Lisbon region, by Casa Santos Lima, in Alenquer. 100% Arinto.',
+    'b.ptwhite3.h':'<b>Pairs with</b> · Di Andria · Crostini · Insalata Vívono · Puttanesca · Margherita','b.ptwhite4.d':'Fresh and floral, with lemon, green apple and chamomile, unoaked. From the Douro, by Quinta do Crasto. Viosinho, Gouveio and Rabigato.',
+    'b.ptwhite4.h':'<b>Pairs with</b> · Insalata Vívono · Giardino · 4 Formaggi · Vívono · Gnocchi ai Quattro Formaggi','b.ptwhite5.d':'Tropical and structured, with a surprising texture: a white with a character all its own. From Cheleiros, in the Lisbon region, by Manz Wine. Jampal, a rare and nearly extinct grape, revived by André Manz.',
+    'b.ptwhite5.h':'<b>Pairs with</b> · Vívono · Parmatella','b.h.itred':'Italian Wines · Reds',
+    'b.itred1.d':'A classic, balanced red, with red berries, spice and marked acidity. Soft tannins and a fresh finish. From Tuscany, where Chianti has been made for more than 300 years. DOCG, the highest tier of Italian appellations.','b.itred1.h':'<b>Pairs with</b> · Puttanesca · Calabrese · Paulistana · Margherita · Pepperoni',
+    'b.itred2.d':'Structured and classic, with ripe fruit, spice and well-integrated oak. Lively acidity, firm tannins and a long finish. From Tuscany, by the Frescobaldi, a family with more than 700 years in wine.','b.itred2.h':'<b>Pairs with</b> · Parma Grana · Prosciutto e Funghi',
+    'b.itred3.d':'Complex and powerful, with ripe fruit, wild cherry, spice and a light earthy touch. Silky tannins, full body and a long finish. From Piedmont, organically farmed, made by Luca Bosio.','b.itred3.h':'<b>Pairs with</b> · Piemontese · 4 Formaggi',
+    'b.h.itwhite':'Italian Wines · Whites','b.itwhite1.d':'Aromatic and fresh, with citrus, tropical and floral notes and a light finish. From Sicily, by Donnafugata. Anthilia was one of the names the ancient Greeks gave the island.',
+    'b.itwhite1.h':'<b>Pairs with</b> · Insalata Vívono · Giardino · Tropicale','b.h.itsp':'Italian Wines · Sparkling',
+    'b.itsp1.d':'Elegant, with green apple, pear and a floral touch. Fine bubbles and a clean finish. From the Veneto, by Bolla, a house founded in Soave in 1883. Brut and millesimato: dry and made with grapes from a single harvest.','b.itsp1.h':'<b>Pairs with</b> · Garlic Bread · Di Andria · Crostini · Brasiliana · Vívono',
+    'b.h.glass':'House Wine','b.glass1.n':'Red',
+    'b.glass2.n':'White','b.glass3.n':'Carafe of White',
+    'b.cocktails1.n':'Gin &amp; Tonic','b.cocktails1.d':'Gin, tonic, lemon and basil, with a hint of pink pepper. Born in colonial India: British soldiers took quinine against malaria and added gin to mask the bitterness.',
+    'b.cocktails2.d':'Aperol, Prosecco, a splash of sparkling water and orange slices. Aperol was born in Padua, in the Veneto, and in the 1950s the spritz became the aperitivo of all Italy.','b.cocktails3.d':'Limoncello, Prosecco and a splash of sparkling water. Limoncello, a liqueur made from the peel of Amalfi lemons, is the digestif of southern Italy. Here it meets the bubbles of Prosecco, from the north.',
+    'b.cocktails4.d':'Cachaça 51, lime and sugar. Born in the São Paulo countryside, in the early 20th century, as a home remedy for flu, with garlic and honey. The garlic and honey went, and Brazil\'s national cocktail remained.','b.cocktails5.d':'Gin, fresh basil, sugar and lemon. Genoese basil, the same used in pesto, leaves the kitchen and goes into the glass.',
+    'b.sangria1.n':'Red Sangria','b.sangria1.d':'Made with red wine, fruit and gentle spices. From the Iberian Peninsula, where adding fruit to wine was the way to cool down hot days. The name comes from &quot;sangue&quot;, blood, for the colour of the wine.',
+    'b.sangria2.n':'White Sangria','b.sangria2.d':'Made with white wine, fruit, spices and a hint of citrus. The same Iberian tradition, with white wine instead of red: lighter, citrusy and fragrant.',
+    'b.sangria3.n':'Red Berries Sangria','b.sangria3.d':'Made with sparkling wine, red berries and a touch of mint and cinnamon. Our take on sangria, with sparkling wine instead of still. The red berries bring the colour, the mint and cinnamon the aroma.',
+    'b.sangria4.n':'Bandida Sangria','b.sangria4.d':'Made with Bandida do Pomar cider, apple, lemon, cinnamon and mint. Our take on sangria, with Portuguese cider instead of wine. The apple brings out the fruit of the Bandida, and the cinnamon and mint bring the aroma.',
+    'b.h.spirits':'Spirits','b.spirits1.n':'Jameson Black Barrel Whiskey',
+    'b.spirits1.d':'From Dublin, where Jameson has distilled since 1780. Black Barrel is matured in double-charred bourbon barrels, which give it notes of caramel and vanilla.','b.spirits2.d':'From London, created in 1830 by Charles Tanqueray. A dry, clean gin with juniper, coriander, angelica and liquorice.',
+    'b.spirits3.n':'Smirnoff Vodka','b.spirits3.d':'From Moscow, where Pyotr Smirnov started distilling in 1864. Charcoal-filtered, it is today the best-selling vodka in the world.',
+    'b.spirits4.d':'Portuguese brandy, distilled in copper pot stills and aged in wood.','b.spirits5.d':'From Pirassununga, in the São Paulo countryside. Brazil\'s best-selling cachaça, distilled from fresh sugar cane.',
+    'b.h.aperit':'Aperitifs','b.aperit1.d':'From Padua, created in 1919 by the Barbieri brothers. Bitter and orange, with just 11% alcohol, made with orange, rhubarb and gentian.',
+    'b.aperit2.d':'From Novara, created by Gaspare Campari in 1860. Red and bitter, with a recipe that has never been revealed. The aperitivo of Milan.','b.h.digest':'Digestives',
+    'b.digest1.d':'From Saronno, in Lombardy. The aroma recalls almond, but it is made from apricot kernels.','b.digest2.d':'From the Amalfi Coast, made with the peel of the local lemons. Served ice cold, as in southern Italy.',
+    'b.digest3.d':'From Bologna, created in 1885 and named in honour of Princess Elena of Montenegro. Made with 40 herbs and botanicals.','b.digest4.d':'From Lousã, made since 1929 with seeds and aromatic plants. The best-selling liqueur in Portugal.',
+    'b.digest5.d':'From Dublin, created in 1974. Irish cream and whiskey, in a liqueur that quickly won over the world.','b.digest6.d':'Fortified wine from Setúbal, sweet and aromatic, with more than 500 years of history.',
+    'b.digest7.d':'From Lisbon and Óbidos, where ginja, a wild sour cherry, is steeped in brandy and sugar. A centuries-old Portuguese tradition, often served in chocolate cups.','b.digest8.n':'Port Wine',
+    'b.digest8.d':'From the Douro. Brandy is added halfway through fermentation, keeping the grape\'s natural sweetness. The most famous Portuguese wine in the world.','b.digest9.d':'A spirit distilled from grape pomace, what is left after the wine is pressed. A tradition from northern Portugal, served at the end of the meal.',
+    'b.h.soda':'Italian Sodas','b.soda1.d':'Sweet and refreshing: strawberry syrup, sparkling water and ice, with a touch of lime and mint. The Italian soda was born in the gelaterias of northern Italy, where fruit syrup met sparkling water to cool down the summers.',
+    'b.soda2.d':'Citrusy and vibrant: lime syrup, sparkling water and ice, with a slice of lemon and mint. From the terraced lemon groves of the Amalfi Coast, lemon gives this soda its sunny character.','b.soda3.d':'Fruity and elegant: pomegranate syrup, sparkling water and ice, with a touch of lime and mint. Melograno is Italian for pomegranate, a symbol of abundance across the Mediterranean.',
+    'b.soda4.d':'Smooth and velvety: peach nectar and syrup, sparkling water, ice and mint. Inspired by the Bellini, from Venice, but alcohol-free. Fresh, bubbly and for any time of day.','b.h.juice':'Fresh Juices',
+    'b.juice1.n':'Orange','b.juice1.m':'Freshly squeezed',
+    'b.juice2.n':'Lemonade','b.juice2.m':'Freshly squeezed',
+    'b.h.soft':'Soft Drinks & Waters','b.soft3.n':'Brazilian Guaraná',
+    'b.soft4.n':'Fuze Tea Peach','b.soft5.n':'Fuze Tea Lemon',
+    'b.soft6.n':'Tonic Water','b.soft7.n':'Pedras Sparkling Water',
+    'b.soft8.n':'Pedras Sparkling Water','b.soft9.n':'Pedras Sparkling Lemon',
+    'b.soft10.n':'Purified Water','b.soft11.n':'Purified Water',
+    'b.h.coffee':'Coffee','b.coffee2.n':'Abatanado (Americano)',
+    'b.footnote':'Our team will be delighted to help you choose yours.','home.storycta':'Our Story',
+    'rev.eyebrow':'What They Say','rev.title':'Reviews',
+    'rev.all':'See all on Google','sobre.eyebrow':'Our Dough',
+    'sobre.title':'Respect for Time','sobre.p1':'Our dough is prepared daily with selected ingredients and fermented for 48 to 72 hours. This whole process is what reveals the lightness, the texture and the flavour of our pizza.',
+    'sobre.p2':'The wood-fired oven, heated to a controlled temperature, ensures the crispy crust and soft interior that only a true Neapolitan pizza can offer.','sobre.motto':'"It is in simplicity that everything appears."',
+    'sobre.p3':'We believe a good pizza goes beyond flavour: it carries tradition, time and care.','sobre.st1.n':'Ingredients',
+    'sobre.st1.l':'Fresh','sobre.st2.l':'Dough Fermentation',
+    'sobre.st3.l':'Wood-Fired Oven','gal.eyebrow':'Our Space',
+    'gal.title':'Gallery','gal.sub':'A modern and welcoming space, and a showcase of our creations.',
+    'gal.c1':'An evening at Vívono','gal.c2':'Flan, the house sweet',
+    'gal.c3':'Our dining room','gal.c4':'Vívono, the house pizza',
+    'gal.c5':'Our home in Mafra','gal.c6':'Late afternoon at Vívono',
     'chegar.eyebrow':'Parking & Access','chegar.title':'How to Find Us',
-    'chegar.sub':'Our little secret: there is a large, free car park right behind us, next to the bus station. Come down the stairs and you are at our door, about a minute on foot.',
-    'chegar.d1.h':'Free parking behind us','chegar.d1.p':'The large car park by the bus station is free. Park, walk down the stairs and you are right at our door, about 1 min on foot.',
-    'chegar.d2.h':'Spaces out front','chegar.d2.p':'You can also park on Rua José Silvestre, right in front of the restaurant.',
-    'chegar.d3.h':'Our address','chegar.cta1':'Get directions on Google Maps','chegar.cta2':'View on the map',
-    'chegar.m.lot':'Free car park','chegar.m.free':'FREE','chegar.m.bus':'Bus station',
-    'chegar.m.s1':'Just walk','chegar.m.s2':'down the stairs','chegar.m.s3':'right to our door.',
-    'chegar.m.min':'± 1 min walk','chegar.m.no':'no. 12 · at your door','chegar.m.front':'street parking out front too',
-    'chegar.m.steps':'down the stairs · ±1 min',
-    'ev.dow':'Wed','ev.mon':'Nov','ev.eyebrow':'From Wednesday · 4 November','ev.title':'New Menu',
-    'ev.act':'New dishes at the table and a new wine selection',
-    'ev.meta':'The bottles saying goodbye are up to half price, while they last',
-    'ev.cta':'Book a table',
-    'evp.title':'Past nights on our stage','evp.sub':'A record of our live music evenings.',
-    'evs.lbl':'Vívono supports',
+    'chegar.sub':'Our little secret: there is a large, free car park right behind us, next to the bus station. Come down the stairs and you are at our door, about a minute on foot.','chegar.d1.h':'Free parking behind us',
+    'chegar.d1.p':'The large car park by the bus station is free. Park, walk down the stairs and you are right at our door, about 1 min on foot.','chegar.d2.h':'Spaces out front',
+    'chegar.d2.p':'You can also park on Rua José Silvestre, right in front of the restaurant.','chegar.d3.h':'Our address',
+    'chegar.cta1':'Get directions on Google Maps','chegar.cta2':'View on the map',
+    'chegar.m.lot':'Free car park','chegar.m.free':'FREE',
+    'chegar.m.bus':'Bus station','chegar.m.s1':'Just walk',
+    'chegar.m.s2':'down the stairs','chegar.m.s3':'right to our door.',
+    'chegar.m.min':'± 1 min walk','chegar.m.no':'no. 12 · at your door',
+    'chegar.m.front':'street parking out front too','chegar.m.steps':'down the stairs · ±1 min',
+    'ev.dow':'Wed','ev.mon':'Nov',
+    'ev.eyebrow':'From Wednesday · 4 November','ev.title':'New Menu',
+    'ev.act':'New dishes at the table and a new wine selection','ev.meta':'The bottles saying goodbye are up to half price, while they last',
+    'ev.cta':'Book a table','evp.title':'Past nights on our stage',
+    'evp.sub':'A record of our live music evenings.','evs.lbl':'Vívono supports',
     'evs.p':'Celebrating 14 years of Rugas de Riso. Saturday, 3 October · 6 p.m. · Auditório Municipal Beatriz Costa, Mafra. Children and seniors pay half price.'
   };
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));

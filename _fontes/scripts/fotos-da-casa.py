@@ -24,6 +24,7 @@ TRABALHOS = [
     ("11.jpg", "galeria-10-forno.jpg",          900, 675, 0.50),
     ("12.jpg", "galeria-11-casa-cheia.jpg",     900, 675, 0.52),
     ("10.jpg", "galeria-12-take-away.jpg",      900, 675, 0.46),
+    ("9.jpg",  "galeria-13-balcao.jpg",         900, 675, 0.50),
     # Como Chegar: quadradas, que as fachadas sao composicoes verticais
     ("8.jpg",  "chegar-fachada.jpg",            700, 700, 0.56),
     ("7.jpg",  "chegar-tabuleta.jpg",           700, 700, 0.08),

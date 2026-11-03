@@ -15,7 +15,9 @@ ORIG = Path("/private/tmp/claude-501/-Users-fellipefranchin-dev-sites-v-vono/"
             "b9275432-57a7-4765-ae51-cb7a39a3d36f/images")
 RAIZ = Path("/Users/fellipefranchin/dev/sites/vívono/assets/img")
 
-# (ficheiro, destino, largura, altura, centro vertical do corte)
+# (ficheiro, destino, largura, altura, corte)
+# corte: float = centro vertical do corte automatico;
+#        (esq, topo, dir, baixo) = recorte explicito, para deixar algo de fora
 TRABALHOS = [
     # Galeria: 4:3, para ficarem todas iguais na grelha de 300 px
     ("6.jpg",  "galeria-7-por-do-sol.jpg",      900, 675, 0.46),
@@ -25,6 +27,10 @@ TRABALHOS = [
     ("12.jpg", "galeria-11-casa-cheia.jpg",     900, 675, 0.52),
     ("10.jpg", "galeria-12-take-away.jpg",      900, 675, 0.46),
     ("9.jpg",  "galeria-13-balcao.jpg",         900, 675, 0.50),
+    ("13.jpg", "galeria-14-caixas.jpg",         900, 675, 0.45),
+    # as caixas verdes antigas estao no canto superior esquerdo; corta-se por
+    # baixo delas (y>=420), que assim saem de vez e o logotipo fica inteiro
+    ("14.jpg", "galeria-15-mafra-tv.jpg",       900, 675, (100, 420, 768, 921)),
     # Como Chegar: quadradas, que as fachadas sao composicoes verticais
     ("8.jpg",  "chegar-fachada.jpg",            700, 700, 0.56),
     ("7.jpg",  "chegar-tabuleta.jpg",           700, 700, 0.08),
@@ -48,8 +54,11 @@ def main():
             faltam.append(ficheiro)
             continue
         im = Image.open(origem); im.load()
-        im = ImageOps.fit(tratar(im), (w, h), method=Image.LANCZOS,
-                          centering=(0.5, centro))
+        im = tratar(im)
+        if isinstance(centro, tuple):
+            im = im.crop(centro).resize((w, h), Image.LANCZOS)
+        else:
+            im = ImageOps.fit(im, (w, h), method=Image.LANCZOS, centering=(0.5, centro))
         saida = RAIZ / destino
         im.save(saida, "JPEG", quality=83, optimize=True, progressive=True)
         print(f"  {ficheiro:9s} -> {destino:32s} {w}x{h}  {saida.stat().st_size // 1024:3d} KB")

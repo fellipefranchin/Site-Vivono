@@ -56,7 +56,7 @@ img{max-width:100%;display:block}a{text-decoration:none;color:inherit}
 .btn-oliva{border-color:var(--oliva);color:var(--oliva)}
 .btn-oliva:hover{background:var(--oliva);color:var(--crema);transform:translateY(-2px)}
 /* NAV */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s;padding:16px 0}
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s;padding:16px 0}.aviso{background:var(--rosso);color:var(--crema);margin:-16px 0 14px;padding:11px 0}.aviso-in{display:flex;align-items:center;gap:13px}.aviso-ic{width:25px;height:25px;flex:0 0 25px;color:var(--crema);opacity:.9}.aviso-txt{font-size:13px;line-height:1.45;margin:0}.aviso-txt b{display:block;font-weight:600;letter-spacing:.01em}.aviso-txt span{opacity:.86;font-weight:300}body.tem-aviso .hero{padding-top:184px}body.tem-aviso .page>section:first-of-type{padding-top:214px!important}@media(max-width:760px){body.tem-aviso .hero{padding-top:196px}body.tem-aviso .page>section:first-of-type{padding-top:224px!important}}@media(max-width:760px){.aviso{padding:9px 0;margin-bottom:10px}.aviso-in{gap:10px}.aviso-ic{width:21px;height:21px;flex-basis:21px}.aviso-txt{font-size:11.5px;line-height:1.4}}
 header.scrolled,header.lighttop{background:var(--crema-light);box-shadow:0 2px 30px rgba(42,28,30,.09);padding:8px 0}
 .nav{display:flex;align-items:center;gap:16px}
 .brand{display:flex;align-items:center;gap:11px;cursor:pointer;margin-right:auto}
@@ -908,8 +908,8 @@ footer .wrap{position:relative;z-index:1}
   }
 }
 </script>
-</head><body>
-<header id="hdr"><div class="wrap nav">
+</head><body class="tem-aviso">
+<header id="hdr"><!-- AVISO PONTUAL · encerrado por mau tempo. Para tirar: apagar este div, o CSS .aviso e as chaves aviso.* do dicionario EN. --><div class="aviso" role="status"><div class="wrap aviso-in"><svg class="aviso-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 17a4.5 4.5 0 0 0 .3-9 6 6 0 0 0-11.5 1.6A3.7 3.7 0 0 0 7 17"/><path d="M9 19.5 8 22M13 19.5 12 22M17 19.5 16 22"/></svg><p class="aviso-txt"><b data-i18n="aviso.h">Hoje estamos encerrados · quarta-feira, 11 de novembro</b><span data-i18n="aviso.p">Perante o aviso vermelho de mau tempo na nossa região, a casa não abre hoje. A segurança de todos, clientes e equipa, é o mais importante. Voltamos quinta-feira às 18h00.</span></p></div></div><div class="wrap nav">
 <div class="brand" data-go="home"><img src="assets/img/logo-forno.png" class="forno" alt="Forno Vívono"><img src="assets/img/logo-vivono-claro.png" class="wm light" alt="Vívono"><img src="assets/img/logo-vivono-escuro.png" class="wm dark" alt="Vívono"></div>
 <ul class="navlinks" id="navlinks">
 <li><a data-go="home" data-i18n="nav.home">Início</a></li>
@@ -1582,6 +1582,7 @@ initReveal();
     'foot.contact':'Contact','foot.siteby':'Site by',
     'foot.bottom':'© 2026 Vívono Pizzeria · R. José Silvestre 12, Mafra · Neapolitan pizzeria · Wood-fired oven · Arte. Origine. Passione.','cookie.text':'We use cookies to understand how the site is used, improve your experience and show relevant advertising. You can accept or decline.',
     'cookie.reject':'Decline','cookie.accept':'Accept',
+    'aviso.h':'Closed today · Wednesday, 11 November','aviso.p':'With the red weather warning in force in our area, the house is not opening today. The safety of everyone, guests and team, comes first. We are back on Thursday at 6 p.m.',
     'menu.eyebrow':'Authentic Flavours','menu.title':'Our Menu',
     'menu.sub':'Contemporary Neapolitan, long-fermentation dough (48 to 72 hours), baked in a wood-fired oven. Each dish, a journey to its origin.','allg.title':'Allergens',
     'allg.intro':'The numbers next to each dish indicate the allergens present. Do you have any allergy or intolerance? Talk to us before ordering, taking care of you is part of the experience.','allg.1':'Gluten',
